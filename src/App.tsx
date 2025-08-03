@@ -1,12 +1,35 @@
 import './styles.css';
 
+const AboutSection = () => (
+  <section id="about" className="about">
+    <div className="about-card">
+      <h2 className="about-title">Обо мне</h2>
+      <p className="about-text">
+        Привет! Я Никита, UX/UI дизайнер. Выпускник магистратуры ВШЭ по UX-аналитике и проектированию информационных систем.
+        Моё портфолио – это результат учебных проектов, выполненных под руководством профессионалов из индустрии.
+        Готов применить свои знания на практике!
+      </p>
+    </div>
+  </section>
+);
+
+
 export default function App() {
+  // Scroll to About by default on first load
+  if (typeof window !== 'undefined') {
+    const hash = window.location.hash;
+    if (!hash) {
+      // Set hash to #about to make About the default visible section
+      window.location.hash = '#about';
+    }
+  }
+
   return (
     <div className="page">
       <header className="topbar">
         <nav className="nav">
           <a href="#about" className="nav-btn">Обо мне</a>
-          <a href="#portfolio" className="nav-btn">Портфолио</a>
+          {/* <a href="#portfolio" className="nav-btn">Портфолио</a> */}
         </nav>
       </header>
 
@@ -47,6 +70,8 @@ export default function App() {
             <span>@ahamkara_nh</span>
           </a>
         </div>
+
+        <AboutSection />
       </main>
     </div>
   );

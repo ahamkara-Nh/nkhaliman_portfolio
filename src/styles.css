@@ -38,7 +38,8 @@ body {
 
 .page {
   min-height: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-rows: auto 1fr;
   padding: 28px 350px;
 }
@@ -86,10 +87,9 @@ body {
 /* Hero section */
 .hero {
   display: grid;
-  align-content: start; /* place hero at the top under the nav */
+  align-content: start; 
   gap: 18px;
-  padding-top: 64px; /* tighter spacing under the top buttons */
-  padding-bottom: 14vh;
+  padding-top: 64px; 
   max-width: 1000px;
 }
 
@@ -154,7 +154,7 @@ body {
 /* Toast for copy feedback */
 .toast {
   position: fixed;
-  left: 50%;
+  left: 10vh;
   top: 24px;
   transform: translateX(-50%) translateY(-10px);
   background: rgba(22, 24, 33, 0.9);

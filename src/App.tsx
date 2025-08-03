@@ -72,6 +72,55 @@ export default function App() {
         </div>
 
         <AboutSection />
+
+        <section id="skills" className="skills">
+          <h2 className="section-title">Навыки</h2>
+          <ul className="skills-grid">
+            {/* NOTE: Replace each src with your icon file and keep the same path.
+                Suggested icon paths (add your SVG/PNG files later):
+                - /src/assets/icons/skills/figma.svg
+                - /src/assets/icons/skills/photoshop.svg
+                - /src/assets/icons/skills/miro.svg
+                - /src/assets/icons/skills/rive.svg
+                - /src/assets/icons/skills/html.svg
+                - /src/assets/icons/skills/css.svg
+                - /src/assets/icons/skills/js.svg
+                - /src/assets/icons/skills/english.svg
+            */}
+            <li className="skill-card">
+              <img className="skill-icon" src="/src/assets/icons/skills/figma.svg" alt="" aria-hidden="true" />
+              <span className="skill-name">Figma</span>
+            </li>
+            <li className="skill-card">
+              <img className="skill-icon" src="/src/assets/icons/skills/photoshop.svg" alt="" aria-hidden="true" />
+              <span className="skill-name">Photoshop</span>
+            </li>
+            <li className="skill-card">
+              <img className="skill-icon" src="/src/assets/icons/skills/miro.svg" alt="" aria-hidden="true" />
+              <span className="skill-name">Miro</span>
+            </li>
+            <li className="skill-card">
+              <img className="skill-icon" src="/src/assets/icons/skills/rive.svg" alt="" aria-hidden="true" />
+              <span className="skill-name">Rive</span>
+            </li>
+            <li className="skill-card">
+              <img className="skill-icon" src="/src/assets/icons/skills/html.svg" alt="" aria-hidden="true" />
+              <span className="skill-name">HTML</span>
+            </li>
+            <li className="skill-card">
+              <img className="skill-icon" src="/src/assets/icons/skills/css.svg" alt="" aria-hidden="true" />
+              <span className="skill-name">CSS</span>
+            </li>
+            <li className="skill-card">
+              <img className="skill-icon" src="/src/assets/icons/skills/js.svg" alt="" aria-hidden="true" />
+              <span className="skill-name">JavaScript</span>
+            </li>
+            <li className="skill-card">
+              <img className="skill-icon" src="/src/assets/icons/skills/english.svg" alt="" aria-hidden="true" />
+              <span className="skill-name">Английский B2</span>
+            </li>
+          </ul>
+        </section>
       </main>
     </div>
   );

@@ -162,7 +162,80 @@ body::after {
   letter-spacing: -0.02em;
 }
 
-/* Portfolio placeholder styling (shares card look) */
+/* Skills section */
+.skills {
+  margin-top: 28px;
+}
+
+.section-title {
+  font-size: clamp(18px, 3vw, 22px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0 0 12px 0;
+}
+
+.skills-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(155,156,255,0.10), rgba(155,156,255,0.04)) border-box,
+    radial-gradient(120% 180% at 0% 0%, rgba(108,223,219,0.06), rgba(155,156,255,0.08) 40%, rgba(255,163,150,0.06) 80%) padding-box,
+    rgba(255,255,255,0.02);
+  box-shadow: 0 8px 26px -16px rgba(155, 156, 255, 0.25), inset 0 1px 0 rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: transform 120ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(155, 156, 255, 0.28);
+  box-shadow: 0 14px 32px -18px rgba(155, 156, 255, 0.35);
+  background:
+    linear-gradient(180deg, rgba(155,156,255,0.14), rgba(155,156,255,0.06)) border-box,
+    radial-gradient(120% 180% at 0% 0%, rgba(108,223,219,0.10), rgba(155,156,255,0.12) 40%, rgba(255,163,150,0.08) 80%) padding-box,
+    rgba(255,255,255,0.03);
+}
+
+.skill-icon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.95;
+}
+
+.skill-name {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* Responsive grid for skills */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Portfolio placeholder styling (kept for future use) */
 .portfolio .about-card {
   margin-top: 18px;
 }

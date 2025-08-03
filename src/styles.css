@@ -83,6 +83,7 @@ body::after {
   flex-direction: column;
   grid-template-rows: auto 1fr;
   padding: 28px 350px;
+  align-items: center;
 }
 
 /* Top navigation */

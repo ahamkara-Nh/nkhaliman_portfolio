@@ -131,6 +131,17 @@ body {
   letter-spacing: -0.04em;
   transition: transform 120ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
   box-shadow: 0 0 0 0 rgba(155, 156, 255, 0);
+  cursor: pointer; /* also for <button> */
+}
+
+.contact-btn .icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 0 transparent);
 }
 
 .contact-btn:hover {
@@ -138,6 +149,31 @@ body {
   border-color: rgba(155, 156, 255, 0.45);
   box-shadow: 0 6px 18px -6px rgba(155, 156, 255, 0.25);
   transform: translateY(-1px);
+}
+
+/* Toast for copy feedback */
+.toast {
+  position: fixed;
+  left: 50%;
+  top: 24px;
+  transform: translateX(-50%) translateY(-10px);
+  background: rgba(22, 24, 33, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Prefer reduced motion */

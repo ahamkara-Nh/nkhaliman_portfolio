@@ -127,12 +127,24 @@ body::after {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Active nav state to indicate current page */
+.nav-btn.is-active {
+  border-color: rgba(155, 156, 255, 0.45);
+  background:
+    linear-gradient(180deg, rgba(155,156,255,0.22), rgba(155,156,255,0.10)) border-box,
+    radial-gradient(120% 180% at 0% 0%, rgba(108,223,219,0.14), rgba(155,156,255,0.16) 40%, rgba(255,163,150,0.12) 80%) padding-box,
+    rgba(255,255,255,0.04);
+  box-shadow: 0 10px 26px -16px rgba(155, 156, 255, 0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+  transform: translateY(-1px);
+}
+
 /* Hero section */
 .hero {
   display: grid;
   align-content: start;
   gap: 18px;
   padding-top: 64px;
+  width: 1000px;
   max-width: 1000px;
   margin-bottom: 64px;
 }

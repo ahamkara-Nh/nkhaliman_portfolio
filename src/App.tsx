@@ -14,6 +14,115 @@ const AboutSection = () => (
 );
 
 
+function HardSoftSkillsSection() {
+  // simple toggle between hard and soft skills by clicking headers
+  const toggle = (type: 'hard' | 'soft') => {
+    const hard = document.getElementById('hard-skills');
+    const soft = document.getElementById('soft-skills');
+    const hardBtn = document.getElementById('hs-tab-hard');
+    const softBtn = document.getElementById('hs-tab-soft');
+    if (!hard || !soft || !hardBtn || !softBtn) return;
+
+    if (type === 'hard') {
+      hard.setAttribute('data-active', 'true');
+      soft.setAttribute('data-active', 'false');
+      hardBtn.setAttribute('aria-pressed', 'true');
+      softBtn.setAttribute('aria-pressed', 'false');
+      hardBtn.classList.add('is-active');
+      softBtn.classList.remove('is-active');
+    } else {
+      hard.setAttribute('data-active', 'false');
+      soft.setAttribute('data-active', 'true');
+      hardBtn.setAttribute('aria-pressed', 'false');
+      softBtn.setAttribute('aria-pressed', 'true');
+      softBtn.classList.add('is-active');
+      hardBtn.classList.remove('is-active');
+    }
+  };
+
+  // ensure default is hard-skills active
+  if (typeof window !== 'undefined') {
+    setTimeout(() => {
+      const hard = document.getElementById('hard-skills');
+      const soft = document.getElementById('soft-skills');
+      const hardBtn = document.getElementById('hs-tab-hard');
+      const softBtn = document.getElementById('hs-tab-soft');
+      if (
+        hard && soft && hardBtn && softBtn &&
+        !hard.hasAttribute('data-active') && !soft.hasAttribute('data-active')
+      ) {
+        // default to HARD active
+        hard.setAttribute('data-active', 'true');
+        soft.setAttribute('data-active', 'false');
+        hardBtn.setAttribute('aria-pressed', 'true');
+        softBtn.setAttribute('aria-pressed', 'false');
+        hardBtn.classList.add('is-active');
+        softBtn.classList.remove('is-active');
+      }
+    }, 0);
+  }
+
+  return (
+    <section id="hard-soft" className="hard-soft">
+      <div className="hs-header" role="tablist" aria-label="Hard and soft skills">
+        <button
+          id="hs-tab-hard"
+          className="hs-tab"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="hard-skills"
+          aria-pressed="true"
+          onClick={() => toggle('hard')}
+        >
+          Хард-скилы
+        </button>
+        <button
+          id="hs-tab-soft"
+          className="hs-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="soft-skills"
+          aria-pressed="false"
+          onClick={() => toggle('soft')}
+        >
+          Софт-скилы
+        </button>
+      </div>
+
+      {/* Hard skills list (placeholder bullets) */}
+      <div id="hard-skills" className="hs-panel" data-active="true" aria-labelledby="hard-soft">
+        <ul className="hs-list">
+          <li>Figma: Auto Layout, Variants, Components</li>
+          <li>Вайрфреймы и интерактивное прототипирование</li>
+          <li>Создание дизайн-систем и UI-китов</li>
+          <li>User Flow, CJM, Информационная архитектура</li>
+          <li>Юзабилити-тесты и пользовательские интервью</li>
+          <li>Основы UX-аналитики</li>
+          <li>Адаптивный и мобильный дизайн</li>
+          <li>Типографика, цвет, визуальная иерархия</li>
+          <li>Базовый HTML/CSS/JS</li>
+        </ul>
+      </div>
+
+      {/* Soft skills list (placeholder bullets) */}
+      <div id="soft-skills" className="hs-panel" aria-labelledby="hard-soft">
+        <ul className="hs-list">
+          <li>Коммуникация с командой и заказчиком</li>
+          <li>Эмпатия к пользователю</li>
+          <li>Работа с обратной связью, итеративный подход</li>
+          <li>Продуктовое мышление</li>
+          <li>Управление временем и приоритезация задач</li>
+          <li>Презентация идей и сторителлинг</li>
+          <li>Коллаборация в кросс-функциональной команде</li>
+          <li>Гибкость и обучаемость</li>
+        </ul>
+      </div>
+    </section>
+  );
+}
+
 export default function App() {
   // Scroll to About by default on first load
   if (typeof window !== 'undefined') {
@@ -180,6 +289,7 @@ export default function App() {
           </ul>
         </section>
 
+
         <section id="education" className="education">
           <h2 className="section-title">Образование</h2>
           <ul className="edu-list">
@@ -217,6 +327,8 @@ export default function App() {
             </li>
           </ul>
         </section>
+
+        <HardSoftSkillsSection />
 
       </main>
     </div>

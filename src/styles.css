@@ -144,7 +144,6 @@ body::after {
   align-content: start;
   gap: 18px;
   padding-top: 64px;
-  width: 1000px;
   max-width: 1000px;
   margin-bottom: 64px;
 }

@@ -1,5 +1,6 @@
 import './styles.css';
 import { NavLink, Route, Routes, Navigate } from 'react-router-dom';
+import CaseLowFodmap from './pages/CaseLowFodmap';
 
 const AboutSection = () => (
   <section id="about" className="about">
@@ -148,8 +149,6 @@ export default function App() {
       </header>
 
       <main className="hero">
-        <h1 className="name">Халиман Никита</h1>
-        <p className="role">UX/UI-дизайнер</p>
 
         <Routes>
           <Route path="/" element={<Navigate to="/about" replace />} />
@@ -157,6 +156,8 @@ export default function App() {
             path="/about"
             element={
               <>
+              <h1 className="name">Халиман Никита</h1>
+              <p className="role">UX/UI-дизайнер</p>
                 <div className="contacts">
           <button
             className="contact-btn"
@@ -347,6 +348,8 @@ export default function App() {
             element={
               <>
                 {/* Contacts section reused, as requested */}
+                <h1 className="name">Халиман Никита</h1>
+                <p className="role">UX/UI-дизайнер</p>
                 <div className="contacts">
                   <button
                     className="contact-btn"
@@ -385,16 +388,18 @@ export default function App() {
 
                   <ul className="portfolio-grid">
                     <li className="case-card">
-                      <img
-                        className="case-image"
-                        src="src\assets\case-images\first.png"
-                        alt="Превью проекта 1"
-                        aria-hidden="true"
-                      />
-                      <div className="case-body">
-                        <h3 className="case-title">Трекер low-FODMAP диеты, Telegram Mini-App</h3>
-                        <div className="case-origin">Дипломный проект ВШЭ</div>
-                      </div>
+                      <a className="case-link" href="/portfolio/fodmap" aria-label="Открыть кейс: Трекер low-FODMAP">
+                        <img
+                          className="case-image"
+                          src="/src/assets/case-images/first.png"
+                          alt="Превью проекта: Трекер low-FODMAP"
+                          aria-hidden="true"
+                        />
+                        <div className="case-body">
+                          <h3 className="case-title">Трекер low-FODMAP диеты, Telegram Mini-App</h3>
+                          <div className="case-origin">Дипломный проект ВШЭ</div>
+                        </div>
+                      </a>
                     </li>
 
                     <li className="case-card">
@@ -437,6 +442,15 @@ export default function App() {
                     </li>
                   </ul>
                 </section>
+              </>
+            }
+          />
+          <Route
+            path="/portfolio/fodmap"
+            element={
+              <>
+                {/* Keep only the two existing buttons at the top (from header). No hero section here. */}
+                <CaseLowFodmap />
               </>
             }
           />

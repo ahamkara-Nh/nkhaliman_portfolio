@@ -380,6 +380,63 @@ export default function App() {
                     <span>@ahamkara_nh</span>
                   </a>
                 </div>
+
+                <section id="portfolio" className="portfolio">
+
+                  <ul className="portfolio-grid">
+                    <li className="case-card">
+                      <img
+                        className="case-image"
+                        src="src\assets\case-images\first.png"
+                        alt="Превью проекта 1"
+                        aria-hidden="true"
+                      />
+                      <div className="case-body">
+                        <h3 className="case-title">Трекер low-FODMAP диеты, Telegram Mini-App</h3>
+                        <div className="case-origin">Дипломный проект ВШЭ</div>
+                      </div>
+                    </li>
+
+                    <li className="case-card">
+                      <img
+                        className="case-image"
+                        src="https://placehold.co/600x400/png"
+                        alt="Превью проекта 2"
+                        aria-hidden="true"
+                      />
+                      <div className="case-body">
+                        <h3 className="case-title">Концепт рекомендательной системы в Т-Банк "Город"</h3>
+                        <div className="case-origin">Учебный проект с компанией "ТеДо" (Технологии Доверия)</div>
+                      </div>
+                    </li>
+
+                    <li className="case-card">
+                      <img
+                        className="case-image"
+                        src="https://placehold.co/600x400/png"
+                        alt="Превью проекта 3"
+                        aria-hidden="true"
+                      />
+                      <div className="case-body">
+                        <h3 className="case-title">Название проекта 3</h3>
+                        <div className="case-origin">Источник: Placeholder (например, фриланс / тестовое задание)</div>
+                      </div>
+                    </li>
+
+                    <li className="case-card">
+                      <img
+                        className="case-image"
+                        src="https://placehold.co/600x400/png"
+                        alt="Превью проекта 4"
+                        aria-hidden="true"
+                      />
+                      <div className="case-body">
+                        <h3 className="case-title">Название проекта 4</h3>
+                        <div className="case-origin">Источник: Placeholder (например, собственная инициатива)</div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
               </>
             }
           />

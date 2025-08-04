@@ -545,6 +545,72 @@ body::after {
   }
 }
 
+/* Portfolio */
+.portfolio {
+  margin-top: 28px;
+}
+
+.portfolio-grid {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.case-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(155,156,255,0.08), rgba(155,156,255,0.03)) border-box,
+    rgba(255,255,255,0.02);
+  box-shadow: 0 8px 26px -16px rgba(155, 156, 255, 0.22), inset 0 1px 0 rgba(255,255,255,0.03);
+  overflow: hidden;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 120ms ease, background 160ms ease;
+}
+
+.case-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(155, 156, 255, 0.26);
+  box-shadow: 0 14px 32px -18px rgba(155, 156, 255, 0.32);
+  background:
+    linear-gradient(180deg, rgba(155,156,255,0.10), rgba(155,156,255,0.04)) border-box,
+    rgba(255,255,255,0.03);
+}
+
+.case-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  background: rgba(255,255,255,0.02);
+}
+
+.case-body {
+  padding: 12px 14px;
+}
+
+.case-title {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.case-origin {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: -0.02em;
+}
+
+/* Responsive grid for portfolio */
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Portfolio placeholder styling (kept for future use) */
 .portfolio .about-card {
   margin-top: 18px;

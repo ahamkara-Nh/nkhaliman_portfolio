@@ -103,6 +103,8 @@ body::after {
   border-radius: 999px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  max-width: 100%;
+  overflow: hidden; /* default desktop/tablet */
 }
 
 .nav-btn {
@@ -120,6 +122,7 @@ body::after {
   letter-spacing: -0.04em;
   background: transparent;
   transition: all 160ms ease;
+  white-space: nowrap; /* keep single line by default */
 }
 
 .nav-btn:hover {
@@ -729,17 +732,31 @@ body::after {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
+  /* Make top nav horizontally scrollable and slightly denser on small screens */
   .nav {
     gap: 6px;
     padding: 4px;
+    max-width: 100vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;            /* Firefox */
+  }
+  .nav::-webkit-scrollbar {           /* WebKit */
+    display: none;
   }
 
   .nav-btn {
     height: 34px;
-    padding: 0 14px;
+    padding: 0 12px;
+    font-size: 13px;                  /* reduce text size a bit */
+    white-space: nowrap;              /* keep in one line to avoid tall header */
+    flex: 0 0 auto;                   /* prevent shrinking; allow horizontal scroll */
   }
+}
 
+@media (max-width: 420px) {
   .contacts {
     gap: 8px;
   }

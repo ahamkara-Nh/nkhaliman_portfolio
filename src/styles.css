@@ -358,6 +358,88 @@ body::after {
   }
 }
 
+/* Education (Образование) section */
+.education {
+  margin-top: 32px;
+}
+
+.edu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.edu-item {
+  margin: 0;
+}
+
+.edu-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(155,156,255,0.08), rgba(155,156,255,0.03)) border-box,
+    rgba(255,255,255,0.02);
+  box-shadow: 0 8px 26px -16px rgba(155, 156, 255, 0.22), inset 0 1px 0 rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 14px 16px;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease, transform 120ms ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(155, 156, 255, 0.24);
+  box-shadow: 0 14px 32px -18px rgba(155, 156, 255, 0.32);
+}
+
+.edu-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.edu-place {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.edu-time {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.edu-meta {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: -0.02em;
+}
+
+.edu-desc {
+  margin-top: 4px;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* Responsive tweaks for education */
+@media (max-width: 900px) {
+  .edu-header {
+    grid-template-columns: 1fr;
+  }
+  .edu-time {
+    white-space: normal;
+    justify-self: start;
+    opacity: 0.9;
+  }
+}
+
 /* Portfolio placeholder styling (kept for future use) */
 .portfolio .about-card {
   margin-top: 18px;

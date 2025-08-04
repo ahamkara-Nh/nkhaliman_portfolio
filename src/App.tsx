@@ -122,6 +122,7 @@ export default function App() {
           </ul>
         </section>
 
+
         <section id="experience" className="experience">
           <h2 className="section-title">Опыт</h2>
           <ul className="exp-list">
@@ -178,6 +179,45 @@ export default function App() {
             </li>
           </ul>
         </section>
+
+        <section id="education" className="education">
+          <h2 className="section-title">Образование</h2>
+          <ul className="edu-list">
+            <li className="edu-item">
+              <div className="edu-card">
+                <div className="edu-header">
+                  <span className="edu-place">ВШЭ</span>
+                  <span className="edu-time">2023–2025</span>
+                </div>
+                <div className="edu-meta">Магистратура</div>
+                <div className="edu-desc">UX-аналитика и проектирование информационных систем</div>
+              </div>
+            </li>
+
+            <li className="edu-item">
+              <div className="edu-card">
+                <div className="edu-header">
+                  <span className="edu-place">Google UX Design</span>
+                  <span className="edu-time">2023</span>
+                </div>
+                <div className="edu-meta">Coursera</div>
+                <div className="edu-desc">Онлайн курс по UX дизайну от Google на платформе Coursera</div>
+              </div>
+            </li>
+
+            <li className="edu-item">
+              <div className="edu-card">
+                <div className="edu-header">
+                  <span className="edu-place">СПБГУТ</span>
+                  <span className="edu-time">2019–2023</span>
+                </div>
+                <div className="edu-meta">Бакалавриат</div>
+                <div className="edu-desc">Инфокоммуникационные технологии и системы связи</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
       </main>
     </div>
   );

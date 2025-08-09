@@ -18,6 +18,48 @@ export default function CaseLowFodmap() {
             в интуитивный инструмент.
           </p>
         </div>
+        
+        <div className="case-lowfodmap__content-row">
+          <div className="case-lowfodmap__table-of-contents">
+            <h2 className="case-lowfodmap__section-title">Содержание</h2>
+            <ul className="case-lowfodmap__toc-list">
+              <li className="case-lowfodmap__toc-item">
+                <a href="#problem" className="case-lowfodmap__toc-link">1. Проблема: Почему low-FODMAP — это вызов?</a>
+              </li>
+              <li className="case-lowfodmap__toc-item">
+                <a href="#research" className="case-lowfodmap__toc-link">2. Исследование: конкурентный анализ, изучение предметной области и инсайты от эксперта.</a>
+              </li>
+              <li className="case-lowfodmap__toc-item">
+                <a href="#design" className="case-lowfodmap__toc-link">3. Дизайн и итерации: От идей к прототипу</a>
+              </li>
+              <li className="case-lowfodmap__toc-item">
+                <a href="#testing" className="case-lowfodmap__toc-link">4. Тестирование и результаты</a>
+              </li>
+              <li className="case-lowfodmap__toc-item">
+                <a href="#conclusion" className="case-lowfodmap__toc-link">5. Выводы и ограничения</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="case-lowfodmap__key-results">
+            <h2 className="case-lowfodmap__section-title">Ключевые результаты</h2>
+            <div className="case-lowfodmap__results-grid">
+              <div className="case-lowfodmap__result-card">
+                <div className="case-lowfodmap__result-number">78.5/100</div>
+                <div className="case-lowfodmap__result-label">SUS</div>
+              </div>
+              <div className="case-lowfodmap__result-card">
+                <div className="case-lowfodmap__result-number">4</div>
+                <div className="case-lowfodmap__result-label">уникальные функции*</div>
+              </div>
+              <a className="case-lowfodmap__result-card" href="https://t.me/lowfodmap_bot" target='_blank'>
+                <img src="/src/assets/icons/telegram_white.svg" alt="Telegram" className="case-lowfodmap__result-icon" />
+                <div className="case-lowfodmap__result-label">Telegram Mini App</div>
+              </a>
+            </div>
+            <p className="case-lowfodmap__results-footnote">*уникальные среди приложений-конкурентов, функции выявлены в процессе исследования.</p>
+          </div>
+        </div>
       </section>
     </div>
   );

@@ -1,4 +1,3 @@
-import React from 'react';
 import './case-lowfodmap.css';
 
 export default function CaseLowFodmap() {
@@ -75,6 +74,30 @@ export default function CaseLowFodmap() {
               <p>
               <b>Low-FODMAP диета</b> — это медицинская диета, которая помогает людям с синдромом раздраженного кишечника (СРК) и другими проблемами пищеварения.<br></br> <br></br> <b>FODMAP</b> — это сложные сахара, которые плохо усваиваются организмом и вызывают неприятные симптомы: вздутие, боли в животе, диарею.
               </p>
+            </div>
+          </div>
+          
+          <h3 className="case-lowfodmap__complexity-subheader">Что делает эту диету такой сложной?</h3>
+          <div className="case-lowfodmap__complexity-cards">
+            <div className="case-lowfodmap__complexity-card">
+              <h4 className="case-lowfodmap__complexity-card-title">Сложная классификация продуктов</h4>
+              <p className="case-lowfodmap__complexity-card-text">Продукты содержат разные типы FODMAP в различных концентрациях, что затрудняет выбор безопасных вариантов без вспомогательных средств.</p>
+            </div>
+            <div className="case-lowfodmap__complexity-card">
+              <h4 className="case-lowfodmap__complexity-card-title">Кумулятивный эффект</h4>
+              <p className="case-lowfodmap__complexity-card-text">Даже маленькие порции разных FODMAP могут суммироваться и вызывать симптомы, требуя точного учета всего рациона.</p>
+            </div>
+            <div className="case-lowfodmap__complexity-card">
+              <h4 className="case-lowfodmap__complexity-card-title">Индивидуальная переносимость</h4>
+              <p className="case-lowfodmap__complexity-card-text">Реакция на FODMAP различается у людей, поэтому универсального подхода не существует, нужна персонализация.</p>
+            </div>
+            <div className="case-lowfodmap__complexity-card">
+              <h4 className="case-lowfodmap__complexity-card-title">Скрытые источники FODMAP</h4>
+              <p className="case-lowfodmap__complexity-card-text">FODMAP содержатся в обработанных продуктах, соусах, добавках, что требует постоянного внимания к составу.</p>
+            </div>
+            <div className="case-lowfodmap__complexity-card">
+              <h4 className="case-lowfodmap__complexity-card-title">Социальные ограничения</h4>
+              <p className="case-lowfodmap__complexity-card-text">Диета ограничивает участие в социальных мероприятиях, требует внимания и планирования, влияя на качество жизни.</p>
             </div>
           </div>
         </section>

@@ -52,7 +52,7 @@ export default function CaseLowFodmap() {
                 <div className="case-lowfodmap__result-number">4</div>
                 <div className="case-lowfodmap__result-label">уникальные функции*</div>
               </div>
-              <a className="case-lowfodmap__result-card" href="https://t.me/lowfodmap_bot" target='_blank'>
+              <a className="case-lowfodmap__result-card" href="https://t.me/fodmap_tracker_bot" target='_blank'>
                 <img src="/src/assets/icons/telegram_white.svg" alt="Telegram" className="case-lowfodmap__result-icon" />
                 <div className="case-lowfodmap__result-label">Telegram Mini App</div>
               </a>
@@ -60,6 +60,25 @@ export default function CaseLowFodmap() {
             <p className="case-lowfodmap__results-footnote">*уникальные среди приложений-конкурентов, функции выявлены в процессе исследования.</p>
           </div>
         </div>
+
+        <section id="problem" className="case-lowfodmap__problem-section">
+          <h2 className="case-lowfodmap__problem-header">Проблема: Почему low-FODMAP — это вызов?</h2>
+          <div className="case-lowfodmap__problem-content">
+            <div className="case-lowfodmap__problem-image">
+              <img
+                src="/src/assets/case-images/first-case/problem.png"
+                alt="Low-FODMAP диета вызов"
+                className="case-lowfodmap__problem-img"
+              />
+            </div>
+            <div className="case-lowfodmap__problem-text">
+              <p>
+              <b>Low-FODMAP диета</b> — это медицинская диета, которая помогает людям с синдромом раздраженного кишечника (СРК) и другими проблемами пищеварения.<br></br> <br></br> <b>FODMAP</b> — это сложные сахара, которые плохо усваиваются организмом и вызывают неприятные симптомы: вздутие, боли в животе, диарею.
+              </p>
+            </div>
+          </div>
+        </section>
+
       </section>
     </div>
   );

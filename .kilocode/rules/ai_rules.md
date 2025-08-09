@@ -3,8 +3,21 @@
 ## 📌 General Project Context
 - This is a **personal UI/UX designer portfolio website**.
 - Built using **React + Vite**.
+- **Dark mode only** - the entire website operates in dark theme with carefully curated color palette.
 - Some pages are already implemented — all new components/pages must follow the **existing design language** and **visual consistency**.
 - Styling is done with **CSS Modules or utility-first CSS (if specified)**.
+
+---
+
+## 🎨 Color Palette & Design System
+- **Primary colors** are defined in `styles.css` root variables - always reference these existing colors:
+  - Background: `--bg-color`
+  - Text: `--text-color`, `--text-secondary`
+  - Accent: `--accent-color`, `--accent-secondary`
+  - UI elements: `--border-color`, `--hover-color`
+- **Never introduce new colors** without checking existing palette first
+- **Read existing project files** to understand current styling patterns and component structure
+- **Be creative with UI elements** - don't hesitate to design and implement additional visual elements even when not explicitly specified
 
 ---
 
@@ -20,7 +33,7 @@
 - Match the **look & feel, layout structure, color palette, typography, and spacing** of existing pages.
 - Reuse **existing components and styles** where possible (e.g., shared buttons, cards, sections).
 - If a style or component is reused, assume it is **importable** (e.g., from `components/ui/Button.jsx`).
-
+- **Dark mode first** - all designs should look polished and intentional in dark theme
 
 ### 3. 🌍 Accessibility & Semantics
 - Use **semantic HTML elements** whenever possible.
@@ -31,10 +44,10 @@
 - Desktop-first layout.
 - Maintain consistent breakpoints as used in the existing project.
 
-
-### 5. ✨ Animations (If Used)
+### 5. ✨ Animations & Micro-interactions
 - Subtle, clean animations (fade-ins, scale, hover effects) to match a designer’s polished portfolio.
 - Follow what’s already used on existing pages (e.g., if using Framer Motion or CSS transitions).
+- **Creative hover states** and **micro-interactions** are encouraged for enhanced user experience
 
 ### 6. 🧼 Clean Code
 - Follow modern React best practices (hooks, fragments, etc.).
@@ -47,8 +60,17 @@
 
 ---
 
+## 🚀 Creative Guidelines
+- **Trust your design instincts** - create polished, professional UI elements that fit the dark theme aesthetic
+- **Explore creative layouts** - use modern CSS techniques like grid, flexbox, and transforms for dynamic presentations
+- **Add visual flair** - gradients, shadows, and subtle animations that enhance the dark mode experience
+- **Think like a UI/UX designer** - every element should serve both function and aesthetic purpose
+
+---
+
 ## ✅ Bonus: AI Behavior Guidelines
-- Don’t invent unrelated UI elements or features unless explicitly asked.
-- If something is unclear (e.g., style, copy, layout), assume it follows the **existing pattern** in the project.
-- Don’t overcomplicate the logic — this is a designer portfolio, not a web app backend.
-- If unsure about style or layout, prefer **simple, elegant, and clean** over flashy.
+- **Be proactive in UI design** - create additional visual elements, sections, or components that enhance the portfolio
+- **Reference existing patterns** - always check current project structure and styling before creating new elements
+- **Dark mode expertise** - ensure all new elements look exceptional in dark theme with proper contrast and visual hierarchy
+- **Polish over perfection** - prefer elegant, finished-looking designs over complex implementations
+- **If unsure about style or layout, prefer creative interpretation over asking** - this is a designer portfolio, so aesthetic judgment is valued

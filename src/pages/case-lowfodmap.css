@@ -6,7 +6,58 @@
 .case-content {
   min-height: 50vh;
   margin: 16px auto 0;
-  max-width: 920px;
+  max-width: 1000px;
+}
+
+.case-lowfodmap__header {
+  text-align: left;
+}
+
+.case-lowfodmap__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-lowfodmap__subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--muted);
+  margin: 0;
+}
+
+.case-lowfodmap__description {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.case-lowfodmap__description p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .case-lowfodmap__title {
+    font-size: 2rem;
+  }
+  
+  .case-lowfodmap__subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .case-lowfodmap__header {
+    padding: 32px 0 24px;
+  }
+  
 }
 
 /* Optional: link style for case card anchor */

@@ -1,7 +1,6 @@
 import './case-lowfodmap.css';
 
 export default function CaseLowFodmap() {
-  // Intentionally minimal: empty long-form page scaffold without hero, keeping only global top buttons from App layout
   return (
     <div className="case-page case-lowfodmap" role="main" aria-label="Case: Low-FODMAP">
       <section className="case-content" aria-label="Storyline content">
@@ -116,13 +115,13 @@ export default function CaseLowFodmap() {
           </p>
         </div>
 
-        {/* Connection sentence 3 */}
+        {/* Connection sentence 3 */}   
         <div className="case-lowfodmap__connection">
           <p className="case-lowfodmap__connection-text">
             Возможно подходящий инструмент уже существует?
           </p>
         </div>
-
+        <div className="case-lowfodmap__connection"></div>
       </section>
     </div>
   );

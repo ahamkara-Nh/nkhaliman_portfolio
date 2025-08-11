@@ -102,6 +102,27 @@ export default function CaseLowFodmap() {
           </div>
         </section>
 
+        {/* Connection sentence 1 */}
+        <div className="case-lowfodmap__connection">
+          <p className="case-lowfodmap__connection-text">
+            Диета эффективна, но довольно сложна для повседневной жизни.
+          </p>
+        </div>
+
+        {/* Connection sentence 2 */}
+        <div className="case-lowfodmap__connection">
+          <p className="case-lowfodmap__connection-text">
+            Было бы неплохо сделать инструмент, который поможет людям пройти этот непростой путь, но для начала стоит посмотреть существующие решения.
+          </p>
+        </div>
+
+        {/* Connection sentence 3 */}
+        <div className="case-lowfodmap__connection">
+          <p className="case-lowfodmap__connection-text">
+            Возможно подходящий инструмент уже существует?
+          </p>
+        </div>
+
       </section>
     </div>
   );

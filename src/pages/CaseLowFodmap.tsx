@@ -121,7 +121,20 @@ export default function CaseLowFodmap() {
             Возможно подходящий инструмент уже существует?
           </p>
         </div>
-        <div className="case-lowfodmap__connection"></div>
+
+        <div className='case-lowfodmap__connection'>
+          {/* THIS IS A DIVIDER. DO NOT TOUCH IT*/}   
+        </div>
+        
+        {/* Research section */}
+        <section id="research" className="case-lowfodmap__research-section">
+          <h2 className="case-lowfodmap__problem-header">Исследование: конкурентный анализ, изучение предметной области и инсайты от эксперта.</h2>
+          <div className="case-lowfodmap__research-description">
+            <p>
+              Я решил начать исследование с конкурентного анализа, чтобы понять, что предлагают существующие приложения, выявить их сильные стороны, найти точки роста и определить недостающий или необходимый функционал. Ниже представлен фрагмент из большой сравнительной таблицы, который отражает общее положение дел среди существующих приложений.
+            </p>
+          </div>
+        </section>
       </section>
     </div>
   );

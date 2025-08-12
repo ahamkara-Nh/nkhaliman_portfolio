@@ -541,6 +541,10 @@
   margin: 0;
 }
 
+.case-lowfodmap__research-description b {
+  color: var(--text);
+}
+
 @media (max-width: 768px) {
   .case-lowfodmap__research-section {
     margin: 48px 0;
@@ -549,5 +553,89 @@
   
   .case-lowfodmap__research-description p {
     font-size: 1rem;
+  }
+}
+
+/* Competitive analysis table */
+.case-lowfodmap__table-container {
+  margin-top: 32px;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.35);
+}
+
+.case-lowfodmap__competitive-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.case-lowfodmap__competitive-table th,
+.case-lowfodmap__competitive-table td {
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.case-lowfodmap__competitive-table th {
+  background: rgba(155, 156, 255, 0.1);
+  font-weight: 200;
+  color: var(--text);
+  position: sticky;
+  top: 0;
+}
+
+.case-lowfodmap__competitive-table th:first-child,
+.case-lowfodmap__competitive-table td:first-child {
+  font-weight: 200;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.case-lowfodmap__competitive-table th:last-child,
+.case-lowfodmap__competitive-table td:last-child {
+  border-right: none;
+}
+
+.case-lowfodmap__competitive-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table cell styling for good, medium, and bad */
+.case-lowfodmap__table-cell--good {
+  background: rgba(108, 223, 219, 0.15);
+  color: #6cdfdb;
+  font-weight: 500;
+}
+
+.case-lowfodmap__table-cell--medium {
+  background: rgba(255, 163, 150, 0.15);
+  color: #ffa396;
+  font-weight: 500;
+}
+
+.case-lowfodmap__table-cell--bad {
+  background: rgba(255, 107, 107, 0.15);
+  color: #ff6b6b;
+  font-weight: 500;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .case-lowfodmap__table-container {
+    margin-top: 24px;
+  }
+  
+  .case-lowfodmap__competitive-table th,
+  .case-lowfodmap__competitive-table td {
+    padding: 12px 8px;
+    font-size: 0.875rem;
+  }
+  
+  .case-lowfodmap__competitive-table th:first-child,
+  .case-lowfodmap__competitive-table td:first-child {
+    min-width: 120px;
   }
 }

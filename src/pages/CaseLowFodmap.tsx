@@ -131,8 +131,62 @@ export default function CaseLowFodmap() {
           <h2 className="case-lowfodmap__problem-header">Исследование: конкурентный анализ, изучение предметной области и инсайты от эксперта.</h2>
           <div className="case-lowfodmap__research-description">
             <p>
-              Я решил начать исследование с конкурентного анализа, чтобы понять, что предлагают существующие приложения, выявить их сильные стороны, найти точки роста и определить недостающий или необходимый функционал. Ниже представлен фрагмент из большой сравнительной таблицы, который отражает общее положение дел среди существующих приложений.
+              Я решил начать исследование с <b>конкурентного анализа</b>, чтобы понять, что предлагают существующие приложения, выявить их сильные стороны, найти точки роста и определить недостающий или необходимый функционал. Ниже представлен фрагмент из большой сравнительной таблицы, который отражает общее положение дел среди существующих приложений.
             </p>
+          </div>
+          
+          {/* Competitive analysis table */}
+          <div className="case-lowfodmap__table-container">
+            <table className="case-lowfodmap__competitive-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Monash University FODMAP diet</th>
+                  <th>Low FODMAP diet A to Z foods</th>
+                  <th>Low FODMAP Diet: IBS tracker</th>
+                  <th>Fodmate: Low FODMAP Foods</th>
+                  <th>FODMAP Friendly</th>
+                  <th>SiboSafe</th>
+                  <th>Cara Care: FODMAP, IBD, IBS Tracker</th>
+                  <th>FODMAP Diet Guide for IBS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Поддержка первого этапа диеты</td>
+                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--medium">Есть подходящие функции, но они не связаны в единый этап</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                </tr>
+                <tr>
+                  <td>Поддержка второго этапа диеты</td>
+                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала + специальный тип заметок в дневник</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--medium">Можно выбрать группу FODMAP для тестирования</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--medium">Есть подходящие функции, но они не связаны в единый этап</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                </tr>
+                <tr>
+                  <td>Поддержка третьего этапа диеты</td>
+                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </section>

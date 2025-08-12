@@ -141,46 +141,56 @@ export default function CaseLowFodmap() {
               <thead>
                 <tr>
                   <th></th>
-                  <th>Monash University FODMAP diet</th>
-                  <th>Low FODMAP diet A to Z foods</th>
-                  <th>Low FODMAP Diet: IBS tracker</th>
-                  <th>Fodmate: Low FODMAP Foods</th>
-                  <th>FODMAP Friendly</th>
-                  <th>SiboSafe</th>
-                  <th>Cara Care: FODMAP, IBD, IBS Tracker</th>
-                  <th>FODMAP Diet Guide for IBS</th>
+                  <th>Поддержка первого этапа диеты</th>
+                  <th>Поддержка второго этапа диеты</th>
+                  <th>Поддержка третьего этапа диеты</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Поддержка первого этапа диеты</td>
+                  <td>Monash University FODMAP diet</td>
                   <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
-                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
-                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
-                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
-                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
-                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
-                  <td className="case-lowfodmap__table-cell--medium">Есть подходящие функции, но они не связаны в единый этап</td>
-                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
-                </tr>
-                <tr>
-                  <td>Поддержка второго этапа диеты</td>
                   <td className="case-lowfodmap__table-cell--medium">Теория без функционала + специальный тип заметок в дневник</td>
+                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
+                </tr>
+                <tr>
+                  <td>Low FODMAP diet A to Z foods</td>
                   <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                </tr>
+                <tr>
+                  <td>Low FODMAP Diet: IBS tracker</td>
+                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
                   <td className="case-lowfodmap__table-cell--medium">Можно выбрать группу FODMAP для тестирования</td>
+                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
+                </tr>
+                <tr>
+                  <td>Fodmate: Low FODMAP Foods</td>
                   <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
                   <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
                   <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                </tr>
+                <tr>
+                  <td>FODMAP Friendly</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                </tr>
+                <tr>
+                  <td>SiboSafe</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                </tr>
+                <tr>
+                  <td>Cara Care: FODMAP, IBD, IBS Tracker</td>
+                  <td className="case-lowfodmap__table-cell--medium">Есть подходящие функции, но они не связаны в единый этап</td>
                   <td className="case-lowfodmap__table-cell--medium">Есть подходящие функции, но они не связаны в единый этап</td>
                   <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
                 </tr>
                 <tr>
-                  <td>Поддержка третьего этапа диеты</td>
-                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
-                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
-                  <td className="case-lowfodmap__table-cell--medium">Теория без функционала</td>
-                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
-                  <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
+                  <td>FODMAP Diet Guide for IBS</td>
                   <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
                   <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>
                   <td className="case-lowfodmap__table-cell--bad">Отсутствует</td>

@@ -953,6 +953,80 @@
   font-weight: 500;
 }
 
+/* Expert Interview Section */
+.case-lowfodmap__expert-interview {
+  margin: 50px 0;
+  text-align: left;
+}
+
+.case-lowfodmap__interview-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.case-lowfodmap__interview-image-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 8px 26px -16px rgba(155, 156, 255, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 160ms ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.case-lowfodmap__interview-image-container:hover {
+  border-color: rgba(155, 156, 255, 0.28);
+  background: rgba(155, 156, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px -18px rgba(155, 156, 255, 0.32);
+}
+
+.case-lowfodmap__interview-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(155, 156, 255, 0.1) 0%,
+    rgba(108, 223, 219, 0.1) 50%,
+    rgba(255, 163, 150, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+  border-radius: var(--radius);
+}
+
+.case-lowfodmap__interview-image-container:hover::before {
+  opacity: 1;
+}
+
+.case-lowfodmap__interview-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.case-lowfodmap__interview-image-container:hover .case-lowfodmap__interview-image {
+  transform: scale(1.03);
+  filter: brightness(1.05) contrast(1.05);
+}
+
 /* Responsive table */
 @media (max-width: 768px) {
   .case-lowfodmap__table-container {
@@ -964,5 +1038,20 @@
   .case-lowfodmap__competitive-table td {
     padding: 12px 8px;
     font-size: 0.875rem;
+  }
+  
+  .case-lowfodmap__expert-interview {
+    margin: 48px 0;
+    padding: 32px 0;
+  }
+  
+  .case-lowfodmap__interview-images {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 24px 0;
+  }
+  
+  .case-lowfodmap__interview-image-container {
+    padding: 16px;
   }
 }

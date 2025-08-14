@@ -363,7 +363,7 @@ export default function CaseLowFodmap() {
 
         {/* Subject Area Section */}
         <section className="case-lowfodmap__subject-area">
-          <h2 className="case-lowfodmap__problem-header">Предметная область</h2>
+          <h2 className="case-lowfodmap__complexity-subheader">Предметная область</h2>
           <div className="case-lowfodmap__subject-description">
             <p>
               Прежде чем проектировать, мне нужно было глубоко понять сам объект мониторинга — <b>low-FODMAP диету</b>. 
@@ -396,6 +396,43 @@ export default function CaseLowFodmap() {
             </p>
           </div>
 
+        </section>
+
+        {/* Expert Interview Section */}
+        <section className="case-lowfodmap__expert-interview">
+          <h2 className="case-lowfodmap__complexity-subheader">Экспертное интервью</h2>
+          <div className="case-lowfodmap__research-description">
+            <p>
+            Когда я понял, что ни одно из существующих приложений не даёт полного представления о том, как на практике проходит каждый этап low-FODMAP диеты, стало ясно: чтобы не строить продукт на догадках, нужно заглянуть за кулисы работы настоящего гастроэнтеролога.
+            </p>
+          </div>
+          
+          <div className="case-lowfodmap__interview-images">
+            <div className="case-lowfodmap__interview-image-container">
+              <img 
+                src="/src/assets/case-images/first-case/interview1.png" 
+                alt="Экспертное интервью 1" 
+                className="case-lowfodmap__interview-image"
+              />
+            </div>
+            <div className="case-lowfodmap__interview-image-container">
+              <img 
+                src="/src/assets/case-images/first-case/interview2.png" 
+                alt="Экспертное интервью 2" 
+                className="case-lowfodmap__interview-image"
+              />
+            </div>
+          </div>
+          
+          <div className="case-lowfodmap__research-description">
+            <p>
+            Глубинное интервью с экспертом помогло мне убедиться, что за теоретическими списками продуктов и академическими сроками элиминации стоят реальные нюансы: сколько дней нужно на стабилизацию симптомов, как правильно тестировать каждую группу углеводов, как учитывать эффект «насыщения» разными порциями, и какие симптомы важнее всего фиксировать. 
+
+<br></br><br></br>Без этого разговора я рисковал бы упустить критические детали — например, что некоторые пациенты путаются в шестигрупповой классификации FODMAP и постоянно забывают записать интенсивность боли или вздутия в привычной шкале. Обсуждение текущей практики мониторинга показало, какие шаблонные дневники врачи считают бесполезными, а какие инструменты реально помогают выявить пищевые триггеры. 
+
+<br></br><br></br>Благодаря прямому контакту с профессионалом я получил не только конкретные цифры и временные рамки, но и живые советы о том, как оформить интерфейс, чтобы человек не сбился с протокола реинтродукции и не забыл вовремя отправить отчет врачу. В итоге интервью стало тем фундаментом, на котором я выстроил функционал и контент приложения, превратив сухие теоретические схемы в понятный и поддерживающий пользователя инструмент.
+            </p>
+          </div>
         </section>
       </section>
 

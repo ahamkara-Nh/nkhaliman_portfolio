@@ -255,21 +255,21 @@ export default function CaseLowFodmap() {
           </div>
         </section>
 
-        {/* Connection sentence 1 */}
+        {/* 
         <div className="case-lowfodmap__connection">
           <p className="case-lowfodmap__connection-text">
             Диета эффективна, но довольно сложна для повседневной жизни.
           </p>
         </div>
 
-        {/* Connection sentence 2 */}
+        
         <div className="case-lowfodmap__connection">
           <p className="case-lowfodmap__connection-text">
             Было бы неплохо сделать инструмент, который поможет людям пройти этот непростой путь, но для начала стоит посмотреть существующие решения.
           </p>
         </div>
 
-        {/* Connection sentence 3 */}   
+      
         <div className="case-lowfodmap__connection">
           <p className="case-lowfodmap__connection-text">
             Возможно подходящий инструмент уже существует?
@@ -277,9 +277,9 @@ export default function CaseLowFodmap() {
         </div>
 
         <div className='case-lowfodmap__connection'>
-          {/* THIS IS A DIVIDER. DO NOT TOUCH IT*/}   
         </div>
-        
+        */}   
+
         {/* Research section */}
         <section id="research" className="case-lowfodmap__research-section">
           <h2 className="case-lowfodmap__problem-header">Исследование: конкурентный анализ, изучение предметной области и инсайты от эксперта.</h2>

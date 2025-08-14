@@ -1,6 +1,160 @@
 import './case-lowfodmap.css';
+import { useState, useRef, useEffect } from 'react';
 
 export default function CaseLowFodmap() {
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
+  const [currentPosition, setCurrentPosition] = useState({ x: 0, y: 0 });
+  const diagramRef = useRef<HTMLDivElement>(null);
+  const touchStartDistance = useRef<number>(0);
+
+  const openFullscreen = () => {
+    setIsFullscreen(true);
+    setZoomLevel(1); // Reset zoom when opening fullscreen
+    setCurrentPosition({ x: 0, y: 0 }); // Reset position when opening fullscreen
+  };
+
+  const closeFullscreen = () => {
+    setIsFullscreen(false);
+    setZoomLevel(1); // Reset zoom when closing fullscreen
+    setCurrentPosition({ x: 0, y: 0 }); // Reset position when closing fullscreen
+  };
+
+  const zoomIn = () => {
+    setZoomLevel(prev => Math.min(prev + 0.2, 3)); // Max zoom 3x
+  };
+
+  const zoomOut = () => {
+    setZoomLevel(prev => Math.max(prev - 0.2, 0.5)); // Min zoom 0.5x
+  };
+
+  const resetZoom = () => {
+    setZoomLevel(1);
+    setCurrentPosition({ x: 0, y: 0 });
+  };
+
+  // Handle mouse wheel zoom
+  const handleWheelZoom = (e: WheelEvent) => {
+    e.preventDefault();
+    if (e.deltaY < 0) {
+      zoomIn();
+    } else {
+      zoomOut();
+    }
+  };
+
+  // Handle mouse drag start
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (zoomLevel > 1) {
+      e.preventDefault();
+      setIsDragging(true);
+      setDragStart({ x: e.clientX - currentPosition.x, y: e.clientY - currentPosition.y });
+      if (diagramRef.current) {
+        diagramRef.current.style.cursor = 'grabbing';
+      }
+    }
+  };
+
+  // Handle mouse drag move
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (isDragging) {
+      e.preventDefault();
+      const newX = e.clientX - dragStart.x;
+      const newY = e.clientY - dragStart.y;
+      setCurrentPosition({ x: newX, y: newY });
+    }
+  };
+
+  // Handle mouse drag end
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    if (diagramRef.current) {
+      diagramRef.current.style.cursor = zoomLevel > 1 ? 'grab' : 'default';
+    }
+  };
+
+  // Handle touch pinch zoom and panning
+  const handleTouchStart = (e: TouchEvent) => {
+    if (e.touches.length === 2) {
+      e.preventDefault(); // Prevent default scrolling behavior
+      const touch1 = e.touches[0];
+      const touch2 = e.touches[1];
+      touchStartDistance.current = Math.sqrt(
+        Math.pow(touch2.clientX - touch1.clientX, 2) +
+        Math.pow(touch2.clientY - touch1.clientY, 2)
+      );
+    } else if (e.touches.length === 1 && zoomLevel > 1) {
+      // Single touch for panning
+      e.preventDefault(); // Prevent default scrolling behavior
+      setIsDragging(true);
+      setDragStart({ 
+        x: e.touches[0].clientX - currentPosition.x, 
+        y: e.touches[0].clientY - currentPosition.y 
+      });
+    }
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    if (e.touches.length === 2) {
+      e.preventDefault(); // Prevent default scrolling behavior
+      const touch1 = e.touches[0];
+      const touch2 = e.touches[1];
+      const currentDistance = Math.sqrt(
+        Math.pow(touch2.clientX - touch1.clientX, 2) +
+        Math.pow(touch2.clientY - touch1.clientY, 2)
+      );
+      
+      if (touchStartDistance.current > 0) {
+        const scaleChange = currentDistance / touchStartDistance.current;
+        const newZoomLevel = Math.min(Math.max(zoomLevel * scaleChange, 0.5), 3);
+        setZoomLevel(newZoomLevel);
+        touchStartDistance.current = currentDistance;
+      }
+    } else if (e.touches.length === 1 && isDragging) {
+      e.preventDefault(); // Prevent default scrolling behavior
+      const newX = e.touches[0].clientX - dragStart.x;
+      const newY = e.touches[0].clientY - dragStart.y;
+      setCurrentPosition({ x: newX, y: newY });
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    touchStartDistance.current = 0;
+  };
+
+  // Update cursor based on zoom level
+  useEffect(() => {
+    if (diagramRef.current) {
+      diagramRef.current.style.cursor = zoomLevel > 1 ? 'grab' : 'default';
+    }
+  }, [zoomLevel]);
+
+  // Add event listeners for zoom functionality
+  useEffect(() => {
+    if (isFullscreen && diagramRef.current) {
+      const element = diagramRef.current;
+      
+      // Add wheel event listener
+      element.addEventListener('wheel', handleWheelZoom as EventListener, { passive: false });
+      
+      // Add touch event listeners
+      element.addEventListener('touchstart', handleTouchStart as EventListener, { passive: false });
+      element.addEventListener('touchmove', handleTouchMove as EventListener, { passive: false });
+      element.addEventListener('touchend', handleTouchEnd as EventListener, { passive: false });
+      
+      return () => {
+        element.removeEventListener('wheel', handleWheelZoom as EventListener);
+        element.removeEventListener('touchstart', handleTouchStart as EventListener);
+        element.removeEventListener('touchmove', handleTouchMove as EventListener);
+        element.removeEventListener('touchend', handleTouchEnd as EventListener);
+      };
+    }
+  }, [isFullscreen, zoomLevel, isDragging, currentPosition]);
+
   return (
     <div className="case-page case-lowfodmap" role="main" aria-label="Case: Low-FODMAP">
       <section className="case-content" aria-label="Storyline content">
@@ -220,8 +374,104 @@ export default function CaseLowFodmap() {
               для эффективного отслеживания.
             </p>
           </div>
+          
+          <div className="case-lowfodmap__diagram-container" onClick={openFullscreen}>
+            <img 
+              src="/src/assets/case-images/first-case/diagram.svg" 
+              alt="Схема процесса соблюдения low-FODMAP диеты" 
+              className="case-lowfodmap__diagram"
+            />
+            <p className="case-lowfodmap__diagram-caption">Схема процесса соблюдения low-FODMAP диеты</p>
+            <div className="case-lowfodmap__fullscreen-button">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 3H5C3.89543 3 3 3.89543 3 5V8M21 8V5C21 3.89543 20.1046 3 19 3H16M16 21H19C20.1046 21 21 20.1046 21 19V16M3 16V19C3 20.1046 3.89543 21 5 21H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span>Полный экран</span>
+            </div>
+          </div>
         </section>
       </section>
+
+      {/* Fullscreen Modal */}
+      {isFullscreen && (
+        <div className="case-lowfodmap__fullscreen-overlay" onClick={closeFullscreen}>
+          <div className="case-lowfodmap__fullscreen-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="case-lowfodmap__fullscreen-header">
+              <h3>Схема процесса соблюдения low-FODMAP диеты</h3>
+              <div className="case-lowfodmap__zoom-controls">
+                <button 
+                  className="case-lowfodmap__zoom-button" 
+                  onClick={zoomOut}
+                  aria-label="Уменьшить"
+                  disabled={zoomLevel <= 0.5}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+                <div className="case-lowfodmap__zoom-level-container">
+                  <span className="case-lowfodmap__zoom-level-text">{Math.round(zoomLevel * 100)}%</span>
+                  <div className="case-lowfodmap__zoom-level-bar">
+                    <div 
+                      className="case-lowfodmap__zoom-level-fill" 
+                      style={{ width: `${((zoomLevel - 0.5) / 2.5) * 100}%` }}
+                    ></div>
+                  </div>
+                </div>
+                <button 
+                  className="case-lowfodmap__zoom-button" 
+                  onClick={zoomIn}
+                  aria-label="Увеличить"
+                  disabled={zoomLevel >= 3}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+                <button 
+                  className="case-lowfodmap__zoom-button case-lowfodmap__zoom-reset-button" 
+                  onClick={resetZoom}
+                  aria-label="Сбросить масштаб"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4V9H4.5M4.5 9H9M4.5 9V13.5M20 20V15H19.5M19.5 15H15M19.5 15V9.5M16 16L20 20L16 16ZM8 8L4 4L8 8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <button className="case-lowfodmap__fullscreen-close" onClick={closeFullscreen} aria-label="Закрыть">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div 
+              className={`case-lowfodmap__fullscreen-content ${isDragging ? 'case-lowfodmap__fullscreen-content--dragging' : ''}`}
+              ref={diagramRef}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
+            >
+              <div className="case-lowfodmap__zoom-instructions">
+                <span className="case-lowfodmap__zoom-instruction-text">
+                  Используйте колесо мыши или пинч для масштабирования, перетаскивание для навигации
+                </span>
+              </div>
+              <img 
+                src="/src/assets/case-images/first-case/diagram.svg" 
+                alt="Схема процесса соблюдения low-FODMAP диеты" 
+                className="case-lowfodmap__fullscreen-diagram"
+                style={{ 
+                  transform: `scale(${zoomLevel}) translate(${currentPosition.x/zoomLevel}px, ${currentPosition.y/zoomLevel}px)`,
+                  transformOrigin: 'center center' 
+                }}
+                draggable={false} // Prevent SVG dragging
+                onDragStart={(e) => e.preventDefault()} // Extra prevention for dragging
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

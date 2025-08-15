@@ -13,6 +13,12 @@ function RivePhaseTracker() {
   return (
     <div className="case-lowfodmap__rive-container">
       <RiveComponent className="case-lowfodmap__rive-animation" />
+      <div className="case-lowfodmap__interactive-indicator">
+        <svg className="case-lowfodmap__indicator-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        <span className="case-lowfodmap__indicator-text">Наведите курсор</span>
+      </div>
     </div>
   );
 }

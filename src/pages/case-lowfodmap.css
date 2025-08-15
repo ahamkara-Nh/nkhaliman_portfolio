@@ -1093,7 +1093,7 @@
 
 .case-lowfodmap__rive-container {
   width: 100%;
-  height: 600px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1101,12 +1101,126 @@
   overflow: hidden;
   position: relative;
   transition: all 160ms ease;
+  /* Add interactive state visualization */
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.case-lowfodmap__rive-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: linear-gradient(
+    135deg,
+    rgba(155, 156, 255, 0.1) 0%,
+    rgba(108, 223, 219, 0.1) 50%,
+    rgba(255, 163, 150, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.case-lowfodmap__rive-container:hover::before {
+  opacity: 1;
+}
+
+.case-lowfodmap__rive-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background: radial-gradient(
+    circle,
+    rgba(155, 156, 255, 0.3) 0%,
+    transparent 70%
+  );
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.case-lowfodmap__rive-container:hover::after {
+  width: 400px;
+  height: 400px;
 }
 
 .case-lowfodmap__rive-animation {
   width: 100%;
   height: 100%;
   border-radius: 8px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Interactive indicator element */
+.case-lowfodmap__interactive-indicator {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 6px 12px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 1;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.case-lowfodmap__rive-container:hover .case-lowfodmap__interactive-indicator {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.case-lowfodmap__indicator-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text);
+}
+
+.case-lowfodmap__indicator-text {
+  font-size: 0.875rem;
+  color: var(--text);
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    var(--text) 0%,
+    rgba(155, 156, 255, 0.9) 50%,
+    var(--text) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: indicator-wave 3s ease-in-out infinite;
+}
+
+@keyframes indicator-wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 

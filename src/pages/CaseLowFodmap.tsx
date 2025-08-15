@@ -1,5 +1,21 @@
 import './case-lowfodmap.css';
 import { useState, useRef, useEffect } from 'react';
+import { useRive } from '@rive-app/react-canvas';
+
+// Rive Phase Tracker Component
+function RivePhaseTracker() {
+  const { RiveComponent } = useRive({
+    src: '/src/assets/fodmap.riv',
+    autoplay: true,
+    stateMachines: 'State Machine 1', // Adjust this based on your Rive file's state machine name
+  });
+
+  return (
+    <div className="case-lowfodmap__rive-container">
+      <RiveComponent className="case-lowfodmap__rive-animation" />
+    </div>
+  );
+}
 
 export default function CaseLowFodmap() {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -445,36 +461,17 @@ export default function CaseLowFodmap() {
             <h3 className="case-lowfodmap__complexity-subheader">Компонент отслеживания фаз</h3>
             <div className="case-lowfodmap__phase-demos">
               
-              {/* Phase 1 Demo */}
+              {/* Phase 1 Demo - Real Interface */}
               <div className="case-lowfodmap__phase-demo">
                 <div className="case-lowfodmap__phase-demo-header">
                   <h4 className="case-lowfodmap__phase-demo-title">Фаза 1: Элиминация</h4>
-                  <span className="case-lowfodmap__phase-demo-badge">7 дней</span>
+                  <span className="case-lowfodmap__phase-demo-badge">Реальный интерфейс</span>
                 </div>
-                <div className="case-lowfodmap__phase-tracker case-lowfodmap__phase-tracker--elimination">
-                  <div className="case-lowfodmap__phase-progress">
-                    <div className="case-lowfodmap__phase-progress-bar">
-                      <div className="case-lowfodmap__phase-progress-fill case-lowfodmap__phase-progress-fill--elimination" style={{width: '57%'}}></div>
-                    </div>
-                    <div className="case-lowfodmap__phase-counter">
-                      <span className="case-lowfodmap__phase-counter-current">4</span>
-                      <span className="case-lowfodmap__phase-counter-separator">/</span>
-                      <span className="case-lowfodmap__phase-counter-total">7</span>
-                      <span className="case-lowfodmap__phase-counter-label">дней без high-FODMAP</span>
-                    </div>
-                  </div>
-                  <div className="case-lowfodmap__phase-status">
-                    <div className="case-lowfodmap__phase-status-icon case-lowfodmap__phase-status-icon--active">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                        <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <span className="case-lowfodmap__phase-status-text">Автоматический подсчёт дней элиминации</span>
-                  </div>
+                <div className="case-lowfodmap__real-interface">
+                  <RivePhaseTracker />
                 </div>
                 <p className="case-lowfodmap__phase-demo-description">
-                  На первом этапе компонент автоматически отслеживает количество дней без high-FODMAP продуктов, мотивируя пользователя довести элиминацию до конца.
+                  Реальный интерфейс первой фазы с интерактивной Rive-анимацией. Компонент автоматически отслеживает прогресс элиминации, создавая мотивирующий и визуально привлекательный опыт для пользователя.
                 </p>
               </div>
 
@@ -483,55 +480,6 @@ export default function CaseLowFodmap() {
                 <div className="case-lowfodmap__phase-demo-header">
                   <h4 className="case-lowfodmap__phase-demo-title">Фаза 2: Реинтродукция</h4>
                   <span className="case-lowfodmap__phase-demo-badge">По группам</span>
-                </div>
-                <div className="case-lowfodmap__phase-tracker case-lowfodmap__phase-tracker--reintroduction">
-                  <div className="case-lowfodmap__fodmap-groups">
-                    <div className="case-lowfodmap__fodmap-group case-lowfodmap__fodmap-group--completed">
-                      <div className="case-lowfodmap__fodmap-group-header">
-                        <span className="case-lowfodmap__fodmap-group-name">Олигосахариды</span>
-                        <div className="case-lowfodmap__fodmap-group-status">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="case-lowfodmap__fodmap-group-progress">
-                        <span className="case-lowfodmap__fodmap-group-days">3/3 дня тестирования</span>
-                      </div>
-                    </div>
-                    
-                    <div className="case-lowfodmap__fodmap-group case-lowfodmap__fodmap-group--active">
-                      <div className="case-lowfodmap__fodmap-group-header">
-                        <span className="case-lowfodmap__fodmap-group-name">Дисахариды</span>
-                        <div className="case-lowfodmap__fodmap-group-status case-lowfodmap__fodmap-group-status--active">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                            <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="case-lowfodmap__fodmap-group-progress">
-                        <div className="case-lowfodmap__fodmap-group-bar">
-                          <div className="case-lowfodmap__fodmap-group-fill" style={{width: '33%'}}></div>
-                        </div>
-                        <span className="case-lowfodmap__fodmap-group-days">1/3 дня тестирования</span>
-                      </div>
-                    </div>
-                    
-                    <div className="case-lowfodmap__fodmap-group case-lowfodmap__fodmap-group--pending">
-                      <div className="case-lowfodmap__fodmap-group-header">
-                        <span className="case-lowfodmap__fodmap-group-name">Моносахариды</span>
-                        <div className="case-lowfodmap__fodmap-group-status">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="case-lowfodmap__fodmap-group-progress">
-                        <span className="case-lowfodmap__fodmap-group-days">Ожидает тестирования</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <p className="case-lowfodmap__phase-demo-description">
                   Во второй фазе компонент трансформируется в трекер групп FODMAP, показывая прогресс тестирования каждой группы углеводов с индивидуальными счётчиками дней.
@@ -543,36 +491,6 @@ export default function CaseLowFodmap() {
                 <div className="case-lowfodmap__phase-demo-header">
                   <h4 className="case-lowfodmap__phase-demo-title">Фаза 3: Персонализация</h4>
                   <span className="case-lowfodmap__phase-demo-badge">Индивидуально</span>
-                </div>
-                <div className="case-lowfodmap__phase-tracker case-lowfodmap__phase-tracker--personalization">
-                  <div className="case-lowfodmap__personal-restrictions">
-                    <div className="case-lowfodmap__restriction-header">
-                      <span className="case-lowfodmap__restriction-title">Ваши ограничения</span>
-                      <span className="case-lowfodmap__restriction-count">2 группы</span>
-                    </div>
-                    <div className="case-lowfodmap__restriction-list">
-                      <div className="case-lowfodmap__restriction-item case-lowfodmap__restriction-item--avoid">
-                        <div className="case-lowfodmap__restriction-icon">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" strokeWidth="2"/>
-                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" strokeWidth="2"/>
-                          </svg>
-                        </div>
-                        <span className="case-lowfodmap__restriction-name">Олигосахариды</span>
-                        <span className="case-lowfodmap__restriction-status">Избегать</span>
-                      </div>
-                      <div className="case-lowfodmap__restriction-item case-lowfodmap__restriction-item--limit">
-                        <div className="case-lowfodmap__restriction-icon">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                        </div>
-                        <span className="case-lowfodmap__restriction-name">Полиолы</span>
-                        <span className="case-lowfodmap__restriction-status">Ограничить</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <p className="case-lowfodmap__phase-demo-description">
                   В третьей фазе компонент становится персональным гидом, показывая только те группы FODMAP, которые вызывают симптомы у конкретного пользователя.

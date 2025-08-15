@@ -1049,6 +1049,37 @@
   }
 }
 
+/* Rive Animation Container */
+.case-lowfodmap__real-interface {
+  padding: 20px;
+  margin: 16px 0;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.case-lowfodmap__rive-container {
+  width: 50%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+
+.case-lowfodmap__rive-animation {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+
+
 /* Design and Iterations Section */
 .case-lowfodmap__design-section {
   margin: 60px 0;
@@ -1268,232 +1299,6 @@
   color: var(--muted);
 }
 
-/* Phase 2: Reintroduction Tracker */
-.case-lowfodmap__phase-tracker--reintroduction {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 163, 150, 0.08) 0%,
-    rgba(155, 156, 255, 0.06) 100%
-  );
-  border-color: rgba(255, 163, 150, 0.15);
-}
-
-.case-lowfodmap__fodmap-groups {
-  display: grid;
-  gap: 12px;
-}
-
-.case-lowfodmap__fodmap-group {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  padding: 16px;
-  transition: all 160ms ease;
-}
-
-.case-lowfodmap__fodmap-group--completed {
-  background: linear-gradient(
-    135deg,
-    rgba(108, 223, 219, 0.15) 0%,
-    rgba(108, 223, 219, 0.08) 100%
-  );
-  border-color: rgba(108, 223, 219, 0.3);
-}
-
-.case-lowfodmap__fodmap-group--active {
-  background: linear-gradient(
-    135deg,
-    rgba(155, 156, 255, 0.15) 0%,
-    rgba(155, 156, 255, 0.08) 100%
-  );
-  border-color: rgba(155, 156, 255, 0.3);
-  box-shadow: 0 0 15px rgba(155, 156, 255, 0.2);
-}
-
-.case-lowfodmap__fodmap-group--pending {
-  opacity: 0.6;
-}
-
-.case-lowfodmap__fodmap-group-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.case-lowfodmap__fodmap-group-name {
-  font-weight: 600;
-  color: var(--text);
-}
-
-.case-lowfodmap__fodmap-group-status {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--muted);
-}
-
-.case-lowfodmap__fodmap-group-status--active {
-  background: linear-gradient(135deg, #9b9cff, #6cdfdb);
-  color: white;
-  box-shadow: 0 0 10px rgba(155, 156, 255, 0.3);
-}
-
-.case-lowfodmap__fodmap-group--completed .case-lowfodmap__fodmap-group-status {
-  background: linear-gradient(135deg, #6cdfdb, #4ade80);
-  color: white;
-  box-shadow: 0 0 10px rgba(108, 223, 219, 0.3);
-}
-
-.case-lowfodmap__fodmap-group-progress {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.case-lowfodmap__fodmap-group-bar {
-  width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.case-lowfodmap__fodmap-group-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #9b9cff, #6cdfdb);
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-.case-lowfodmap__fodmap-group-days {
-  font-size: 0.875rem;
-  color: var(--muted);
-}
-
-/* Phase 3: Personalization Tracker */
-.case-lowfodmap__phase-tracker--personalization {
-  background: linear-gradient(
-    135deg,
-    rgba(108, 223, 219, 0.08) 0%,
-    rgba(155, 156, 255, 0.06) 100%
-  );
-  border-color: rgba(108, 223, 219, 0.15);
-}
-
-.case-lowfodmap__personal-restrictions {
-  display: grid;
-  gap: 16px;
-}
-
-.case-lowfodmap__restriction-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.case-lowfodmap__restriction-title {
-  font-weight: 600;
-  color: var(--text);
-}
-
-.case-lowfodmap__restriction-count {
-  background: linear-gradient(
-    135deg,
-    rgba(108, 223, 219, 0.2) 0%,
-    rgba(155, 156, 255, 0.2) 100%
-  );
-  border: 1px solid rgba(108, 223, 219, 0.3);
-  border-radius: 12px;
-  padding: 2px 8px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.case-lowfodmap__restriction-list {
-  display: grid;
-  gap: 8px;
-}
-
-.case-lowfodmap__restriction-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  transition: all 160ms ease;
-}
-
-.case-lowfodmap__restriction-item--avoid {
-  border-color: rgba(255, 107, 107, 0.3);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 107, 107, 0.1) 0%,
-    rgba(255, 107, 107, 0.05) 100%
-  );
-}
-
-.case-lowfodmap__restriction-item--limit {
-  border-color: rgba(255, 163, 150, 0.3);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 163, 150, 0.1) 0%,
-    rgba(255, 163, 150, 0.05) 100%
-  );
-}
-
-.case-lowfodmap__restriction-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.case-lowfodmap__restriction-item--avoid .case-lowfodmap__restriction-icon {
-  background: linear-gradient(135deg, #ff6b6b, #ff8a80);
-  color: white;
-  box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
-}
-
-.case-lowfodmap__restriction-item--limit .case-lowfodmap__restriction-icon {
-  background: linear-gradient(135deg, #ffa396, #ffb74d);
-  color: white;
-  box-shadow: 0 0 10px rgba(255, 163, 150, 0.3);
-}
-
-.case-lowfodmap__restriction-name {
-  flex: 1;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.case-lowfodmap__restriction-status {
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 10px;
-}
-
-.case-lowfodmap__restriction-item--avoid .case-lowfodmap__restriction-status {
-  background: rgba(255, 107, 107, 0.2);
-  color: #ff6b6b;
-}
-
-.case-lowfodmap__restriction-item--limit .case-lowfodmap__restriction-status {
-  background: rgba(255, 163, 150, 0.2);
-  color: #ffa396;
-}
 
 /* Design Decisions */
 .case-lowfodmap__design-decisions {
@@ -1615,6 +1420,12 @@
     font-size: 1.125rem;
   }
   
+  .case-lowfodmap__rive-container {
+    height: 400px;
+    width: 100%;
+  }
+  }
+  
   .case-lowfodmap__phase-counter-current {
     font-size: 1.75rem;
   }
@@ -1646,7 +1457,6 @@
   .case-lowfodmap__decision-description {
     font-size: 0.875rem;
   }
-}
 
 @media (max-width: 480px) {
   .case-lowfodmap__phase-demo {
@@ -1655,6 +1465,15 @@
   
   .case-lowfodmap__phase-tracker {
     padding: 16px;
+  }
+  
+  .case-lowfodmap__real-interface {
+    padding: 16px;
+  }
+  
+  .case-lowfodmap__rive-container {
+    height: 350px;
+    width: 100%;
   }
   
   .case-lowfodmap__fodmap-group {

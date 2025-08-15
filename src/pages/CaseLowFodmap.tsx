@@ -430,6 +430,214 @@ export default function CaseLowFodmap() {
             </p>
           </div>
         </section>
+
+        {/* Design and Iterations Section */}
+        <section id="design" className="case-lowfodmap__design-section">
+          <h2 className="case-lowfodmap__problem-header">Дизайн и итерации: От идей к прототипу</h2>
+          <div className="case-lowfodmap__design-description">
+            <p>
+              После глубокого погружения в предметную область и анализа конкурентов стало ясно: нужен инструмент, который будет <b>проводником через все три этапа диеты</b>. Центральным элементом интерфейса стал компонент отслеживания фаз — умный помощник, который автоматически адаптируется под текущий этап пользователя и предоставляет именно ту информацию, которая нужна здесь и сейчас.
+            </p>
+          </div>
+
+          {/* Phase Tracking Component Showcase */}
+          <div className="case-lowfodmap__interface-showcase">
+            <h3 className="case-lowfodmap__complexity-subheader">Компонент отслеживания фаз</h3>
+            <div className="case-lowfodmap__phase-demos">
+              
+              {/* Phase 1 Demo */}
+              <div className="case-lowfodmap__phase-demo">
+                <div className="case-lowfodmap__phase-demo-header">
+                  <h4 className="case-lowfodmap__phase-demo-title">Фаза 1: Элиминация</h4>
+                  <span className="case-lowfodmap__phase-demo-badge">7 дней</span>
+                </div>
+                <div className="case-lowfodmap__phase-tracker case-lowfodmap__phase-tracker--elimination">
+                  <div className="case-lowfodmap__phase-progress">
+                    <div className="case-lowfodmap__phase-progress-bar">
+                      <div className="case-lowfodmap__phase-progress-fill case-lowfodmap__phase-progress-fill--elimination" style={{width: '57%'}}></div>
+                    </div>
+                    <div className="case-lowfodmap__phase-counter">
+                      <span className="case-lowfodmap__phase-counter-current">4</span>
+                      <span className="case-lowfodmap__phase-counter-separator">/</span>
+                      <span className="case-lowfodmap__phase-counter-total">7</span>
+                      <span className="case-lowfodmap__phase-counter-label">дней без high-FODMAP</span>
+                    </div>
+                  </div>
+                  <div className="case-lowfodmap__phase-status">
+                    <div className="case-lowfodmap__phase-status-icon case-lowfodmap__phase-status-icon--active">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <span className="case-lowfodmap__phase-status-text">Автоматический подсчёт дней элиминации</span>
+                  </div>
+                </div>
+                <p className="case-lowfodmap__phase-demo-description">
+                  На первом этапе компонент автоматически отслеживает количество дней без high-FODMAP продуктов, мотивируя пользователя довести элиминацию до конца.
+                </p>
+              </div>
+
+              {/* Phase 2 Demo */}
+              <div className="case-lowfodmap__phase-demo">
+                <div className="case-lowfodmap__phase-demo-header">
+                  <h4 className="case-lowfodmap__phase-demo-title">Фаза 2: Реинтродукция</h4>
+                  <span className="case-lowfodmap__phase-demo-badge">По группам</span>
+                </div>
+                <div className="case-lowfodmap__phase-tracker case-lowfodmap__phase-tracker--reintroduction">
+                  <div className="case-lowfodmap__fodmap-groups">
+                    <div className="case-lowfodmap__fodmap-group case-lowfodmap__fodmap-group--completed">
+                      <div className="case-lowfodmap__fodmap-group-header">
+                        <span className="case-lowfodmap__fodmap-group-name">Олигосахариды</span>
+                        <div className="case-lowfodmap__fodmap-group-status">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="case-lowfodmap__fodmap-group-progress">
+                        <span className="case-lowfodmap__fodmap-group-days">3/3 дня тестирования</span>
+                      </div>
+                    </div>
+                    
+                    <div className="case-lowfodmap__fodmap-group case-lowfodmap__fodmap-group--active">
+                      <div className="case-lowfodmap__fodmap-group-header">
+                        <span className="case-lowfodmap__fodmap-group-name">Дисахариды</span>
+                        <div className="case-lowfodmap__fodmap-group-status case-lowfodmap__fodmap-group-status--active">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                            <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="case-lowfodmap__fodmap-group-progress">
+                        <div className="case-lowfodmap__fodmap-group-bar">
+                          <div className="case-lowfodmap__fodmap-group-fill" style={{width: '33%'}}></div>
+                        </div>
+                        <span className="case-lowfodmap__fodmap-group-days">1/3 дня тестирования</span>
+                      </div>
+                    </div>
+                    
+                    <div className="case-lowfodmap__fodmap-group case-lowfodmap__fodmap-group--pending">
+                      <div className="case-lowfodmap__fodmap-group-header">
+                        <span className="case-lowfodmap__fodmap-group-name">Моносахариды</span>
+                        <div className="case-lowfodmap__fodmap-group-status">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="case-lowfodmap__fodmap-group-progress">
+                        <span className="case-lowfodmap__fodmap-group-days">Ожидает тестирования</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="case-lowfodmap__phase-demo-description">
+                  Во второй фазе компонент трансформируется в трекер групп FODMAP, показывая прогресс тестирования каждой группы углеводов с индивидуальными счётчиками дней.
+                </p>
+              </div>
+
+              {/* Phase 3 Demo */}
+              <div className="case-lowfodmap__phase-demo">
+                <div className="case-lowfodmap__phase-demo-header">
+                  <h4 className="case-lowfodmap__phase-demo-title">Фаза 3: Персонализация</h4>
+                  <span className="case-lowfodmap__phase-demo-badge">Индивидуально</span>
+                </div>
+                <div className="case-lowfodmap__phase-tracker case-lowfodmap__phase-tracker--personalization">
+                  <div className="case-lowfodmap__personal-restrictions">
+                    <div className="case-lowfodmap__restriction-header">
+                      <span className="case-lowfodmap__restriction-title">Ваши ограничения</span>
+                      <span className="case-lowfodmap__restriction-count">2 группы</span>
+                    </div>
+                    <div className="case-lowfodmap__restriction-list">
+                      <div className="case-lowfodmap__restriction-item case-lowfodmap__restriction-item--avoid">
+                        <div className="case-lowfodmap__restriction-icon">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                            <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" strokeWidth="2"/>
+                            <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" strokeWidth="2"/>
+                          </svg>
+                        </div>
+                        <span className="case-lowfodmap__restriction-name">Олигосахариды</span>
+                        <span className="case-lowfodmap__restriction-status">Избегать</span>
+                      </div>
+                      <div className="case-lowfodmap__restriction-item case-lowfodmap__restriction-item--limit">
+                        <div className="case-lowfodmap__restriction-icon">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <span className="case-lowfodmap__restriction-name">Полиолы</span>
+                        <span className="case-lowfodmap__restriction-status">Ограничить</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="case-lowfodmap__phase-demo-description">
+                  В третьей фазе компонент становится персональным гидом, показывая только те группы FODMAP, которые вызывают симптомы у конкретного пользователя.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Design Decisions */}
+          <div className="case-lowfodmap__design-decisions">
+            <h3 className="case-lowfodmap__complexity-subheader">Ключевые дизайн-решения</h3>
+            <div className="case-lowfodmap__decision-cards">
+              <div className="case-lowfodmap__decision-card">
+                <div className="case-lowfodmap__decision-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <h4 className="case-lowfodmap__decision-title">Адаптивный интерфейс</h4>
+                <p className="case-lowfodmap__decision-description">
+                  Один компонент трансформируется под каждую фазу, избавляя от когнитивной нагрузки и создавая ощущение персонального помощника.
+                </p>
+              </div>
+              
+              <div className="case-lowfodmap__decision-card">
+                <div className="case-lowfodmap__decision-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+                <h4 className="case-lowfodmap__decision-title">Автоматизация рутины</h4>
+                <p className="case-lowfodmap__decision-description">
+                  Система сама считает дни, переключает фазы и напоминает о следующих шагах, освобождая пользователя от механических действий.
+                </p>
+              </div>
+              
+              <div className="case-lowfodmap__decision-card">
+                <div className="case-lowfodmap__decision-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <h4 className="case-lowfodmap__decision-title">Визуальная обратная связь</h4>
+                <p className="case-lowfodmap__decision-description">
+                  Прогресс-бары, цветовое кодирование и иконки дают мгновенное понимание текущего статуса без необходимости читать текст.
+                </p>
+              </div>
+              
+              <div className="case-lowfodmap__decision-card">
+                <div className="case-lowfodmap__decision-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" strokeWidth="2"/>
+                    <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+                <h4 className="case-lowfodmap__decision-title">Персонализация</h4>
+                <p className="case-lowfodmap__decision-description">
+                  В финальной фазе интерфейс показывает только релевантные ограничения, создавая индивидуальный план питания.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
       {/* Fullscreen Modal */}

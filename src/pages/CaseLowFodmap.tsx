@@ -4,21 +4,40 @@ import { useRive } from '@rive-app/react-canvas';
 
 // Rive Phase Tracker Component
 function RivePhaseTracker() {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Check on initial render
+    checkIsMobile();
+    
+    // Add resize listener
+    window.addEventListener('resize', checkIsMobile);
+    
+    // Cleanup listener
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+  
   const { RiveComponent } = useRive({
-    src: '/src/assets/fodmap.riv',
+    src: isMobile ? '/src/assets/fodmap-mobile.riv' : '/src/assets/fodmap.riv',
     autoplay: true,
-    stateMachines: 'State Machine 1', // Adjust this based on your Rive file's state machine name
+    stateMachines: isMobile ? 'State Machine 2' : 'State Machine 1', // Use State Machine 2 for mobile
   });
 
   return (
     <div className="case-lowfodmap__rive-container">
       <RiveComponent className="case-lowfodmap__rive-animation" />
-      <div className="case-lowfodmap__interactive-indicator">
-        <svg className="case-lowfodmap__indicator-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        <span className="case-lowfodmap__indicator-text">Наведите курсор</span>
-      </div>
+      {!isMobile && (
+        <div className="case-lowfodmap__interactive-indicator">
+          <svg className="case-lowfodmap__indicator-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <span className="case-lowfodmap__indicator-text">Наведите курсор</span>
+        </div>
+      )}
     </div>
   );
 }

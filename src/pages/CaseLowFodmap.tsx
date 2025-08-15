@@ -489,19 +489,20 @@ export default function CaseLowFodmap() {
               {/* Phase 1 Demo - Real Interface */}
               <div className="case-lowfodmap__phase-demo">
                 <div className="case-lowfodmap__phase-demo-header">
-                  <h4 className="case-lowfodmap__phase-demo-title">Фаза 1: Элиминация</h4>
-                  <span className="case-lowfodmap__phase-demo-badge">Реальный интерфейс</span>
+                  <h4 className="case-lowfodmap__phase-demo-title">Фаза 1: Исключение</h4>
+                  <span className="case-lowfodmap__phase-demo-badge">От 3 до 7 дней</span>
                 </div>
                 <div className="case-lowfodmap__real-interface-container">
-                  <div className="case-lowfodmap__real-interface">
-                    <RivePhaseTracker />
-                  </div>
+                  
                   <div className="case-lowfodmap__real-screenshot">
                     <img 
                       src="/src/assets/case-images/first-case/phone-phase1.png" 
                       alt="Скриншот интерфейса первой фазы" 
                       className="case-lowfodmap__phase-screenshot"
                     />
+                  </div>
+                  <div className="case-lowfodmap__real-interface">
+                    <RivePhaseTracker />
                   </div>
                 </div>
                 <p className="case-lowfodmap__phase-demo-description">

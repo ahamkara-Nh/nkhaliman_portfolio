@@ -467,8 +467,17 @@ export default function CaseLowFodmap() {
                   <h4 className="case-lowfodmap__phase-demo-title">Фаза 1: Элиминация</h4>
                   <span className="case-lowfodmap__phase-demo-badge">Реальный интерфейс</span>
                 </div>
-                <div className="case-lowfodmap__real-interface">
-                  <RivePhaseTracker />
+                <div className="case-lowfodmap__real-interface-container">
+                  <div className="case-lowfodmap__real-interface">
+                    <RivePhaseTracker />
+                  </div>
+                  <div className="case-lowfodmap__real-screenshot">
+                    <img 
+                      src="/src/assets/case-images/first-case/phone-phase1.png" 
+                      alt="Скриншот интерфейса первой фазы" 
+                      className="case-lowfodmap__phase-screenshot"
+                    />
+                  </div>
                 </div>
                 <p className="case-lowfodmap__phase-demo-description">
                   Реальный интерфейс первой фазы с интерактивной Rive-анимацией. Компонент автоматически отслеживает прогресс элиминации, создавая мотивирующий и визуально привлекательный опыт для пользователя.

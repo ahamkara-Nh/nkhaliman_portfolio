@@ -1149,11 +1149,6 @@
   pointer-events: none;
 }
 
-.case-lowfodmap__rive-container:hover::after {
-  width: 400px;
-  height: 400px;
-}
-
 .case-lowfodmap__rive-animation {
   width: 100%;
   height: 100%;

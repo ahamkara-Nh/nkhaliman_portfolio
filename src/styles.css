@@ -725,6 +725,14 @@ body::after {
 }
 
 /* Small screens tweaks */
+
+
+@media (max-width: 1600px) {
+  .page {
+    padding: 24px 24px;
+  }
+}
+
 @media (max-width: 900px) {
   .page {
     padding: 24px 24px;

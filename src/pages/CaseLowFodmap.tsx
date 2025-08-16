@@ -490,8 +490,10 @@ export default function CaseLowFodmap() {
               <div className="case-lowfodmap__phase-demo">
                 <div className="case-lowfodmap__phase-demo-header">
                   <h4 className="case-lowfodmap__phase-demo-title">Фаза 1: Исключение</h4>
-                  <span className="case-lowfodmap__phase-demo-badge">От 3 до 7 дней</span>
                 </div>
+                <p className="case-lowfodmap__phase-demo-description">
+                  Реальный интерфейс первой фазы с интерактивной Rive-анимацией. Компонент автоматически отслеживает прогресс элиминации, создавая мотивирующий и визуально привлекательный опыт для пользователя.
+                </p>
                 <div className="case-lowfodmap__real-interface-container">
                   
                   <div className="case-lowfodmap__real-screenshot">
@@ -505,16 +507,13 @@ export default function CaseLowFodmap() {
                     <RivePhaseTracker />
                   </div>
                 </div>
-                <p className="case-lowfodmap__phase-demo-description">
-                  Реальный интерфейс первой фазы с интерактивной Rive-анимацией. Компонент автоматически отслеживает прогресс элиминации, создавая мотивирующий и визуально привлекательный опыт для пользователя.
-                </p>
+                
               </div>
 
               {/* Phase 2 Demo */}
               <div className="case-lowfodmap__phase-demo">
                 <div className="case-lowfodmap__phase-demo-header">
                   <h4 className="case-lowfodmap__phase-demo-title">Фаза 2: Реинтродукция</h4>
-                  <span className="case-lowfodmap__phase-demo-badge">По группам</span>
                 </div>
                 <p className="case-lowfodmap__phase-demo-description">
                   Во второй фазе компонент трансформируется в трекер групп FODMAP, показывая прогресс тестирования каждой группы углеводов с индивидуальными счётчиками дней.
@@ -525,7 +524,6 @@ export default function CaseLowFodmap() {
               <div className="case-lowfodmap__phase-demo">
                 <div className="case-lowfodmap__phase-demo-header">
                   <h4 className="case-lowfodmap__phase-demo-title">Фаза 3: Персонализация</h4>
-                  <span className="case-lowfodmap__phase-demo-badge">Индивидуально</span>
                 </div>
                 <p className="case-lowfodmap__phase-demo-description">
                   В третьей фазе компонент становится персональным гидом, показывая только те группы FODMAP, которые вызывают симптомы у конкретного пользователя.

@@ -349,7 +349,6 @@
   
   .case-lowfodmap__problem-section {
     margin: 48px 0;
-    padding: 32px 0;
   }
   
   .case-lowfodmap__problem-header {
@@ -547,11 +546,13 @@
 @media (max-width: 768px) {
   .case-lowfodmap__research-section {
     margin: 48px 0;
-    padding: 32px 0;
   }
   
   .case-lowfodmap__research-description p {
     font-size: 1rem;
+  }
+  .hero {
+    padding-top: 0px;
   }
 }
 
@@ -582,7 +583,6 @@
 @media (max-width: 768px) {
   .case-lowfodmap__subject-area {
     margin: 48px 0;
-    padding: 32px 0;
   }
   
   .case-lowfodmap__subject-description p {
@@ -1035,7 +1035,6 @@
   
   .case-lowfodmap__expert-interview {
     margin: 48px 0;
-    padding: 32px 0;
   }
   
   .case-lowfodmap__interview-images {
@@ -1057,7 +1056,7 @@
   position: relative;
   z-index: 2;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .case-lowfodmap__real-interface {
@@ -1287,21 +1286,6 @@
   color: var(--text);
 }
 
-.case-lowfodmap__phase-demo-badge {
-  background: linear-gradient(
-    135deg,
-    rgba(155, 156, 255, 0.2) 0%,
-    rgba(108, 223, 219, 0.2) 100%
-  );
-  border: 1px solid rgba(155, 156, 255, 0.3);
-  border-radius: 20px;
-  padding: 4px 12px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
 
 .case-lowfodmap__phase-demo-description {
   font-size: 1rem;

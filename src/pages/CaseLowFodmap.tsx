@@ -524,7 +524,7 @@ export default function CaseLowFodmap() {
                     <img
                       src="/src/assets/case-images/second-phase-svg/first.svg"
                       alt="Скриншот интерфейса второй фазы - первый этап"
-                      className="case-lowfodmap__phase-screenshot"
+                      className="case-lowfodmap__phase-screenshot2"
                     />
                   </div>
                   <div className="case-lowfodmap__arrow-icon">
@@ -536,7 +536,7 @@ export default function CaseLowFodmap() {
                     <img
                       src="/src/assets/case-images/second-phase-svg/second.svg"
                       alt="Скриншот интерфейса второй фазы - второй этап"
-                      className="case-lowfodmap__phase-screenshot"
+                      className="case-lowfodmap__phase-screenshot2"
                     />
                   </div>
                   <div className="case-lowfodmap__arrow-icon">
@@ -548,7 +548,7 @@ export default function CaseLowFodmap() {
                     <img
                       src="/src/assets/case-images/second-phase-svg/third.svg"
                       alt="Скриншот интерфейса второй фазы - третий этап"
-                      className="case-lowfodmap__phase-screenshot"
+                      className="case-lowfodmap__phase-screenshot2"
                     />
                   </div>
                 </div>

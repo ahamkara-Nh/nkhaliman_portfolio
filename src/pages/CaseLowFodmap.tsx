@@ -47,7 +47,6 @@ export default function CaseLowFodmap() {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [currentPosition, setCurrentPosition] = useState({ x: 0, y: 0 });
   const diagramRef = useRef<HTMLDivElement>(null);
   const touchStartDistance = useRef<number>(0);

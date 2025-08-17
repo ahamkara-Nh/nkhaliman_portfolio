@@ -518,6 +518,40 @@ export default function CaseLowFodmap() {
                 <p className="case-lowfodmap__phase-demo-description">
                   Во второй фазе компонент трансформируется в трекер групп FODMAP, показывая прогресс тестирования каждой группы углеводов с индивидуальными счётчиками дней.
                 </p>
+                {/* Phase 2 Screenshots */}
+                <div className="case-lowfodmap__phase-screenshots">
+                  <div className="case-lowfodmap__screenshot-container">
+                    <img
+                      src="/src/assets/case-images/second-phase-svg/first.svg"
+                      alt="Скриншот интерфейса второй фазы - первый этап"
+                      className="case-lowfodmap__phase-screenshot"
+                    />
+                  </div>
+                  <div className="case-lowfodmap__arrow-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="case-lowfodmap__screenshot-container">
+                    <img
+                      src="/src/assets/case-images/second-phase-svg/second.svg"
+                      alt="Скриншот интерфейса второй фазы - второй этап"
+                      className="case-lowfodmap__phase-screenshot"
+                    />
+                  </div>
+                  <div className="case-lowfodmap__arrow-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="case-lowfodmap__screenshot-container">
+                    <img
+                      src="/src/assets/case-images/second-phase-svg/third.svg"
+                      alt="Скриншот интерфейса второй фазы - третий этап"
+                      className="case-lowfodmap__phase-screenshot"
+                    />
+                  </div>
+                </div>
               </div>
 
               {/* Phase 3 Demo */}

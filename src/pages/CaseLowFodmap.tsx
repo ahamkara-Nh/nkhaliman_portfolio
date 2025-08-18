@@ -44,7 +44,9 @@ function RivePhaseTracker() {
 
 export default function CaseLowFodmap() {
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(1);
+  const [isPhase2Fullscreen, setIsPhase2Fullscreen] = useState(false);
+  const [fullscreenImage, setFullscreenImage] = useState('');
+  const [zoomLevel, setZoomLevel] = useState(0.25); // 25% default zoom for Phase 2
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [currentPosition, setCurrentPosition] = useState({ x: 0, y: 0 });
@@ -57,22 +59,35 @@ export default function CaseLowFodmap() {
     setCurrentPosition({ x: 0, y: 0 }); // Reset position when opening fullscreen
   };
 
+  const openPhase2Fullscreen = (imageSrc: string) => {
+    setFullscreenImage(imageSrc);
+    setIsPhase2Fullscreen(true);
+    setZoomLevel(0.25); // Set default zoom to 25% for Phase 2 screenshots
+    setCurrentPosition({ x: 0, y: 0 }); // Reset position
+  };
+
   const closeFullscreen = () => {
     setIsFullscreen(false);
     setZoomLevel(1); // Reset zoom when closing fullscreen
     setCurrentPosition({ x: 0, y: 0 }); // Reset position when closing fullscreen
   };
 
+  const closePhase2Fullscreen = () => {
+    setIsPhase2Fullscreen(false);
+    setZoomLevel(0.25); // Reset zoom when closing fullscreen
+    setCurrentPosition({ x: 0, y: 0 }); // Reset position when closing fullscreen
+  };
+
   const zoomIn = () => {
-    setZoomLevel(prev => Math.min(prev + 0.2, 3)); // Max zoom 3x
+    setZoomLevel(prev => Math.min(prev + 0.05, 3)); // Max zoom 3x, 5% increment
   };
 
   const zoomOut = () => {
-    setZoomLevel(prev => Math.max(prev - 0.2, 0.5)); // Min zoom 0.5x
+    setZoomLevel(prev => Math.max(prev - 0.05, 0.1)); // Min zoom 0.1x (10%), 5% decrement
   };
 
   const resetZoom = () => {
-    setZoomLevel(1);
+    setZoomLevel(isPhase2Fullscreen ? 0.25 : 1);
     setCurrentPosition({ x: 0, y: 0 });
   };
 
@@ -88,13 +103,11 @@ export default function CaseLowFodmap() {
 
   // Handle mouse drag start
   const handleMouseDown = (e: React.MouseEvent) => {
-    if (zoomLevel > 1) {
-      e.preventDefault();
-      setIsDragging(true);
-      setDragStart({ x: e.clientX - currentPosition.x, y: e.clientY - currentPosition.y });
-      if (diagramRef.current) {
-        diagramRef.current.style.cursor = 'grabbing';
-      }
+    e.preventDefault();
+    setIsDragging(true);
+    setDragStart({ x: e.clientX - currentPosition.x, y: e.clientY - currentPosition.y });
+    if (diagramRef.current) {
+      diagramRef.current.style.cursor = 'grabbing';
     }
   };
 
@@ -112,7 +125,7 @@ export default function CaseLowFodmap() {
   const handleMouseUp = () => {
     setIsDragging(false);
     if (diagramRef.current) {
-      diagramRef.current.style.cursor = zoomLevel > 1 ? 'grab' : 'default';
+      diagramRef.current.style.cursor = 'grab';
     }
   };
 
@@ -126,7 +139,7 @@ export default function CaseLowFodmap() {
         Math.pow(touch2.clientX - touch1.clientX, 2) +
         Math.pow(touch2.clientY - touch1.clientY, 2)
       );
-    } else if (e.touches.length === 1 && zoomLevel > 1) {
+    } else if (e.touches.length === 1) {
       // Single touch for panning
       e.preventDefault(); // Prevent default scrolling behavior
       setIsDragging(true);
@@ -166,16 +179,20 @@ export default function CaseLowFodmap() {
     touchStartDistance.current = 0;
   };
 
-  // Update cursor based on zoom level
+  // Update cursor based on zoom level and dragging state
   useEffect(() => {
     if (diagramRef.current) {
-      diagramRef.current.style.cursor = zoomLevel > 1 ? 'grab' : 'default';
+      if (isDragging) {
+        diagramRef.current.style.cursor = 'grabbing';
+      } else {
+        diagramRef.current.style.cursor = 'grab';
+      }
     }
-  }, [zoomLevel]);
+  }, [isDragging]);
 
   // Add event listeners for zoom functionality
   useEffect(() => {
-    if (isFullscreen && diagramRef.current) {
+    if ((isFullscreen || isPhase2Fullscreen) && diagramRef.current) {
       const element = diagramRef.current;
       
       // Add wheel event listener
@@ -193,7 +210,7 @@ export default function CaseLowFodmap() {
         element.removeEventListener('touchend', handleTouchEnd as EventListener);
       };
     }
-  }, [isFullscreen, zoomLevel, isDragging, currentPosition]);
+  }, [isFullscreen, isPhase2Fullscreen, zoomLevel, isDragging, currentPosition]);
 
   return (
     <div className="case-page case-lowfodmap" role="main" aria-label="Case: Low-FODMAP">
@@ -519,7 +536,7 @@ export default function CaseLowFodmap() {
                 </p>
                 {/* Phase 2 Screenshots */}
                 <div className="case-lowfodmap__phase-screenshots">
-                  <div className="case-lowfodmap__screenshot-container">
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/first.svg")}>
                     <img
                       src="/src/assets/case-images/second-phase-svg/first.svg"
                       alt="Скриншот интерфейса второй фазы - первый этап"
@@ -531,7 +548,7 @@ export default function CaseLowFodmap() {
                       <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <div className="case-lowfodmap__screenshot-container">
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/second.svg")}>
                     <img
                       src="/src/assets/case-images/second-phase-svg/second.svg"
                       alt="Скриншот интерфейса второй фазы - второй этап"
@@ -543,7 +560,7 @@ export default function CaseLowFodmap() {
                       <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <div className="case-lowfodmap__screenshot-container">
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/third.svg")}>
                     <img
                       src="/src/assets/case-images/second-phase-svg/third.svg"
                       alt="Скриншот интерфейса второй фазы - третий этап"
@@ -699,6 +716,85 @@ export default function CaseLowFodmap() {
                 }}
                 draggable={false} // Prevent SVG dragging
                 onDragStart={(e) => e.preventDefault()} // Extra prevention for dragging
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Fullscreen Modal for Phase 2 Screenshots */}
+      {isPhase2Fullscreen && (
+        <div className="case-lowfodmap__fullscreen-overlay case-lowfodmap__fullscreen-overlay--phase2" onClick={closePhase2Fullscreen}>
+          <div className="case-lowfodmap__fullscreen-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="case-lowfodmap__fullscreen-header">
+              <h3>Скриншот интерфейса второй фазы</h3>
+              <div className="case-lowfodmap__zoom-controls">
+                <button 
+                  className="case-lowfodmap__zoom-button" 
+                  onClick={zoomOut}
+                  aria-label="Уменьшить"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+                <div className="case-lowfodmap__zoom-level-container">
+                  <span className="case-lowfodmap__zoom-level-text">{Math.round(zoomLevel * 100)}%</span>
+                  <div className="case-lowfodmap__zoom-level-bar">
+                    <div 
+                      className="case-lowfodmap__zoom-level-fill" 
+                      style={{ width: `${((zoomLevel - 0.1) / 2.9) * 100}%` }}
+                    ></div>
+                  </div>
+                </div>
+                <button 
+                  className="case-lowfodmap__zoom-button" 
+                  onClick={zoomIn}
+                  aria-label="Увеличить"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+                <button 
+                  className="case-lowfodmap__zoom-button case-lowfodmap__zoom-reset-button" 
+                  onClick={resetZoom}
+                  aria-label="Сбросить масштаб"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4V9H4.5M4.5 9H9M4.5 9V13.5M20 20V15H19.5M19.5 15H15M19.5 15V9.5M16 16L20 20L16 16ZM8 8L4 4L8 8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <button className="case-lowfodmap__fullscreen-close" onClick={closePhase2Fullscreen} aria-label="Закрыть">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div 
+              className={`case-lowfodmap__fullscreen-content--phase2 ${isPhase2Fullscreen ? 'case-lowfodmap__fullscreen-content--phase2' : ''} ${isDragging ? 'case-lowfodmap__fullscreen-content--dragging' : ''}`}
+              ref={diagramRef}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
+            >
+              <div className="case-lowfodmap__zoom-instructions">
+                <span className="case-lowfodmap__zoom-instruction-text">
+                  Используйте колесо мыши или пинч для масштабирования, перетаскивание для навигации
+                </span>
+              </div>
+              <img 
+                src={fullscreenImage} 
+                alt="Скриншот интерфейса второй фазы" 
+                className="case-lowfodmap__fullscreen-diagram"
+                style={{ 
+                  transform: `scale(${zoomLevel}) translate(${currentPosition.x/zoomLevel}px, ${currentPosition.y/zoomLevel}px)`,
+                  transformOrigin: 'center center' 
+                }}
+                draggable={false}
+                onDragStart={(e) => e.preventDefault()}
               />
             </div>
           </div>

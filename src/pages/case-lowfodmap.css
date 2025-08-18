@@ -675,6 +675,10 @@
   padding: 20px;
 }
 
+.case-lowfodmap__fullscreen-overlay--phase2 {
+  background: transparent;
+}
+
 .case-lowfodmap__fullscreen-modal {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -690,6 +694,34 @@
   flex-direction: column;
   overflow: hidden;
 }
+
+
+.case-lowfodmap__fullscreen-content--phase2 {
+  background: #1a1a1a; /* Dark background for Phase 2 screenshots */
+  padding: 24px;
+  overflow: hidden; /* Changed from auto to hidden for better drag experience */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none; /* Prevent default touch actions for better zoom control */
+  position: relative;
+  user-select: none; /* Prevent text selection during drag */
+}
+
+.case-lowfodmap__fullscreen-content {
+  background: white;
+  padding: 24px;
+  overflow: hidden; /* Changed from auto to hidden for better drag experience */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none; /* Prevent default touch actions for better zoom control */
+  position: relative;
+  user-select: none; /* Prevent text selection during drag */
+}
+
 
 .case-lowfodmap__fullscreen-header {
   display: flex;
@@ -797,18 +829,7 @@
   color: var(--text);
 }
 
-.case-lowfodmap__fullscreen-content {
-  background: white;
-  padding: 24px;
-  overflow: hidden; /* Changed from auto to hidden for better drag experience */
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  touch-action: none; /* Prevent default touch actions for better zoom control */
-  position: relative;
-  user-select: none; /* Prevent text selection during drag */
-}
+
 
 .case-lowfodmap__fullscreen-content--dragging {
   cursor: grabbing !important;

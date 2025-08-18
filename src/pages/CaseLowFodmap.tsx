@@ -79,11 +79,11 @@ export default function CaseLowFodmap() {
   };
 
   const zoomIn = () => {
-    setZoomLevel(prev => Math.min(prev + 0.05, 3)); // Max zoom 3x, 5% increment
+    setZoomLevel(prev => Math.min(prev + 0.2, 3)); // Max zoom 3x, 5% increment
   };
 
   const zoomOut = () => {
-    setZoomLevel(prev => Math.max(prev - 0.05, 0.1)); // Min zoom 0.1x (10%), 5% decrement
+    setZoomLevel(prev => Math.max(prev - 0.2, 0.1)); // Min zoom 0.1x (10%), 5% decrement
   };
 
   const resetZoom = () => {
@@ -536,7 +536,7 @@ export default function CaseLowFodmap() {
                 </p>
                 {/* Phase 2 Screenshots */}
                 <div className="case-lowfodmap__phase-screenshots">
-                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/first.svg")}>
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/first.svg")} style={{ cursor: 'pointer'}}>
                     <img
                       src="/src/assets/case-images/second-phase-svg/first.svg"
                       alt="Скриншот интерфейса второй фазы - первый этап"
@@ -548,7 +548,7 @@ export default function CaseLowFodmap() {
                       <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/second.svg")}>
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/second.svg")} style={{ cursor: 'pointer'}}>
                     <img
                       src="/src/assets/case-images/second-phase-svg/second.svg"
                       alt="Скриншот интерфейса второй фазы - второй этап"
@@ -560,7 +560,7 @@ export default function CaseLowFodmap() {
                       <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/third.svg")}>
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/third.svg")} style={{ cursor: 'pointer'}}>
                     <img
                       src="/src/assets/case-images/second-phase-svg/third.svg"
                       alt="Скриншот интерфейса второй фазы - третий этап"

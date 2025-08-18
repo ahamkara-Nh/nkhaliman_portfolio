@@ -709,6 +709,12 @@
   user-select: none; /* Prevent text selection during drag */
 }
 
+
+.case-lowfodmap__fullscreen-content--phase2:hover .case-lowfodmap__zoom-instructions {
+  opacity: 0;
+}
+
+
 .case-lowfodmap__fullscreen-content {
   background: white;
   padding: 24px;

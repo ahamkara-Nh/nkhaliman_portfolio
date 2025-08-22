@@ -1,6 +1,7 @@
 .case-page.case-lowfodmap {
   display: block;
   padding: 0 16px 64px;
+  max-width: 100vw;
 }
 
 .case-content {
@@ -1739,16 +1740,15 @@
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.04);
   box-shadow: 0 8px 26px -16px rgba(155, 156, 255, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  padding: 24px 0;
+  padding: 24px 0; min-width: 0; /* allow container to shrink in flex/grid contexts */
 }
 
 .case-lowfodmap__onboarding-carousel {
-  width: 100%;
+  width: 100%; min-width: 0; /* ensure inner wrapper can shrink */
   overflow: hidden;
   position: relative;
 }
@@ -1758,13 +1758,14 @@
   gap: 24px;
   padding: 0 24px;
   animation: carousel-scroll 45s linear infinite;
-  width: calc(100% * 2); /* Double width for seamless loop */
+  width: fit-content;
+  min-width: 100%;
 }
 
 .case-lowfodmap__onboarding-slide {
   flex: 0 0 auto;
-  width: 280px;
-  height: 500px;
+  width: clamp(140px, 26vw, 280px); /* responsive width */
+  aspect-ratio: 9 / 16;            /* keep phone-like portrait ratio */
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
@@ -1830,6 +1831,18 @@
   }
 }
 
+/* Dynamic keyframes for responsive carousel */
+@media (max-width: 768px) {
+  @keyframes carousel-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
 /* Pause animation on hover */
 .case-lowfodmap__onboarding-carousel-container:hover .case-lowfodmap__onboarding-track {
   animation-play-state: paused;
@@ -1857,8 +1870,8 @@
   }
   
   .case-lowfodmap__onboarding-slide {
-    width: 200px;
-    height: 360px;
+    /* width via clamp from base */
+    /* height via aspect-ratio */
     padding: 12px;
     flex-shrink: 0; /* Prevent shrinking */
   }
@@ -1876,8 +1889,8 @@
   }
   
   .case-lowfodmap__onboarding-slide {
-    width: 160px;
-    height: 280px;
+    /* width via clamp from base */
+    /* height via aspect-ratio */
     padding: 8px;
     flex-shrink: 0; /* Prevent shrinking */
   }
@@ -1895,8 +1908,8 @@
   }
   
   .case-lowfodmap__onboarding-slide {
-    width: 140px;
-    height: 240px;
+    /* width via clamp from base */
+    /* height via aspect-ratio */
     padding: 6px;
     flex-shrink: 0;
   }

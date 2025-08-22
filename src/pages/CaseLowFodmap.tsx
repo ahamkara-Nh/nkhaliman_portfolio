@@ -555,10 +555,10 @@ export default function CaseLowFodmap() {
 
           {/* Onboarding Section */}
           <div className="case-lowfodmap__onboarding-section">
-            <h3 className="case-lowfodmap__complexity-subheader">Онбоардинг экраны</h3>
+            <h3 className="case-lowfodmap__complexity-subheader">Onboarding экраны</h3>
             <div className="case-lowfodmap__onboarding-description">
               <p>
-                Первое впечатление пользователя формируется на этапе онбоардинга. Здесь важно было не только объяснить суть диеты, но и показать, как приложение поможет пройти весь путь от элиминации до персонализации.
+                Первое впечатление пользователя формируется на этапе онбординга. Здесь важно было не только объяснить суть диеты, но и показать, как приложение поможет пройти весь путь от элиминации до персонализации.
               </p>
             </div>
             

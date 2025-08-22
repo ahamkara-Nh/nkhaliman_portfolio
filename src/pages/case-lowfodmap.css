@@ -1739,8 +1739,11 @@
 .case-lowfodmap__onboarding-carousel-container {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 0; /* Remove corner radius */
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-left: none; /* Remove left stroke */
+  border-right: none; /* Remove right stroke */
   box-shadow: 0 8px 26px -16px rgba(155, 156, 255, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -1943,5 +1946,15 @@
   
   .case-lowfodmap__onboarding-carousel::-webkit-scrollbar-thumb:hover {
     background: rgba(155, 156, 255, 0.5);
+  }
+}
+
+/* Running line animation for carousel container */
+@keyframes running-line {
+  0% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
   }
 }

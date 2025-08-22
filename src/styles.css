@@ -2,14 +2,14 @@
   color-scheme: dark;
   --bg: #0b0c0f;
   --text: #e6e7ea;
-  --muted: #a9aeba;
+  --muted: #ffffffa2;
   --accent: #9b9cff;
   --btn-bg: #161821;
   --btn-hover: #1e2230;
   --radius: 12px;
 }
 
-/* Global reset and typography --muted: #a9aeba; */
+/* Global reset and typography --muted: #a9aeba; #ffffff85 */
 *,
 *::before,
 *::after {

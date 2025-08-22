@@ -576,7 +576,30 @@ export default function CaseLowFodmap() {
                   <h4 className="case-lowfodmap__phase-demo-title">Фаза 3: Персонализация</h4>
                 </div>
                 <p className="case-lowfodmap__phase-demo-description">
-                  В третьей фазе компонент становится персональным гидом, показывая только те группы FODMAP, которые вызывают симптомы у конкретного пользователя.
+                  В третьей фазе компонент показывает группы FODMAP, которые вызывают симптомы у конкретного пользователя. Это помогает пользователю понять, какие группы FODMAP он должен избегать, чтобы быть более здоровым. В базе продуктов автоматически применяется фильтр.
+{/* Phase 3 Screenshots */}
+                <div className="case-lowfodmap__phase-screenshots">
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/third-phase-svg/first.svg")} style={{ cursor: 'pointer'}}>
+                    <img
+                      src="/src/assets/case-images/third-phase-svg/first.svg"
+                      alt="Скриншот интерфейса третьей фазы - первый этап"
+                      className="case-lowfodmap__phase-screenshot2"
+                      style={{maxWidth: '75%'}}
+                    />
+                  </div>
+                  <div className="case-lowfodmap__arrow-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/third-phase-svg/second.svg")} style={{ cursor: 'pointer'}}>
+                    <img
+                      src="/src/assets/case-images/third-phase-svg/second.svg"
+                      alt="Скриншот интерфейса третьей фазы - второй этап"
+                      className="case-lowfodmap__phase-screenshot2"
+                    />
+                  </div>
+                </div>
                 </p>
               </div>
             </div>
@@ -727,7 +750,7 @@ export default function CaseLowFodmap() {
         <div className="case-lowfodmap__fullscreen-overlay case-lowfodmap__fullscreen-overlay--phase2" onClick={closePhase2Fullscreen}>
           <div className="case-lowfodmap__fullscreen-modal" onClick={(e) => e.stopPropagation()}>
             <div className="case-lowfodmap__fullscreen-header">
-              <h3>Скриншот интерфейса второй фазы</h3>
+              <h3>Скриншот интерфейса</h3>
               <div className="case-lowfodmap__zoom-controls">
                 <button 
                   className="case-lowfodmap__zoom-button" 

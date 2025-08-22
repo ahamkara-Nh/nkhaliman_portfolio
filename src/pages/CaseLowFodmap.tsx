@@ -553,6 +553,61 @@ export default function CaseLowFodmap() {
             </div>
           </div>
 
+          {/* Onboarding Section */}
+          <div className="case-lowfodmap__onboarding-section">
+            <h3 className="case-lowfodmap__complexity-subheader">Онбоардинг экраны</h3>
+            <div className="case-lowfodmap__onboarding-description">
+              <p>
+                Первое впечатление пользователя формируется на этапе онбоардинга. Здесь важно было не только объяснить суть диеты, но и показать, как приложение поможет пройти весь путь от элиминации до персонализации.
+              </p>
+            </div>
+            
+            {/* Onboarding Screenshots Carousel */}
+            <div className="case-lowfodmap__onboarding-carousel-container">
+              <div className="case-lowfodmap__onboarding-carousel">
+                <div className="case-lowfodmap__onboarding-track">
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_1.svg" alt="Онбоардинг экран 1" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_2.svg" alt="Онбоардинг экран 2" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_3.svg" alt="Онбоардинг экран 3" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_1.svg" alt="Обучающий экран 1" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_2.svg" alt="Обучающий экран 2" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_3.svg" alt="Обучающий экран 3" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_4.svg" alt="Обучающий экран 4" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_5.svg" alt="Обучающий экран 5" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_6.svg" alt="Обучающий экран 6" />
+                  </div>
+                  {/* Duplicate slides for seamless loop */}
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_1.svg" alt="Онбоардинг экран 1" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_2.svg" alt="Онбоардинг экран 2" />
+                  </div>
+                  <div className="case-lowfodmap__onboarding-slide">
+                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_3.svg" alt="Онбоардинг экран 3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Phase Tracking Component Showcase */}
           <div className="case-lowfodmap__interface-showcase">
             <h3 className="case-lowfodmap__complexity-subheader">Компонент отслеживания фаз</h3>

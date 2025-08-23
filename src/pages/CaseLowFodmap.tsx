@@ -50,8 +50,10 @@ export default function CaseLowFodmap() {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [currentPosition, setCurrentPosition] = useState({ x: 0, y: 0 });
+  const [currentScreen, setCurrentScreen] = useState(0);
   const diagramRef = useRef<HTMLDivElement>(null);
   const touchStartDistance = useRef<number>(0);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   const openFullscreen = () => {
     setIsFullscreen(true);
@@ -211,6 +213,22 @@ export default function CaseLowFodmap() {
       };
     }
   }, [isFullscreen, isPhase2Fullscreen, zoomLevel, isDragging, currentPosition]);
+
+  // Handle carousel navigation
+  useEffect(() => {
+    if (trackRef.current) {
+      trackRef.current.style.transform = `translateX(-${currentScreen * 100}%)`;
+    }
+  }, [currentScreen]);
+
+  // Auto-advance carousel every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentScreen(prev => (prev + 1) % 3);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="case-page case-lowfodmap" role="main" aria-label="Case: Low-FODMAP">
@@ -604,6 +622,113 @@ export default function CaseLowFodmap() {
                     <img src="/src/assets/case-images/onboarding-svg/Onboarding_3.svg" alt="Онбоардинг экран 3" />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Main Screens Section */}
+          <div className="case-lowfodmap__main-screens-section">
+            <h3 className="case-lowfodmap__complexity-subheader">Основные экраны</h3>
+            <div className="case-lowfodmap__main-screens-description">
+              <p>
+                После завершения онбординга пользователь попадает на основные экраны приложения, где сосредоточен весь функционал для эффективного отслеживания диеты.
+              </p>
+            </div>
+            
+            {/* Main Screens Flip Component */}
+            <div className="case-lowfodmap__main-screens-flip-container">
+              <div className="case-lowfodmap__main-screens-flip">
+                <div className="case-lowfodmap__main-screens-track" ref={trackRef}>
+                  {/* Screen 1 */}
+                  <div className="case-lowfodmap__main-screens-slide">
+                    <div className="case-lowfodmap__main-screens-content">
+                      <h4 className="case-lowfodmap__main-screens-subheader">Главный экран дневника</h4>
+                      <div className="case-lowfodmap__main-screens-layout">
+                        <div className="case-lowfodmap__main-screens-image">
+                          <div className="case-lowfodmap__main-screens-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                              <rect x="10" y="10" width="80" height="60" rx="4" stroke="currentColor" strokeWidth="2"/>
+                              <circle cx="30" cy="40" r="6" fill="currentColor"/>
+                              <circle cx="50" cy="40" r="6" fill="currentColor"/>
+                              <circle cx="70" cy="40" r="6" fill="currentColor"/>
+                              <rect x="20" y="70" width="60" height="8" rx="2" fill="currentColor"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <div className="case-lowfodmap__main-screens-text">
+                          <p>
+                            Центральный экран приложения отображает сводку за текущий день. Пользователь может видеть 
+                            уже добавленные продукты, уровень потребления FODMAP и общее состояние пищеварения. 
+                            Удобные кнопки позволяют быстро добавить новый прием пищи или отметить симптомы.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Screen 2 */}
+                  <div className="case-lowfodmap__main-screens-slide">
+                    <div className="case-lowfodmap__main-screens-content">
+                      <h4 className="case-lowfodmap__main-screens-subheader">Экран добавления продуктов</h4>
+                      <div className="case-lowfodmap__main-screens-layout">
+                        <div className="case-lowfodmap__main-screens-image">
+                          <div className="case-lowfodmap__main-screens-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                              <rect x="10" y="15" width="80" height="10" rx="2" fill="currentColor"/>
+                              <rect x="10" y="35" width="60" height="8" rx="2" fill="currentColor"/>
+                              <rect x="10" y="50" width="50" height="8" rx="2" fill="currentColor"/>
+                              <rect x="10" y="65" width="70" height="8" rx="2" fill="currentColor"/>
+                              <circle cx="85" cy="20" r="8" fill="currentColor"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <div className="case-lowfodmap__main-screens-text">
+                          <p>
+                            Интуитивный интерфейс добавления продуктов с возможностью поиска по базе данных. 
+                            Для каждого продукта отображается содержание FODMAP и рекомендуемая порция. 
+                            Пользователь может указать точное количество съеденного и время приема пищи.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Screen 3 */}
+                  <div className="case-lowfodmap__main-screens-slide">
+                    <div className="case-lowfodmap__main-screens-content">
+                      <h4 className="case-lowfodmap__main-screens-subheader">Аналитика и статистика</h4>
+                      <div className="case-lowfodmap__main-screens-layout">
+                        <div className="case-lowfodmap__main-screens-image">
+                          <div className="case-lowfodmap__main-screens-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                              <path d="M20 70 L35 50 L50 60 L65 40 L80 55" stroke="currentColor" strokeWidth="3" fill="none"/>
+                              <line x1="20" y1="80" x2="20" y2="20" stroke="currentColor" strokeWidth="1"/>
+                              <line x1="20" y1="80" x2="80" y2="80" stroke="currentColor" strokeWidth="1"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <div className="case-lowfodmap__main-screens-text">
+                          <p>
+                            Подробная аналитика помогает пользователю понять закономерности между питанием и симптомами. 
+                            Графики показывают динамику потребления FODMAP по дням, частоту симптомов и эффективность диеты. 
+                            Отчеты можно экспортировать для обсуждения с врачом.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Navigation dots */}
+              <div className="case-lowfodmap__main-screens-dots">
+                {[0, 1, 2].map((index) => (
+                  <div 
+                    key={index}
+                    className={`case-lowfodmap__main-screens-dot ${currentScreen === index ? 'case-lowfodmap__main-screens-dot--active' : ''}`}
+                    onClick={() => setCurrentScreen(index)}
+                  ></div>
+                ))}
               </div>
             </div>
           </div>

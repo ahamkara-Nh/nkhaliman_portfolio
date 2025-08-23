@@ -870,7 +870,6 @@ export default function CaseLowFodmap() {
                       src="/src/assets/case-images/third-phase-svg/first.svg"
                       alt="Скриншот интерфейса третьей фазы - первый этап"
                       className="case-lowfodmap__phase-screenshot2"
-                      style={{maxWidth: '75%'}}
                     />
                   </div>
                   <div className="case-lowfodmap__arrow-icon">

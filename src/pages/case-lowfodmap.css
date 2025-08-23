@@ -2261,3 +2261,10 @@
     margin-top: 10px;
   }
 }
+
+@media (max-width: 1100px) {
+  .case-page.case-lowfodmap{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

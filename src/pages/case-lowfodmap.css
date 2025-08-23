@@ -1676,7 +1676,7 @@
   }
 
   .case-lowfodmap__screenshot-container {
-    width: 100%;
+    width: 80%;
   }
 
   .case-lowfodmap__phase-screenshot {
@@ -2232,5 +2232,27 @@
   }
   100% {
     background-position: right center;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-lowfodmap__table-of-contents {
+    padding: 0;
+  }
+
+  .case-lowfodmap__key-results {
+    padding-top: 0;
+  }
+  .case-lowfodmap__problem-text p {
+    font-size: 1rem;
+  }
+  .case-lowfodmap__design-description p {
+    font-size: 1rem;
+  }
+  .case-lowfodmap__phase-demo-description{
+    font-size: 1rem;
+  }
+  .case-lowfodmap__real-interface-container {
+    margin-top: 10px;
   }
 }

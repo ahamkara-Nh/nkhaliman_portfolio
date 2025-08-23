@@ -652,15 +652,11 @@ export default function CaseLowFodmap() {
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
-                          <div className="case-lowfodmap__main-screens-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                              <rect x="10" y="10" width="80" height="60" rx="4" stroke="currentColor" strokeWidth="2"/>
-                              <circle cx="30" cy="40" r="6" fill="currentColor"/>
-                              <circle cx="50" cy="40" r="6" fill="currentColor"/>
-                              <circle cx="70" cy="40" r="6" fill="currentColor"/>
-                              <rect x="20" y="70" width="60" height="8" rx="2" fill="currentColor"/>
-                            </svg>
-                          </div>
+                          <img 
+                            src="/src/assets/case-images/first-case/diary-screens/first.png" 
+                            alt="Экран дневника приложения" 
+                            className="case-lowfodmap__main-screens-screenshot"
+                          />
                         </div>
                         <div className="case-lowfodmap__main-screens-text">
                           <p>
@@ -679,15 +675,11 @@ export default function CaseLowFodmap() {
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
-                          <div className="case-lowfodmap__main-screens-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                              <rect x="10" y="15" width="80" height="10" rx="2" fill="currentColor"/>
-                              <rect x="10" y="35" width="60" height="8" rx="2" fill="currentColor"/>
-                              <rect x="10" y="50" width="50" height="8" rx="2" fill="currentColor"/>
-                              <rect x="10" y="65" width="70" height="8" rx="2" fill="currentColor"/>
-                              <circle cx="85" cy="20" r="8" fill="currentColor"/>
-                            </svg>
-                          </div>
+                          <img 
+                            src="/src/assets/case-images/first-case/diary-screens/second.png" 
+                            alt="Экран добавления продуктов" 
+                            className="case-lowfodmap__main-screens-screenshot"
+                          />
                         </div>
                         <div className="case-lowfodmap__main-screens-text">
                           <p>
@@ -706,13 +698,11 @@ export default function CaseLowFodmap() {
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
-                          <div className="case-lowfodmap__main-screens-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                              <path d="M20 70 L35 50 L50 60 L65 40 L80 55" stroke="currentColor" strokeWidth="3" fill="none"/>
-                              <line x1="20" y1="80" x2="20" y2="20" stroke="currentColor" strokeWidth="1"/>
-                              <line x1="20" y1="80" x2="80" y2="80" stroke="currentColor" strokeWidth="1"/>
-                            </svg>
-                          </div>
+                          <img 
+                            src="/src/assets/case-images/first-case/diary-screens/third.png" 
+                            alt="Экран аналитики и информации" 
+                            className="case-lowfodmap__main-screens-screenshot"
+                          />
                         </div>
                         <div className="case-lowfodmap__main-screens-text">
                           <p>
@@ -731,13 +721,11 @@ export default function CaseLowFodmap() {
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
-                          <div className="case-lowfodmap__main-screens-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                              <circle cx="50" cy="35" r="15" stroke="currentColor" strokeWidth="2"/>
-                              <path d="M35 65 L50 55 L65 65" stroke="currentColor" strokeWidth="2" fill="none"/>
-                              <path d="M40 75 L50 85 L60 75" stroke="currentColor" strokeWidth="2" fill="none"/>
-                            </svg>
-                          </div>
+                          <img 
+                            src="/src/assets/case-images/first-case/diary-screens/fourth.png" 
+                            alt="Экран настроек приложения" 
+                            className="case-lowfodmap__main-screens-screenshot"
+                          />
                         </div>
                         <div className="case-lowfodmap__main-screens-text">
                           <p>

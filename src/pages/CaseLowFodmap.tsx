@@ -221,15 +221,6 @@ export default function CaseLowFodmap() {
     }
   }, [currentScreen]);
 
-  // Auto-advance carousel every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentScreen(prev => (prev + 1) % 3);
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="case-page case-lowfodmap" role="main" aria-label="Case: Low-FODMAP">
       <section className="case-content" aria-label="Storyline content">
@@ -637,12 +628,12 @@ export default function CaseLowFodmap() {
             
             {/* Main Screens Flip Component */}
             <div className="case-lowfodmap__main-screens-flip-container">
+              <h4 className="case-lowfodmap__main-screens-subheader">Главный экран дневника</h4>
               <div className="case-lowfodmap__main-screens-flip">
                 <div className="case-lowfodmap__main-screens-track" ref={trackRef}>
                   {/* Screen 1 */}
                   <div className="case-lowfodmap__main-screens-slide">
                     <div className="case-lowfodmap__main-screens-content">
-                      <h4 className="case-lowfodmap__main-screens-subheader">Главный экран дневника</h4>
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
                           <div className="case-lowfodmap__main-screens-placeholder">
@@ -669,7 +660,6 @@ export default function CaseLowFodmap() {
                   {/* Screen 2 */}
                   <div className="case-lowfodmap__main-screens-slide">
                     <div className="case-lowfodmap__main-screens-content">
-                      <h4 className="case-lowfodmap__main-screens-subheader">Экран добавления продуктов</h4>
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
                           <div className="case-lowfodmap__main-screens-placeholder">
@@ -696,7 +686,6 @@ export default function CaseLowFodmap() {
                   {/* Screen 3 */}
                   <div className="case-lowfodmap__main-screens-slide">
                     <div className="case-lowfodmap__main-screens-content">
-                      <h4 className="case-lowfodmap__main-screens-subheader">Аналитика и статистика</h4>
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
                           <div className="case-lowfodmap__main-screens-placeholder">

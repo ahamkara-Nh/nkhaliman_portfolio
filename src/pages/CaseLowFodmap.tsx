@@ -651,7 +651,11 @@ export default function CaseLowFodmap() {
                     <h4 className="case-lowfodmap__main-screens-subheader">Дневник</h4>
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
-                        <div className="case-lowfodmap__main-screens-image">
+                        <div 
+                          className="case-lowfodmap__main-screens-image"
+                          onClick={() => openPhase2Fullscreen("/src/assets/case-images/first-case/diary-screens/first.png")}
+                          style={{ cursor: 'pointer' }}
+                        >
                           <img 
                             src="/src/assets/case-images/first-case/diary-screens/first.png" 
                             alt="Экран дневника приложения" 
@@ -674,7 +678,11 @@ export default function CaseLowFodmap() {
                     <h4 className="case-lowfodmap__main-screens-subheader">Продукты</h4>
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
-                        <div className="case-lowfodmap__main-screens-image">
+                        <div 
+                          className="case-lowfodmap__main-screens-image"
+                          onClick={() => openPhase2Fullscreen("/src/assets/case-images/first-case/diary-screens/second.png")}
+                          style={{ cursor: 'pointer' }}
+                        >
                           <img 
                             src="/src/assets/case-images/first-case/diary-screens/second.png" 
                             alt="Экран добавления продуктов" 
@@ -697,7 +705,11 @@ export default function CaseLowFodmap() {
                     <h4 className="case-lowfodmap__main-screens-subheader">Информация</h4>
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
-                        <div className="case-lowfodmap__main-screens-image">
+                        <div 
+                          className="case-lowfodmap__main-screens-image"
+                          onClick={() => openPhase2Fullscreen("/src/assets/case-images/first-case/diary-screens/third.png")}
+                          style={{ cursor: 'pointer' }}
+                        >
                           <img 
                             src="/src/assets/case-images/first-case/diary-screens/third.png" 
                             alt="Экран аналитики и информации" 
@@ -720,7 +732,11 @@ export default function CaseLowFodmap() {
                     <h4 className="case-lowfodmap__main-screens-subheader">Настройки</h4>
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
-                        <div className="case-lowfodmap__main-screens-image">
+                        <div 
+                          className="case-lowfodmap__main-screens-image"
+                          onClick={() => openPhase2Fullscreen("/src/assets/case-images/first-case/diary-screens/fourth.png")}
+                          style={{ cursor: 'pointer' }}
+                        >
                           <img 
                             src="/src/assets/case-images/first-case/diary-screens/fourth.png" 
                             alt="Экран настроек приложения" 

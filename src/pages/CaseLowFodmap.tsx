@@ -225,9 +225,9 @@ export default function CaseLowFodmap() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
-        setCurrentScreen(currentScreen === 0 ? 2 : currentScreen - 1);
+        setCurrentScreen(currentScreen === 0 ? 3 : currentScreen - 1);
       } else if (e.key === 'ArrowRight') {
-        setCurrentScreen(currentScreen === 2 ? 0 : currentScreen + 1);
+        setCurrentScreen(currentScreen === 3 ? 0 : currentScreen + 1);
       }
     };
 
@@ -644,11 +644,11 @@ export default function CaseLowFodmap() {
             
             {/* Main Screens Flip Component */}
             <div className="case-lowfodmap__main-screens-flip-container">
-              <h4 className="case-lowfodmap__main-screens-subheader">Главный экран дневника</h4>
               <div className="case-lowfodmap__main-screens-flip">
                 <div className="case-lowfodmap__main-screens-track" ref={trackRef}>
                   {/* Screen 1 */}
                   <div className="case-lowfodmap__main-screens-slide">
+                    <h4 className="case-lowfodmap__main-screens-subheader">Дневник</h4>
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
@@ -675,6 +675,7 @@ export default function CaseLowFodmap() {
                   
                   {/* Screen 2 */}
                   <div className="case-lowfodmap__main-screens-slide">
+                    <h4 className="case-lowfodmap__main-screens-subheader">Продукты</h4>
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
@@ -701,6 +702,7 @@ export default function CaseLowFodmap() {
                   
                   {/* Screen 3 */}
                   <div className="case-lowfodmap__main-screens-slide">
+                    <h4 className="case-lowfodmap__main-screens-subheader">Информация</h4>
                     <div className="case-lowfodmap__main-screens-content">
                       <div className="case-lowfodmap__main-screens-layout">
                         <div className="case-lowfodmap__main-screens-image">
@@ -722,6 +724,32 @@ export default function CaseLowFodmap() {
                       </div>
                     </div>
                   </div>
+
+                  {/* Screen 4 - New Screen */}
+                  <div className="case-lowfodmap__main-screens-slide">
+                    <h4 className="case-lowfodmap__main-screens-subheader">Настройки</h4>
+                    <div className="case-lowfodmap__main-screens-content">
+                      <div className="case-lowfodmap__main-screens-layout">
+                        <div className="case-lowfodmap__main-screens-image">
+                          <div className="case-lowfodmap__main-screens-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                              <circle cx="50" cy="35" r="15" stroke="currentColor" strokeWidth="2"/>
+                              <path d="M35 65 L50 55 L65 65" stroke="currentColor" strokeWidth="2" fill="none"/>
+                              <path d="M40 75 L50 85 L60 75" stroke="currentColor" strokeWidth="2" fill="none"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <div className="case-lowfodmap__main-screens-text">
+                          <p>
+                            Персонализация приложения под индивидуальные потребности пользователя. 
+                            Настройка уведомлений, выбор единиц измерения, настройка графиков и отчетов. 
+                            Возможность интеграции с другими приложениями для более точного отслеживания состояния.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
               
@@ -729,13 +757,13 @@ export default function CaseLowFodmap() {
               <div className="case-lowfodmap__main-screens-dots">
                 <div 
                   className="case-lowfodmap__main-screens-arrow case-lowfodmap__main-screens-arrow--left"
-                  onClick={() => setCurrentScreen(currentScreen === 0 ? 2 : currentScreen - 1)}
+                  onClick={() => setCurrentScreen(currentScreen === 0 ? 3 : currentScreen - 1)}
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                {[0, 1, 2].map((index) => (
+                {[0, 1, 2, 3].map((index) => (
                   <div 
                     key={index}
                     className={`case-lowfodmap__main-screens-dot ${currentScreen === index ? 'case-lowfodmap__main-screens-dot--active' : ''}`}
@@ -744,7 +772,7 @@ export default function CaseLowFodmap() {
                 ))}
                 <div 
                   className="case-lowfodmap__main-screens-arrow case-lowfodmap__main-screens-arrow--right"
-                  onClick={() => setCurrentScreen(currentScreen === 2 ? 0 : currentScreen + 1)}
+                  onClick={() => setCurrentScreen(currentScreen === 3 ? 0 : currentScreen + 1)}
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

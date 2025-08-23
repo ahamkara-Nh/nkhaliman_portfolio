@@ -221,6 +221,22 @@ export default function CaseLowFodmap() {
     }
   }, [currentScreen]);
 
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        setCurrentScreen(currentScreen === 0 ? 2 : currentScreen - 1);
+      } else if (e.key === 'ArrowRight') {
+        setCurrentScreen(currentScreen === 2 ? 0 : currentScreen + 1);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentScreen]);
+
   return (
     <div className="case-page case-lowfodmap" role="main" aria-label="Case: Low-FODMAP">
       <section className="case-content" aria-label="Storyline content">
@@ -709,8 +725,16 @@ export default function CaseLowFodmap() {
                 </div>
               </div>
               
-              {/* Navigation dots */}
+              {/* Navigation dots with arrows */}
               <div className="case-lowfodmap__main-screens-dots">
+                <div 
+                  className="case-lowfodmap__main-screens-arrow case-lowfodmap__main-screens-arrow--left"
+                  onClick={() => setCurrentScreen(currentScreen === 0 ? 2 : currentScreen - 1)}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
                 {[0, 1, 2].map((index) => (
                   <div 
                     key={index}
@@ -718,6 +742,14 @@ export default function CaseLowFodmap() {
                     onClick={() => setCurrentScreen(index)}
                   ></div>
                 ))}
+                <div 
+                  className="case-lowfodmap__main-screens-arrow case-lowfodmap__main-screens-arrow--right"
+                  onClick={() => setCurrentScreen(currentScreen === 2 ? 0 : currentScreen + 1)}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>

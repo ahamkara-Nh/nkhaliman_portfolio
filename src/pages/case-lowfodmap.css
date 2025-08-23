@@ -1842,12 +1842,38 @@
   margin: 0;
 }
 
-/* Navigation dots */
+/* Navigation dots with arrows */
 .case-lowfodmap__main-screens-dots {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 12px;
   margin-top: 32px;
+}
+
+.case-lowfodmap__main-screens-arrow {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.case-lowfodmap__main-screens-arrow:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.case-lowfodmap__main-screens-arrow--left {
+  margin-right: 8px;
+}
+
+.case-lowfodmap__main-screens-arrow--right {
+  margin-left: 8px;
 }
 
 .case-lowfodmap__main-screens-dot {
@@ -2062,6 +2088,19 @@
   .case-lowfodmap__main-screens-dot {
     width: 10px;
     height: 10px;
+  }
+  
+  .case-lowfodmap__main-screens-arrow {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .case-lowfodmap__main-screens-arrow--left {
+    margin-right: 6px;
+  }
+  
+  .case-lowfodmap__main-screens-arrow--right {
+    margin-left: 6px;
   }
 }
 

@@ -1812,16 +1812,18 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 8px;
   padding: 24px;
-  height: 100%;
-  min-height: 300px;
+  height: auto;
+  min-height: 0;
   max-width: max-content;
   max-height: max-content;
 }
 
 .case-lowfodmap__main-screens-screenshot {
-  max-height: 75%;
+  max-height: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: auto;
 }
 
 .case-lowfodmap__main-screens-text {
@@ -2052,13 +2054,15 @@
   }
   
   .case-lowfodmap__main-screens-image {
-    min-height: 200px;
+    min-height: 0;
     padding: 16px;
   }
   
   .case-lowfodmap__main-screens-screenshot {
-    max-height: 75%;
+    max-height: 100%;
     border-radius: 6px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -2123,13 +2127,15 @@
   
   
   .case-lowfodmap__main-screens-image {
-    min-height: 150px;
+    min-height: 0;
     padding: 12px;
   }
   
   .case-lowfodmap__main-screens-screenshot {
-    max-height: 75%;
+    max-height: 100%;
     border-radius: 4px;
+    width: 100%;
+    height: auto;
   }
 }
 

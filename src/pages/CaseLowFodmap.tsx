@@ -264,7 +264,7 @@ export default function CaseLowFodmap() {
                 <a href="#research" className="case-lowfodmap__toc-link">2. Исследование: конкурентный анализ, изучение предметной области и инсайты от эксперта.</a>
               </li>
               <li className="case-lowfodmap__toc-item">
-                <a href="#design" className="case-lowfodmap__toc-link">3. Дизайн и итерации: От идей к прототипу</a>
+                <a href="#design" className="case-lowfodmap__toc-link">3. Дизайн и функционал: От идей к прототипу</a>
               </li>
               <li className="case-lowfodmap__toc-item">
                 <a href="#testing" className="case-lowfodmap__toc-link">4. Тестирование и результаты</a>
@@ -299,11 +299,8 @@ export default function CaseLowFodmap() {
           <h2 className="case-lowfodmap__problem-header">Проблема: Почему low-FODMAP — это вызов?</h2>
           <div className="case-lowfodmap__problem-content">
             <div className="case-lowfodmap__problem-image">
-              <img
-                src="/src/assets/case-images/first-case/problem.png"
-                alt="Low-FODMAP диета вызов"
-                className="case-lowfodmap__problem-img"
-              />
+              <div className="case-lowfodmap__problem-image-slide case-lowfodmap__problem-image-slide--default"></div>
+              <div className="case-lowfodmap__problem-image-slide case-lowfodmap__problem-image-slide--hover"></div>
             </div>
             <div className="case-lowfodmap__problem-text">
               <p>
@@ -515,7 +512,7 @@ export default function CaseLowFodmap() {
 
         {/* Design and Iterations Section */}
         <section id="design" className="case-lowfodmap__design-section">
-          <h2 className="case-lowfodmap__problem-header">Дизайн и итерации: От идей к прототипу</h2>
+          <h2 className="case-lowfodmap__problem-header">Дизайн и функционал: От идей к прототипу</h2>
           <div className="case-lowfodmap__design-description">
             <p>
               После глубокого погружения в предметную область и анализа конкурентов стало ясно: нужен инструмент, который будет <b>проводником через все три этапа диеты</b>. Центральным элементом интерфейса стал компонент отслеживания фаз — умный помощник, который автоматически адаптируется под текущий этап пользователя и предоставляет именно ту информацию, которая нужна здесь и сейчас.

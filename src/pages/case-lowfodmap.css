@@ -2374,7 +2374,6 @@
   
   .case-lowfodmap__testing-description {
     font-size: 1rem;
-    padding: 20px;
   }
 }
 
@@ -2389,6 +2388,11 @@
   padding: 24px;
   background: rgba(255, 255, 255, 0.01);
   margin-top: 32px;
+  contain: layout style paint;
+}
+
+.case-lowfodmap__testing-flip-container * {
+  pointer-events: auto;
 }
 
 .case-lowfodmap__testing-flip {
@@ -2519,7 +2523,6 @@
   color: var(--text);
   margin: 0;
   max-width: 18vw;
-  text-align: center;
 }
 
 /* Legacy styles for backward compatibility */
@@ -2589,6 +2592,8 @@
   align-items: center;
   gap: 12px;
   margin-top: 32px;
+  position: relative;
+  z-index: 10;
 }
 
 .case-lowfodmap__testing-arrow {
@@ -2601,6 +2606,9 @@
   cursor: pointer;
   transition: all 0.2s ease;
   opacity: 0.7;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .case-lowfodmap__testing-arrow:hover {
@@ -2623,6 +2631,9 @@
   background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: background 0.3s ease;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .case-lowfodmap__testing-dot--active {
@@ -2767,6 +2778,6 @@
   
   .case-lowfodmap__testing-text p,
   .case-lowfodmap__testing-test-description p {
-    font-size: 0.95rem;
+    font-size: 0.65rem;
   }
 }

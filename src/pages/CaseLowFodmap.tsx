@@ -51,9 +51,11 @@ export default function CaseLowFodmap() {
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [currentPosition, setCurrentPosition] = useState({ x: 0, y: 0 });
   const [currentScreen, setCurrentScreen] = useState(0);
+  const [mainScreensCurrentScreen, setMainScreensCurrentScreen] = useState(0);
   const diagramRef = useRef<HTMLDivElement>(null);
   const touchStartDistance = useRef<number>(0);
   const trackRef = useRef<HTMLDivElement>(null);
+  const mainScreensTrackRef = useRef<HTMLDivElement>(null);
 
   const openFullscreen = () => {
     setIsFullscreen(true);
@@ -214,20 +216,32 @@ export default function CaseLowFodmap() {
     }
   }, [isFullscreen, isPhase2Fullscreen, zoomLevel, isDragging, currentPosition]);
 
-  // Handle carousel navigation
+  // Handle carousel navigation for testing flip container
   useEffect(() => {
     if (trackRef.current) {
       trackRef.current.style.transform = `translateX(-${currentScreen * 100}%)`;
     }
   }, [currentScreen]);
 
+  // Handle carousel navigation for main screens flip container
+  useEffect(() => {
+    if (mainScreensTrackRef.current) {
+      mainScreensTrackRef.current.style.transform = `translateX(-${mainScreensCurrentScreen * 100}%)`;
+    }
+  }, [mainScreensCurrentScreen]);
+
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') {
-        setCurrentScreen(currentScreen === 0 ? 3 : currentScreen - 1);
-      } else if (e.key === 'ArrowRight') {
-        setCurrentScreen(currentScreen === 3 ? 0 : currentScreen + 1);
+      // Only handle keyboard navigation if neither fullscreen modal is open
+      if (!isFullscreen && !isPhase2Fullscreen) {
+        if (e.key === 'ArrowLeft') {
+          // For simplicity, we'll control the testing flip container with keyboard
+          // In a more complex implementation, we might want to determine which container has focus
+          setCurrentScreen(prev => prev === 0 ? 3 : prev - 1);
+        } else if (e.key === 'ArrowRight') {
+          setCurrentScreen(prev => prev === 3 ? 0 : prev + 1);
+        }
       }
     };
 
@@ -235,7 +249,7 @@ export default function CaseLowFodmap() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [currentScreen]);
+  }, [isFullscreen, isPhase2Fullscreen]);
 
   return (
     <div className="case-page case-lowfodmap" role="main" aria-label="Case: Low-FODMAP">
@@ -642,7 +656,7 @@ export default function CaseLowFodmap() {
             {/* Main Screens Flip Component */}
             <div className="case-lowfodmap__main-screens-flip-container">
               <div className="case-lowfodmap__main-screens-flip">
-                <div className="case-lowfodmap__main-screens-track" ref={trackRef}>
+                <div className="case-lowfodmap__main-screens-track" ref={mainScreensTrackRef}>
                   {/* Screen 1 */}
                   <div className="case-lowfodmap__main-screens-slide">
                     <h4 className="case-lowfodmap__main-screens-subheader">Дневник</h4>
@@ -755,7 +769,7 @@ export default function CaseLowFodmap() {
               <div className="case-lowfodmap__main-screens-dots">
                 <div 
                   className="case-lowfodmap__main-screens-arrow case-lowfodmap__main-screens-arrow--left"
-                  onClick={() => setCurrentScreen(currentScreen === 0 ? 3 : currentScreen - 1)}
+                  onClick={() => setMainScreensCurrentScreen(prev => prev === 0 ? 3 : prev - 1)}
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -764,13 +778,13 @@ export default function CaseLowFodmap() {
                 {[0, 1, 2, 3].map((index) => (
                   <div 
                     key={index}
-                    className={`case-lowfodmap__main-screens-dot ${currentScreen === index ? 'case-lowfodmap__main-screens-dot--active' : ''}`}
-                    onClick={() => setCurrentScreen(index)}
+                    className={`case-lowfodmap__main-screens-dot ${mainScreensCurrentScreen === index ? 'case-lowfodmap__main-screens-dot--active' : ''}`}
+                    onClick={() => setMainScreensCurrentScreen(index)}
                   ></div>
                 ))}
                 <div 
                   className="case-lowfodmap__main-screens-arrow case-lowfodmap__main-screens-arrow--right"
-                  onClick={() => setCurrentScreen(currentScreen === 3 ? 0 : currentScreen + 1)}
+                  onClick={() => setMainScreensCurrentScreen(prev => prev === 3 ? 0 : prev + 1)}
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -913,7 +927,7 @@ export default function CaseLowFodmap() {
           </p>
 
           {/* Before/After Section */}
-          <h3 className="case-lowfodmap__complexity-subheader">Что было и что стало</h3>
+          <h3 className="case-lowfodmap__complexity-subheader">Уникальные функции среди приложений-конкурентов</h3>
           
           {/* Modified Flip Component with unique class names - 4 features */}
           <div className="case-lowfodmap__testing-flip-container">
@@ -1055,7 +1069,7 @@ export default function CaseLowFodmap() {
             <div className="case-lowfodmap__testing-dots">
               <div
                 className="case-lowfodmap__testing-arrow case-lowfodmap__testing-arrow--left"
-                onClick={() => setCurrentScreen(currentScreen === 0 ? 3 : currentScreen - 1)}
+                onClick={() => setCurrentScreen(prev => prev === 0 ? 3 : prev - 1)}
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -1070,7 +1084,7 @@ export default function CaseLowFodmap() {
               ))}
               <div
                 className="case-lowfodmap__testing-arrow case-lowfodmap__testing-arrow--right"
-                onClick={() => setCurrentScreen(currentScreen === 3 ? 0 : currentScreen + 1)}
+                onClick={() => setCurrentScreen(prev => prev === 3 ? 0 : prev + 1)}
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

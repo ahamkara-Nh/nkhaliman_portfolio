@@ -2478,8 +2478,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
   padding: 32px;
   width: 100%;
@@ -2487,12 +2485,7 @@
   transition: all 0.3s ease;
 }
 
-.case-lowfodmap__testing-interface-image:hover {
-  border-color: rgba(155, 156, 255, 0.28);
-  background: rgba(155, 156, 255, 0.08);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 32px -18px rgba(155, 156, 255, 0.32);
-}
+
 
 .case-lowfodmap__testing-interface-screenshot {
   max-width: 100%;

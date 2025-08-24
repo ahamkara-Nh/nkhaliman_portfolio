@@ -922,14 +922,14 @@ export default function CaseLowFodmap() {
                 
                 {/* Feature 1 */}
                 <div className="case-lowfodmap__testing-slide">
-                  <h4 className="case-lowfodmap__testing-subheader">Уникальная функция 1</h4>
+                  <h4 className="case-lowfodmap__testing-subheader">Автоматическое отслеживание этапов</h4>
                   <div className="case-lowfodmap__testing-content">
                     <div className="case-lowfodmap__testing-single-layout">
                       <div className="case-lowfodmap__testing-image-container">
                         <div className="case-lowfodmap__testing-interface-image">
                           <img
-                            src="/placeholder-interface-1.png"
-                            alt="Placeholder interface feature 1"
+                            src="/src/assets/case-images/first-case/features/first.svg"
+                            alt="Автоматическое отслеживание этапов"
                             className="case-lowfodmap__testing-interface-screenshot"
                           />
                         </div>
@@ -954,27 +954,31 @@ export default function CaseLowFodmap() {
                 
                 {/* Feature 2 */}
                 <div className="case-lowfodmap__testing-slide">
-                  <h4 className="case-lowfodmap__testing-subheader">Уникальная функция 2</h4>
+                  <h4 className="case-lowfodmap__testing-subheader">Возможность добавить собственный продукт</h4>
                   <div className="case-lowfodmap__testing-content">
                     <div className="case-lowfodmap__testing-single-layout">
                       <div className="case-lowfodmap__testing-image-container">
-                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
-                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
                         <div className="case-lowfodmap__testing-interface-image">
                           <img
-                            src="/placeholder-interface-2.png"
-                            alt="Placeholder interface feature 2"
+                            src="/src/assets/case-images/first-case/features/second.svg"
+                            alt="Возможность добавить собственный продукт"
                             className="case-lowfodmap__testing-interface-screenshot"
                           />
                         </div>
                       </div>
                       <div className="case-lowfodmap__testing-test-description">
-                        <p>
-                          Первый абзац описания уникальной функции 2. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
-                        </p>
-                        <p>
-                          Второй абзац описания уникальной функции 2. Здесь будет дополнительная информация о том, как эта функция помогает пользователю и какие преимущества она предоставляет.
-                        </p>
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
+                          <p>
+                            Пользователи могли не найти в базе нужного продукта
+                          </p>
+                        </div>
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
+                          <p>
+                            Пользователь может добавить продукт, если нашел его в другом источнике
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -982,27 +986,31 @@ export default function CaseLowFodmap() {
                 
                 {/* Feature 3 */}
                 <div className="case-lowfodmap__testing-slide">
-                  <h4 className="case-lowfodmap__testing-subheader">Уникальная функция 3</h4>
+                  <h4 className="case-lowfodmap__testing-subheader">Автоматический фильтр продуктов</h4>
                   <div className="case-lowfodmap__testing-content">
                     <div className="case-lowfodmap__testing-single-layout">
                       <div className="case-lowfodmap__testing-image-container">
-                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
-                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
                         <div className="case-lowfodmap__testing-interface-image">
                           <img
-                            src="/placeholder-interface-3.png"
-                            alt="Placeholder interface feature 3"
+                            src="/src/assets/case-images/first-case/features/third.svg"
+                            alt="Автоматический фильтр продуктов"
                             className="case-lowfodmap__testing-interface-screenshot"
                           />
                         </div>
                       </div>
                       <div className="case-lowfodmap__testing-test-description">
-                        <p>
-                          Первый абзац описания уникальной функции 3. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
-                        </p>
-                        <p>
-                          Второй абзац описания уникальной функции 3. Здесь будет дополнительная информация о том, как эта функция помогает пользователю и какие преимущества она предоставляет.
-                        </p>
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
+                          <p>
+                            Приходилось вручную отбирать необходимые продукты в текущем этапе
+                          </p>
+                        </div>
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
+                          <p>
+                            Фильтрация базы под текущий этап и личную переносимость, экономия времени
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1010,27 +1018,31 @@ export default function CaseLowFodmap() {
                 
                 {/* Feature 4 */}
                 <div className="case-lowfodmap__testing-slide">
-                  <h4 className="case-lowfodmap__testing-subheader">Уникальная функция 4</h4>
+                  <h4 className="case-lowfodmap__testing-subheader">Раздельные списки продуктов</h4>
                   <div className="case-lowfodmap__testing-content">
                     <div className="case-lowfodmap__testing-single-layout">
                       <div className="case-lowfodmap__testing-image-container">
-                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
-                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
                         <div className="case-lowfodmap__testing-interface-image">
                           <img
-                            src="/placeholder-interface-4.png"
-                            alt="Placeholder interface feature 4"
+                            src="/src/assets/case-images/first-case/features/fourth.png"
+                            alt="Раздельные списки продуктов"
                             className="case-lowfodmap__testing-interface-screenshot"
                           />
                         </div>
                       </div>
                       <div className="case-lowfodmap__testing-test-description">
-                        <p>
-                          Первый абзац описания уникальной функции 4. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
-                        </p>
-                        <p>
-                          Второй абзац описания уникальной функции 4. Здесь будет дополнительная информация о том, как эта функция помогает пользователю и какие преимущества она предоставляет.
-                        </p>
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
+                          <p>
+                            В избранном перемешаны разные продукты для разных этапов
+                          </p>
+                        </div>
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
+                          <p>
+                            Продукт можно добавить в список определенного этапа
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>

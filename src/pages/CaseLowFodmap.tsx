@@ -907,10 +907,149 @@ export default function CaseLowFodmap() {
           <h2 className="case-lowfodmap__problem-header">Тестирование и результаты</h2>
           <h3 className="case-lowfodmap__complexity-subheader">Немного о тестировании</h3>
           <p className="case-lowfodmap__testing-description">
-            Для проверки прототипа собрал небольшую, но релевантную группу участников: 
-            людей, которые пробовали соблюдать <b>low‑FODMAP</b> диету и пользовались существующими приложениями, но сталкивались с трудностями. 
+            Для проверки прототипа собрал небольшую, но релевантную группу участников:
+            людей, которые пробовали соблюдать <b>low‑FODMAP</b> диету и пользовались существующими приложениями, но сталкивались с трудностями.
             Я составил тестирование в <b>Pathway</b> с интерактивным прототипом и коротким опросником, чтобы понять, насколько продукт помогает справляться с реальными сценариями.
           </p>
+
+          {/* Before/After Section */}
+          <h3 className="case-lowfodmap__complexity-subheader">Что было и что стало</h3>
+          
+          {/* Modified Flip Component with unique class names - 4 features */}
+          <div className="case-lowfodmap__testing-flip-container">
+            <div className="case-lowfodmap__testing-flip">
+              <div className="case-lowfodmap__testing-track" ref={trackRef}>
+                
+                {/* Feature 1 */}
+                <div className="case-lowfodmap__testing-slide">
+                  <h4 className="case-lowfodmap__testing-subheader">Уникальная функция 1</h4>
+                  <div className="case-lowfodmap__testing-content">
+                    <div className="case-lowfodmap__testing-single-layout">
+                      <div className="case-lowfodmap__testing-image-container">
+                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
+                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
+                        <div className="case-lowfodmap__testing-interface-image">
+                          <img
+                            src="/placeholder-interface-1.png"
+                            alt="Placeholder interface feature 1"
+                            className="case-lowfodmap__testing-interface-screenshot"
+                          />
+                        </div>
+                      </div>
+                      <div className="case-lowfodmap__testing-description">
+                        <p>
+                          Описание уникальной функции 1. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Feature 2 */}
+                <div className="case-lowfodmap__testing-slide">
+                  <h4 className="case-lowfodmap__testing-subheader">Уникальная функция 2</h4>
+                  <div className="case-lowfodmap__testing-content">
+                    <div className="case-lowfodmap__testing-single-layout">
+                      <div className="case-lowfodmap__testing-image-container">
+                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
+                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
+                        <div className="case-lowfodmap__testing-interface-image">
+                          <img
+                            src="/placeholder-interface-2.png"
+                            alt="Placeholder interface feature 2"
+                            className="case-lowfodmap__testing-interface-screenshot"
+                          />
+                        </div>
+                      </div>
+                      <div className="case-lowfodmap__testing-description">
+                        <p>
+                          Описание уникальной функции 2. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Feature 3 */}
+                <div className="case-lowfodmap__testing-slide">
+                  <h4 className="case-lowfodmap__testing-subheader">Уникальная функция 3</h4>
+                  <div className="case-lowfodmap__testing-content">
+                    <div className="case-lowfodmap__testing-single-layout">
+                      <div className="case-lowfodmap__testing-image-container">
+                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
+                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
+                        <div className="case-lowfodmap__testing-interface-image">
+                          <img
+                            src="/placeholder-interface-3.png"
+                            alt="Placeholder interface feature 3"
+                            className="case-lowfodmap__testing-interface-screenshot"
+                          />
+                        </div>
+                      </div>
+                      <div className="case-lowfodmap__testing-description">
+                        <p>
+                          Описание уникальной функции 3. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Feature 4 */}
+                <div className="case-lowfodmap__testing-slide">
+                  <h4 className="case-lowfodmap__testing-subheader">Уникальная функция 4</h4>
+                  <div className="case-lowfodmap__testing-content">
+                    <div className="case-lowfodmap__testing-single-layout">
+                      <div className="case-lowfodmap__testing-image-container">
+                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
+                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
+                        <div className="case-lowfodmap__testing-interface-image">
+                          <img
+                            src="/placeholder-interface-4.png"
+                            alt="Placeholder interface feature 4"
+                            className="case-lowfodmap__testing-interface-screenshot"
+                          />
+                        </div>
+                      </div>
+                      <div className="case-lowfodmap__testing-description">
+                        <p>
+                          Описание уникальной функции 4. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            {/* Navigation dots with arrows for 4 pages */}
+            <div className="case-lowfodmap__testing-dots">
+              <div
+                className="case-lowfodmap__testing-arrow case-lowfodmap__testing-arrow--left"
+                onClick={() => setCurrentScreen(currentScreen === 0 ? 3 : currentScreen - 1)}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              {[0, 1, 2, 3].map((index) => (
+                <div
+                  key={index}
+                  className={`case-lowfodmap__testing-dot ${currentScreen === index ? 'case-lowfodmap__testing-dot--active' : ''}`}
+                  onClick={() => setCurrentScreen(index)}
+                ></div>
+              ))}
+              <div
+                className="case-lowfodmap__testing-arrow case-lowfodmap__testing-arrow--right"
+                onClick={() => setCurrentScreen(currentScreen === 3 ? 0 : currentScreen + 1)}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
         </section>
       </section>
 

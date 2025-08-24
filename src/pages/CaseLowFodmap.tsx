@@ -926,8 +926,6 @@ export default function CaseLowFodmap() {
                   <div className="case-lowfodmap__testing-content">
                     <div className="case-lowfodmap__testing-single-layout">
                       <div className="case-lowfodmap__testing-image-container">
-                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
-                        <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
                         <div className="case-lowfodmap__testing-interface-image">
                           <img
                             src="/placeholder-interface-1.png"
@@ -937,9 +935,18 @@ export default function CaseLowFodmap() {
                         </div>
                       </div>
                       <div className="case-lowfodmap__testing-test-description">
-                        <p>
-                          Описание уникальной функции 1. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
-                        </p>
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
+                          <p>
+                            Пользователи вручную отслеживали этапы диеты и часто путались
+                          </p>
+                        </div>
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
+                          <p>
+                            Снял рутинную нагрузку и убрал риск ошибки
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -963,7 +970,10 @@ export default function CaseLowFodmap() {
                       </div>
                       <div className="case-lowfodmap__testing-test-description">
                         <p>
-                          Описание уникальной функции 2. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                          Первый абзац описания уникальной функции 2. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                        </p>
+                        <p>
+                          Второй абзац описания уникальной функции 2. Здесь будет дополнительная информация о том, как эта функция помогает пользователю и какие преимущества она предоставляет.
                         </p>
                       </div>
                     </div>
@@ -988,7 +998,10 @@ export default function CaseLowFodmap() {
                       </div>
                       <div className="case-lowfodmap__testing-test-description">
                         <p>
-                          Описание уникальной функции 3. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                          Первый абзац описания уникальной функции 3. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                        </p>
+                        <p>
+                          Второй абзац описания уникальной функции 3. Здесь будет дополнительная информация о том, как эта функция помогает пользователю и какие преимущества она предоставляет.
                         </p>
                       </div>
                     </div>
@@ -1013,7 +1026,10 @@ export default function CaseLowFodmap() {
                       </div>
                       <div className="case-lowfodmap__testing-test-description">
                         <p>
-                          Описание уникальной функции 4. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                          Первый абзац описания уникальной функции 4. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
+                        </p>
+                        <p>
+                          Второй абзац описания уникальной функции 4. Здесь будет дополнительная информация о том, как эта функция помогает пользователю и какие преимущества она предоставляет.
                         </p>
                       </div>
                     </div>

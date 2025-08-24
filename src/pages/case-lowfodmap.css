@@ -1096,7 +1096,7 @@
   position: relative;
   z-index: 2;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.01);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 10px;
 }
@@ -1105,7 +1105,7 @@
   position: relative;
   z-index: 2;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.01);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 10px;
   display: flex;
@@ -2228,6 +2228,54 @@
   }
 }
 
+/* Telegram Bot Button */
+.case-lowfodmap__telegram-button-container {
+  margin-top: 48px;
+  text-align: center;
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 26px -16px rgba(155, 156, 255, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.case-lowfodmap__telegram-description {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0 0 24px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-lowfodmap__telegram-button {
+  background: linear-gradient(135deg, #9b9cff, #6cdfdb);
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(155, 156, 255, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.case-lowfodmap__telegram-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(155, 156, 255, 0.4);
+}
+
+.case-lowfodmap__telegram-button:active {
+  transform: translateY(0);
+}
+
 /* Running line animation for carousel container */
 @keyframes running-line {
   0% {
@@ -2264,5 +2312,23 @@
   .case-page.case-lowfodmap{
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .case-lowfodmap__telegram-button-container {
+    padding: 24px 16px;
+    margin-top: 32px;
+  }
+  
+  .case-lowfodmap__telegram-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .case-lowfodmap__telegram-button {
+    font-size: 1rem;
+    padding: 14px 24px;
   }
 }

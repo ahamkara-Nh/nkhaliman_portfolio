@@ -890,6 +890,19 @@ export default function CaseLowFodmap() {
             </div>
           </div>
 
+          {/* Telegram Bot Button */}
+          <div className="case-lowfodmap__telegram-button-container">
+            <p className="case-lowfodmap__telegram-description">
+              Полный интерфейс был реализован в виде Telegram Mini App. 
+              Функционал, представленный выше, можно посмотреть по ссылке.
+            </p>
+            <button 
+              className="case-lowfodmap__telegram-button"
+              onClick={() => window.open('https://t.me/fodmap_tracker_bot', '_blank')}
+            >
+              Открыть Telegram бот
+            </button>
+          </div>
         </section>
       </section>
 

@@ -938,7 +938,6 @@
 }
 
 .case-lowfodmap__competitive-table th {
-  background: rgba(155, 156, 255, 0.1);
   font-weight: 200;
   color: var(--text);
   position: sticky;
@@ -948,7 +947,6 @@
 .case-lowfodmap__competitive-table th:first-child,
 .case-lowfodmap__competitive-table td:first-child {
   font-weight: 200;
-  background: rgba(255, 255, 255, 0.06);
 }
 
 .case-lowfodmap__competitive-table th:last-child,
@@ -968,13 +966,13 @@
 }
 
 .case-lowfodmap__table-cell--medium {
-  background: rgba(255, 163, 150, 0.15);
+  background: rgba(255, 163, 150, 0.05);
   color: #ffa396;
   font-weight: 500;
 }
 
 .case-lowfodmap__table-cell--bad {
-  background: rgba(255, 107, 107, 0.15);
+  background: rgba(255, 107, 107, 0.05);
   color: #ff6b6b;
   font-weight: 500;
 }

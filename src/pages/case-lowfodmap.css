@@ -2672,6 +2672,7 @@
   
   .case-lowfodmap__testing-test-description p {
     font-size: 1rem;
+    max-width: 40vw;
   }
   
   .case-lowfodmap__testing-layout {
@@ -2772,5 +2773,6 @@
   .case-lowfodmap__testing-text p,
   .case-lowfodmap__testing-test-description p {
     font-size: 0.65rem;
+    max-width: 30vw;
   }
 }

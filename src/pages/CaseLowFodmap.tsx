@@ -901,6 +901,17 @@ export default function CaseLowFodmap() {
             </button>
           </div>
         </section>
+
+        {/* Testing and Results Section */}
+        <section id="testing" className="case-lowfodmap__testing-section">
+          <h2 className="case-lowfodmap__problem-header">Тестирование и результаты</h2>
+          <h3 className="case-lowfodmap__complexity-subheader">Немного о тестировании</h3>
+          <p className="case-lowfodmap__testing-description">
+            Для проверки прототипа собрал небольшую, но релевантную группу участников: 
+            людей, которые пробовали соблюдать <b>low‑FODMAP</b> диету и пользовались существующими приложениями, но сталкивались с трудностями. 
+            Я составил тестирование в <b>Pathway</b> с интерактивным прототипом и коротким опросником, чтобы понять, насколько продукт помогает справляться с реальными сценариями.
+          </p>
+        </section>
       </section>
 
       {/* Fullscreen Modal */}

@@ -2349,3 +2349,31 @@
     padding: 14px 24px;
   }
 }
+
+/* Testing and Results Section */
+.case-lowfodmap__testing-section {
+  margin: 60px 0;
+  text-align: left;
+}
+
+.case-lowfodmap__testing-section b {
+  color: var(--text);
+}
+
+.case-lowfodmap__testing-description {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 16px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .case-lowfodmap__testing-section {
+    margin: 48px 0;
+  }
+  
+  .case-lowfodmap__testing-description {
+    font-size: 1rem;
+    padding: 20px;
+  }
+}

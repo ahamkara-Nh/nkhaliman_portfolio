@@ -2501,12 +2501,12 @@
 
 /* Labels are now positioned in the main styles above - no duplicate rules needed */
 
-.case-lowfodmap__testing-description {
+.case-lowfodmap__testing-test-description {
   text-align: center;
   max-width: 500px;
 }
 
-.case-lowfodmap__testing-description p {
+.case-lowfodmap__testing-test-description p {
   font-size: 1.125rem;
   line-height: 1.65;
   color: var(--muted);
@@ -2653,11 +2653,11 @@
     max-height: 300px;
   }
   
-  .case-lowfodmap__testing-description {
+  .case-lowfodmap__testing-test-description {
     max-width: 100%;
   }
   
-  .case-lowfodmap__testing-description p {
+  .case-lowfodmap__testing-test-description p {
     font-size: 1rem;
   }
   
@@ -2757,7 +2757,7 @@
   }
   
   .case-lowfodmap__testing-text p,
-  .case-lowfodmap__testing-description p {
+  .case-lowfodmap__testing-test-description p {
     font-size: 0.95rem;
   }
 }

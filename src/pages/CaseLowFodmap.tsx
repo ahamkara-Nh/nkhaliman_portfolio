@@ -936,7 +936,7 @@ export default function CaseLowFodmap() {
                           />
                         </div>
                       </div>
-                      <div className="case-lowfodmap__testing-description">
+                      <div className="case-lowfodmap__testing-test-description">
                         <p>
                           Описание уникальной функции 1. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
                         </p>
@@ -961,7 +961,7 @@ export default function CaseLowFodmap() {
                           />
                         </div>
                       </div>
-                      <div className="case-lowfodmap__testing-description">
+                      <div className="case-lowfodmap__testing-test-description">
                         <p>
                           Описание уникальной функции 2. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
                         </p>
@@ -986,7 +986,7 @@ export default function CaseLowFodmap() {
                           />
                         </div>
                       </div>
-                      <div className="case-lowfodmap__testing-description">
+                      <div className="case-lowfodmap__testing-test-description">
                         <p>
                           Описание уникальной функции 3. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
                         </p>
@@ -1011,7 +1011,7 @@ export default function CaseLowFodmap() {
                           />
                         </div>
                       </div>
-                      <div className="case-lowfodmap__testing-description">
+                      <div className="case-lowfodmap__testing-test-description">
                         <p>
                           Описание уникальной функции 4. Здесь будет описание того, как эта функция работает и какую пользу она приносит пользователю.
                         </p>

@@ -3082,6 +3082,12 @@
   transform: translateY(0);
 }
 
+.case-lowfodmap__back-to-top svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
 /* Responsive adjustments for back to top button */
 @media (max-width: 768px) {
   .case-lowfodmap__back-to-top {
@@ -3089,6 +3095,11 @@
     right: 24px;
     width: 48px;
     height: 48px;
+  }
+  
+  .case-lowfodmap__back-to-top svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -3098,5 +3109,10 @@
     right: 16px;
     width: 40px;
     height: 40px;
+  }
+  
+  .case-lowfodmap__back-to-top svg {
+    width: 18px;
+    height: 18px;
   }
 }

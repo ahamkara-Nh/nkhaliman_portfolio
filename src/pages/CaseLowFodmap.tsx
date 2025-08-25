@@ -926,6 +926,59 @@ export default function CaseLowFodmap() {
             Я составил тестирование в <b>Pathway</b> с интерактивным прототипом и коротким опросником, чтобы понять, насколько продукт помогает справляться с реальными сценариями.
           </p>
 
+          {/* SUS Test Results Section */}
+          <h3 className="case-lowfodmap__complexity-subheader">Оценка удобства</h3>
+          <p className="case-lowfodmap__testing-description">
+            По итогам тестов SUS‑оценка интерфейса составила 78,5 из 100, что считается хорошим показателем. 
+            Особенно пользователи ценили простоту навигации и чёткие визуальные сигналы.
+            Также использовался метод оценки SEQ (Single Ease Question) для оценки удобства выполнения конкретных задач.
+            Пользователи оценивали каждую задачу по шкале от 1 до 7, где 1 — "очень сложно", а 7 — "очень просто".
+          </p>
+          <div className="case-lowfodmap__sus-score-container">
+            <div className="case-lowfodmap__sus-score">
+              <span className="case-lowfodmap__sus-value">SUS</span>
+              <span className="case-lowfodmap__sus-number">78.5</span>
+              <span className="case-lowfodmap__sus-max">/ 100</span>
+            </div>
+          </div>
+
+          <div className="case-lowfodmap__seq-table-container">
+            <table className="case-lowfodmap__seq-table">
+              <thead>
+                <tr>
+                  <th>Задача</th>
+                  <th>Средний балл SEQ (из 7)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1. Зарегистрировать новый прием пищи</td>
+                  <td>6.2</td>
+                </tr>
+                <tr>
+                  <td>2. Найти информацию о FODMAP-статусе продукта</td>
+                  <td>6.5</td>
+                </tr>
+                <tr>
+                  <td>3. Добавить продукт в избранное</td>
+                  <td>6.8</td>
+                </tr>
+                <tr>
+                  <td>4. Зафиксировать возникшие симптомы и их интенсивность</td>
+                  <td>5.9</td>
+                </tr>
+                <tr>
+                  <td>5. Ознакомиться с информацией об одном из этапов диеты</td>
+                  <td>6.1</td>
+                </tr>
+                <tr>
+                  <td>6. Загрузить свой дневник питания (функция экспорта)</td>
+                  <td>5.5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           {/* Before/After Section */}
           <h3 className="case-lowfodmap__complexity-subheader">Уникальные функции среди приложений-конкурентов</h3>
           

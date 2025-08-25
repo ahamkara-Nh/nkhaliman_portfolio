@@ -934,6 +934,38 @@ export default function CaseLowFodmap() {
             <div className="case-lowfodmap__testing-flip">
               <div className="case-lowfodmap__testing-track" ref={trackRef}>
                 
+                                {/* Feature 2 */}
+                <div className="case-lowfodmap__testing-slide">
+                  <h4 className="case-lowfodmap__testing-subheader">Возможность добавить собственный продукт</h4>
+                  <div className="case-lowfodmap__testing-content">
+                    <div className="case-lowfodmap__testing-single-layout">
+                      <div className="case-lowfodmap__testing-image-container">
+                        <div className="case-lowfodmap__testing-interface-image">
+                          <img
+                            src="/src/assets/case-images/first-case/features/second.svg"
+                            alt="Возможность добавить собственный продукт"
+                            className="case-lowfodmap__testing-interface-screenshot"
+                          />
+                        </div>
+                      </div>
+                      <div className="case-lowfodmap__testing-test-description">
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
+                          <p>
+                            Пользователи могли не найти в базе нужного продукта
+                          </p>
+                        </div>
+                        <div className="case-lowfodmap__testing-label-label">
+                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
+                          <p>
+                            Пользователь может добавить продукт, если нашел его в другом источнике
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
                 {/* Feature 1 */}
                 <div className="case-lowfodmap__testing-slide">
                   <h4 className="case-lowfodmap__testing-subheader">Автоматическое отслеживание этапов</h4>
@@ -965,38 +997,7 @@ export default function CaseLowFodmap() {
                     </div>
                   </div>
                 </div>
-                
-                {/* Feature 2 */}
-                <div className="case-lowfodmap__testing-slide">
-                  <h4 className="case-lowfodmap__testing-subheader">Возможность добавить собственный продукт</h4>
-                  <div className="case-lowfodmap__testing-content">
-                    <div className="case-lowfodmap__testing-single-layout">
-                      <div className="case-lowfodmap__testing-image-container">
-                        <div className="case-lowfodmap__testing-interface-image">
-                          <img
-                            src="/src/assets/case-images/first-case/features/second.svg"
-                            alt="Возможность добавить собственный продукт"
-                            className="case-lowfodmap__testing-interface-screenshot"
-                          />
-                        </div>
-                      </div>
-                      <div className="case-lowfodmap__testing-test-description">
-                        <div className="case-lowfodmap__testing-label-label">
-                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--before">До</div>
-                          <p>
-                            Пользователи могли не найти в базе нужного продукта
-                          </p>
-                        </div>
-                        <div className="case-lowfodmap__testing-label-label">
-                          <div className="case-lowfodmap__testing-label case-lowfodmap__testing-label--after">После</div>
-                          <p>
-                            Пользователь может добавить продукт, если нашел его в другом источнике
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
                 
                 {/* Feature 3 */}
                 <div className="case-lowfodmap__testing-slide">

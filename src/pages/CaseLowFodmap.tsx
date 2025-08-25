@@ -1,6 +1,7 @@
 import './case-lowfodmap.css';
 import { useState, useRef, useEffect } from 'react';
 import { useRive } from '@rive-app/react-canvas';
+import confetti from 'canvas-confetti';
 
 // Rive Phase Tracker Component
 function RivePhaseTracker() {
@@ -1160,12 +1161,26 @@ export default function CaseLowFodmap() {
             К тому же, я не программист: код для мини‑приложения писал с помощью нейросети, и поэтому не все задуманные в дизайне фишки удалось воплотить вживую. 
             Это всё не минусы, а скорее ориентиры, куда двигаться дальше, чтобы из идеи вырос полностью готовый и надёжный продукт.
           </p>
-          <div className="case-lowfodmap__conclusion-image-container">
-            <img 
-              src="/src/assets/case-images/first-case/meme.png" 
-              alt="Мем о low-FODMAP диете" 
-              className="case-lowfodmap__conclusion-image"
-            />
+          <div className='case-lowfodmap__conclusion-image-wrapper'>
+            <div 
+              className="case-lowfodmap__conclusion-image-container"
+              onClick={() => {
+                confetti({
+                  particleCount: 150,
+                  spread: 70,
+                  origin: { y: 0.6 },
+                  colors: ['#9b9cff', '#6cdfdb', '#ffa396', '#ff6b6b'],
+                  shapes: ['circle', 'square'],
+                  scalar: 1.2
+                });
+              }}
+            >
+              <img 
+                src="/src/assets/case-images/first-case/meme.png" 
+                alt="Мем о low-FODMAP диете" 
+                className="case-lowfodmap__conclusion-image"
+              />
+            </div>
           </div>
         </section>
       </section>

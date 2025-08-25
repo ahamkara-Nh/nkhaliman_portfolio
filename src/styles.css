@@ -148,7 +148,7 @@ body::after {
   gap: 18px;
   padding-top: 64px;
   max-width: 1000px;
-  margin-bottom: 64px;
+  margin-bottom: 0;
 }
 
 /* About section */

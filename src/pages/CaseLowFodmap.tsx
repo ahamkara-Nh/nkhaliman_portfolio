@@ -53,6 +53,7 @@ export default function CaseLowFodmap() {
   const [currentPosition, setCurrentPosition] = useState({ x: 0, y: 0 });
   const [currentScreen, setCurrentScreen] = useState(0);
   const [mainScreensCurrentScreen, setMainScreensCurrentScreen] = useState(0);
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const diagramRef = useRef<HTMLDivElement>(null);
   const touchStartDistance = useRef<number>(0);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -251,6 +252,22 @@ export default function CaseLowFodmap() {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isFullscreen, isPhase2Fullscreen]);
+
+  // Handle scroll to show/hide back to top button
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="case-page case-lowfodmap" role="main" aria-label="Case: Low-FODMAP">
@@ -1344,6 +1361,17 @@ export default function CaseLowFodmap() {
           </div>
         </div>
       )}
+      
+      {/* Back to Top Button */}
+      <button 
+        className={`case-lowfodmap__back-to-top ${showBackToTop ? 'show' : ''}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Наверх"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
     </div>
   );
 }

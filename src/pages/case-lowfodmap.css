@@ -218,7 +218,7 @@
 }
 
 .case-lowfodmap__problem-image-slide--hover {
-  background-image: url("/src/assets/case-images/first-case/problem2.png");
+  background-image: url("/src/assets/case-images/first-case/problem2.jpeg");
   opacity: 0;
   z-index: 2;
 }

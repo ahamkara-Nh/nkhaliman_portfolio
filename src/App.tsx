@@ -283,7 +283,7 @@ export default function App() {
                     <li className="exp-item">
                       <details className="exp-details">
                         <summary className="exp-summary">
-                          <div className="exp-title">UI/UX дизайнер — Учебный проект с компанией «Центр гос. экспертизы»</div>
+                          <div className="exp-title">UI/UX дизайнер — Учебный проект с компанией «ТеДо» (Технологии Доверия) </div>
                           <div className="exp-meta">апрель 2024 — июнь 2024 / 3 месяца</div>
                         </summary>
                         <div className="exp-content">
@@ -301,7 +301,7 @@ export default function App() {
                     <li className="exp-item">
                       <details className="exp-details">
                         <summary className="exp-summary">
-                          <div className="exp-title">UI/UX дизайнер — Учебный проект с компанией «ТеДо» (Технологии Доверия)</div>
+                          <div className="exp-title">UI/UX дизайнер — Учебный проект с компанией «Центр гос. экспертизы»</div>
                           <div className="exp-meta">январь 2024 — март 2024 / 3 месяца</div>
                         </summary>
                         <div className="exp-content">

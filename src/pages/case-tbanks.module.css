@@ -260,6 +260,110 @@
   color: var(--text);
 }
 
+/* About Project Section */
+.case-tbanks__about-section {
+  margin: 40px 0;
+  text-align: left;
+}
+
+.case-tbanks__about-header {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 32px 0;
+  color: var(--text);
+  text-align: left;
+}
+
+.case-tbanks__about-content {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.case-tbanks__about-text {
+  flex: 1.5;
+}
+
+.case-tbanks__about-text p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 16px 0;
+}
+
+.case-tbanks__about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.case-tbanks__about-text b,
+.case-tbanks__about-text strong {
+  color: var(--text);
+}
+
+.case-tbanks__about-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  height: 480px;
+  transition: all 160ms ease;
+}
+
+.case-tbanks__about-image:hover {
+  transform: translateY(-2px);
+}
+
+.case-tbanks__about-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+  border-radius: var(--radius);
+}
+
+.case-tbanks__about-image:hover::before {
+  opacity: 1;
+}
+
+.case-tbanks__about-image::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.case-tbanks__about-image:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+.case-tbanks__mockup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  position: relative;
+  z-index: 3;
+  transition: transform 0.3s ease;
+}
+
+.case-tbanks__about-image:hover .case-tbanks__mockup-image {
+  transform: scale(1.02);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .case-tbanks__title {
@@ -341,6 +445,32 @@
 
   .case-tbanks__research-description p {
     font-size: 1rem;
+  }
+
+  .case-tbanks__about-section {
+    margin: 48px 0;
+  }
+
+  .case-tbanks__about-header {
+    font-size: 1.875rem;
+    margin-bottom: 24px;
+  }
+
+  .case-tbanks__about-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .case-tbanks__about-text {
+    flex: 1;
+  }
+
+  .case-tbanks__about-text p {
+    font-size: 1rem;
+  }
+
+  .case-tbanks__about-image {
+    max-width: 100%;
   }
 }
 

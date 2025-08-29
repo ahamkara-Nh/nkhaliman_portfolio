@@ -10,8 +10,10 @@ export default function CaseTBanks() {
         </header>
         <div className={styles['case-tbanks__description']}>
           <p>
-            От безликой ленты к персональному гиду: как мы планировали внедрение новой рекомендательной системы и увеличить конверсию в 1.5 раза для сервиса "Город" в Т-Банке
-            Разработка концепции рекомендательной системы на основе байесовских сетей — от исследования пользователей до дорожной карты внедрения.
+            От безликого раздела к персональному гиду: как мы планировали внедрение новой рекомендательной системы, 
+            чтобы увеличить конверсию в 1.5 раза для сервиса "Город" в Т-Банке.
+            Разработка концепции рекомендательной системы на основе байесовских сетей — 
+            от исследования пользователей до дорожной карты внедрения.
           </p>
         </div>
 
@@ -20,25 +22,25 @@ export default function CaseTBanks() {
             <h2 className={styles['case-tbanks__section-title']}>Содержание</h2>
             <ul className={styles['case-tbanks__toc-list']}>
               <li className={styles['case-tbanks__toc-item']}>
-                <a href="#problem" className={styles['case-tbanks__toc-link']}>1. Проблематика сервиса "Город"</a>
+                <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
               </li>
               <li className={styles['case-tbanks__toc-item']}>
-                <a href="#research" className={styles['case-tbanks__toc-link']}>2. Исследование и анализ данных</a>
+                <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
               </li>
               <li className={styles['case-tbanks__toc-item']}>
-                <a href="#concept" className={styles['case-tbanks__toc-link']}>3. Концепция рекомендательной системы</a>
+                <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
               </li>
               <li className={styles['case-tbanks__toc-item']}>
-                <a href="#implementation" className={styles['case-tbanks__toc-link']}>4. Техническая реализация</a>
+                <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
               </li>
               <li className={styles['case-tbanks__toc-item']}>
-                <a href="#roadmap" className={styles['case-tbanks__toc-link']}>5. Дорожная карта внедрения</a>
+                <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
               </li>
             </ul>
           </div>
 
           <div className={styles['case-tbanks__key-results']}>
-            <h2 className={styles['case-tbanks__section-title']}>Ключевые результаты</h2>
+            <h2 className={styles['case-tbanks__section-title']}>Мой вклад в групповой проект</h2>
             <div className={styles['case-tbanks__results-grid']}>
               <div className={styles['case-tbanks__result-card']}>
                 <div className={styles['case-tbanks__result-number']}>Макет</div>

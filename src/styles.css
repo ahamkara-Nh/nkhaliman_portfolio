@@ -146,7 +146,7 @@ body::after {
   display: grid;
   align-content: start;
   gap: 18px;
-  padding-top: 64px;
+  padding-top: 44px;
   max-width: 1000px;
   margin-bottom: 0;
 }

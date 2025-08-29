@@ -1,6 +1,7 @@
 import './styles.css';
 import { NavLink, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import CaseLowFodmap from './pages/CaseLowFodmap';
+import CaseTBanks from './pages/CaseTBanks';
 
 const AboutSection = () => (
   <section id="about" className="about">
@@ -127,7 +128,7 @@ function HardSoftSkillsSection() {
 
 export default function App() {
   const location = useLocation();
-  const isCasePage = location.pathname === '/portfolio/fodmap';
+  const isCasePage = location.pathname === '/portfolio/fodmap' || location.pathname === '/portfolio/tbanks';
 
   return (
     <div className="page">
@@ -152,13 +153,22 @@ export default function App() {
             Портфолио
           </NavLink>
           {/* Show the third button only on the case page */}
-          {isCasePage && (
+          {location.pathname === '/portfolio/fodmap' && (
             <NavLink
               to="/portfolio/fodmap"
               className={({ isActive }: { isActive: boolean }) => `nav-btn${isActive ? ' is-active' : ''}`}
               aria-current="page"
             >
               Трекер low-FODMAP
+            </NavLink>
+          )}
+          {location.pathname === '/portfolio/tbanks' && (
+            <NavLink
+              to="/portfolio/tbanks"
+              className={({ isActive }: { isActive: boolean }) => `nav-btn${isActive ? ' is-active' : ''}`}
+              aria-current="page"
+            >
+              Т-Банк "Город"
             </NavLink>
           )}
         </nav>
@@ -419,16 +429,18 @@ export default function App() {
                     </li>
 
                     <li className="case-card">
-                      <img
-                        className="case-image"
-                        src="https://placehold.co/600x400/png"
-                        alt="Превью проекта 2"
-                        aria-hidden="true"
-                      />
-                      <div className="case-body">
-                        <h3 className="case-title">Концепт рекомендательной системы в Т-Банк "Город"</h3>
-                        <div className="case-origin">Учебный проект с компанией "ТеДо" (Технологии Доверия)</div>
-                      </div>
+                      <a className="case-link" href="/portfolio/tbanks" aria-label="Открыть кейс: Концепт рекомендательной системы в Т-Банк Город">
+                        <img
+                          className="case-image"
+                          src="src\assets\case-images\second-case\bank.png"
+                          alt="Превью проекта: Концепт рекомендательной системы в Т-Банк Город"
+                          aria-hidden="true"
+                        />
+                        <div className="case-body">
+                          <h3 className="case-title">Концепт рекомендательной системы в Т-Банк "Город"</h3>
+                          <div className="case-origin">Учебный проект с компанией "ТеДо" (Технологии Доверия)</div>
+                        </div>
+                      </a>
                     </li>
 
                     <li className="case-card">
@@ -467,6 +479,15 @@ export default function App() {
               <>
                 {/* Keep only the two existing buttons at the top (from header). No hero section here. */}
                 <CaseLowFodmap />
+              </>
+            }
+          />
+          <Route
+            path="/portfolio/tbanks"
+            element={
+              <>
+                {/* Keep only the two existing buttons at the top (from header). No hero section here. */}
+                <CaseTBanks />
               </>
             }
           />

@@ -15,4 +15,4 @@ To prevent style conflicts and ensure component encapsulation, we use CSS Module
 
 1. Rule: Every React component must have its own corresponding [ComponentName].module.css file.
 
-2. Rule: NEVER write global CSS selectors (e.g., div, button, .card).
+2. Rule: NEVER write global CSS selectors (e.g., div, button, .card, h1).

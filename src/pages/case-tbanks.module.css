@@ -1,0 +1,352 @@
+.case-page.case-tbanks {
+  display: block;
+  padding: 0 16px 64px;
+  max-width: 100vw;
+  padding-bottom: 0;
+}
+
+.case-content {
+  min-height: 50vh;
+  margin: 16px auto 0;
+  max-width: 1000px;
+}
+
+.case-tbanks__header {
+  text-align: left;
+}
+
+.case-tbanks__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-tbanks__subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--muted);
+  margin: 0;
+}
+
+.case-tbanks__description {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  margin-top: 24px;
+}
+
+.case-tbanks__description p {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0;
+}
+
+.case-tbanks__content-row {
+  display: flex;
+  gap: 64px;
+  margin-top: 40px;
+}
+
+.case-tbanks__table-of-contents {
+  flex: 1;
+  border-radius: var(--radius);
+  padding: 20px 0;
+}
+
+.case-tbanks__key-results {
+  flex: 1;
+  border-radius: var(--radius);
+  padding: 20px 0;
+  backdrop-filter: blur(6px);
+}
+
+.case-tbanks__section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 16px 0;
+  color: var(--text);
+}
+
+.case-tbanks__toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.case-tbanks__toc-item {
+  margin: 0;
+}
+
+.case-tbanks__toc-link {
+  display: block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 160ms ease;
+}
+
+.case-tbanks__toc-link:hover {
+  color: var(--text);
+  border-color: rgba(155, 156, 255, 0.28);
+  background: rgba(155, 156, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
+}
+
+.case-tbanks__results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.case-tbanks__result-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 160ms ease;
+}
+
+.case-tbanks__result-card:hover {
+  border-color: rgba(155, 156, 255, 0.28);
+  background: rgba(155, 156, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
+}
+
+.case-tbanks__result-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.case-tbanks__result-label {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--muted);
+  margin: 0;
+}
+
+.case-tbanks__problem-section {
+  margin: 40px 0;
+}
+
+.case-tbanks__problem-header {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 32px 0;
+  color: var(--text);
+  text-align: left;
+}
+
+.case-tbanks__problem-content {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.case-tbanks__problem-text {
+  flex: 1;
+}
+
+.case-tbanks__problem-text p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 16px 0;
+}
+
+.case-tbanks__problem-text b {
+  color: var(--text);
+}
+
+.case-tbanks__complexity-subheader {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 48px 0 32px 0;
+  color: var(--text);
+  text-align: left;
+}
+
+.case-tbanks__complexity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.case-tbanks__complexity-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 160ms ease;
+}
+
+.case-tbanks__complexity-card:hover {
+  border-color: rgba(155, 156, 255, 0.28);
+  background: rgba(155, 156, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
+}
+
+.case-tbanks__complexity-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+  color: var(--text);
+}
+
+.case-tbanks__complexity-card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+.case-tbanks__research-section,
+.case-tbanks__concept-section,
+.case-tbanks__implementation-section,
+.case-tbanks__roadmap-section {
+  margin: 60px 0;
+  text-align: left;
+}
+
+.case-tbanks__research-description {
+  border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(6px);
+  margin-top: 24px;
+}
+
+.case-tbanks__research-description p {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0;
+}
+
+.case-tbanks__research-description b {
+  color: var(--text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .case-tbanks__title {
+    font-size: 2rem;
+  }
+
+  .case-tbanks__subtitle {
+    font-size: 1.125rem;
+  }
+
+  .case-tbanks__header {
+    padding: 0;
+  }
+
+  .case-tbanks__description p {
+    font-size: 1rem;
+  }
+
+  .case-tbanks__content-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .case-tbanks__section-title {
+    font-size: 1.375rem;
+  }
+
+  .case-tbanks__problem-section {
+    margin: 48px 0;
+  }
+
+  .case-tbanks__problem-header {
+    font-size: 1.875rem;
+    margin-bottom: 24px;
+  }
+
+  .case-tbanks__problem-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .case-tbanks__toc-link {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+
+  .case-tbanks__results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-tbanks__result-number {
+    font-size: 2rem;
+  }
+
+  .case-tbanks__complexity-subheader {
+    font-size: 1.5rem;
+    margin: 32px 0 20px 0;
+  }
+
+  .case-tbanks__complexity-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .case-tbanks__complexity-card {
+    padding: 20px;
+  }
+
+  .case-tbanks__complexity-card-title {
+    font-size: 1.125rem;
+  }
+
+  .case-tbanks__research-section,
+  .case-tbanks__concept-section,
+  .case-tbanks__implementation-section,
+  .case-tbanks__roadmap-section {
+    margin: 48px 0;
+  }
+
+  .case-tbanks__research-description p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .case-page.case-tbanks {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

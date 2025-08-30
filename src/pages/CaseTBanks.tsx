@@ -22,8 +22,20 @@ export default function CaseTBanks() {
   const openFullscreen = (imageSrc: string) => {
     setFullscreenImage(imageSrc);
     setIsFullscreen(true);
-    setZoomLevel(0.85); // Set default zoom to 85% for screenshots
+    // Set default zoom based on device type
+    const isMobile = window.innerWidth <= 768;
+    setZoomLevel(isMobile ? 2.0 : 0.85); // 200% for mobile, 85% for desktop
     setCurrentPosition({ x: 0, y: 0 }); // Reset position
+  };
+
+  // Determine header based on image source
+  const getFullscreenHeader = () => {
+    if (fullscreenImage.includes('story1.svg')) {
+      return 'Storyboard AS IS';
+    } else if (fullscreenImage.includes('painpoint')) {
+      return 'Анализ болей пользователей';
+    }
+    return 'Анализ болей пользователей'; // Default fallback
   };
 
   const closeFullscreen = () => {
@@ -362,7 +374,7 @@ export default function CaseTBanks() {
         <div className="case-lowfodmap__fullscreen-overlay case-lowfodmap__fullscreen-overlay--phase2" onClick={closeFullscreen}>
           <div className="case-lowfodmap__fullscreen-modal" onClick={(e) => e.stopPropagation()}>
             <div className="case-lowfodmap__fullscreen-header">
-              <h3>Storyboard AS IS</h3>
+              <h3>{getFullscreenHeader()}</h3>
               <div className="case-lowfodmap__zoom-controls">
                 <button
                   className="case-lowfodmap__zoom-button"
@@ -400,12 +412,12 @@ export default function CaseTBanks() {
                     <path d="M4 4V9H4.5M4.5 9H9M4.5 9V13.5M20 20V15H19.5M19.5 15H15M19.5 15V9.5M16 16L20 20L16 16ZM8 8L4 4L8 8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
+                <button className="case-lowfodmap__fullscreen-close" onClick={closeFullscreen} aria-label="Закрыть">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </div>
-              <button className="case-lowfodmap__fullscreen-close" onClick={closeFullscreen} aria-label="Закрыть">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
             </div>
             <div
               className={`case-lowfodmap__fullscreen-content--phase2 ${isFullscreen ? 'case-lowfodmap__fullscreen-content--phase2' : ''} ${isDragging ? 'case-lowfodmap__fullscreen-content--dragging' : ''}`}

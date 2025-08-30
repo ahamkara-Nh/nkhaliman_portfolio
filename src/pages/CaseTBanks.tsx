@@ -11,6 +11,14 @@ export default function CaseTBanks() {
   const diagramRef = useRef<HTMLDivElement>(null);
   const touchStartDistance = useRef<number>(0);
 
+  // Carousel state
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const carouselImages = [
+    '/src/assets/case-images/second-case/painpoint1.svg',
+    '/src/assets/case-images/second-case/painpoint2.svg',
+    '/src/assets/case-images/second-case/painpoint3.svg'
+  ];
+
   const openFullscreen = (imageSrc: string) => {
     setFullscreenImage(imageSrc);
     setIsFullscreen(true);
@@ -135,6 +143,19 @@ export default function CaseTBanks() {
       }
     }
   }, [isDragging]);
+
+  // Carousel navigation functions
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
+
+  const goToImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
 
   // Add event listeners for zoom functionality
   useEffect(() => {
@@ -263,9 +284,75 @@ export default function CaseTBanks() {
                 className="case-lowfodmap__phase-screenshot2"
               />
             </div>
-            <p>
-              Эти проблемы приводили к фрустрации: пользователи, как Серёжа из сториборда, часто уходили ни с чем, не найдя подходящего досуга. Ниже я приведу три слайда из презентации, которые визуально иллюстрируют эти боли на примерах реального интерфейса.
+            <p style={{ marginBottom: '1vw', marginTop: '0.5vw' }}>
+              Эти проблемы приводили к фрустрации: пользователи, как Серёжа из сториборда, часто уходили ни с чем, не найдя подходящего досуга. 
+              Ниже я приведу три слайда из презентации, которые визуально иллюстрируют эти боли на примерах реального интерфейса.
             </p>
+
+            {/* Image Carousel */}
+            <div className={styles['case-tbanks__carousel']}>
+              <div className={styles['case-tbanks__carousel-container']}>
+                
+
+                <div className={styles['case-tbanks__carousel-content']}>
+                  <div
+                    className={styles['case-tbanks__carousel-image-container']}
+                    onClick={() => openFullscreen(carouselImages[currentImageIndex])}
+                  >
+                    <img
+                      src={carouselImages[currentImageIndex]}
+                      alt={`Pain point illustration ${currentImageIndex + 1}`}
+                      className={styles['case-tbanks__carousel-image']}
+                    />
+                    <div className={styles['case-tbanks__carousel-fullscreen-hint']}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 3H21V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M9 21H3V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M21 3L14 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3 21L10 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <span>Полный экран</span>
+                    </div>
+                  </div>
+
+                  <div className={styles['case-tbanks__carousel-controls']}>
+                    <div
+                    className={`${styles['case-tbanks__carousel-arrow']} ${styles['case-tbanks__carousel-arrow--left']}`}
+                    onClick={prevImage}
+                    aria-label="Previous image"
+                    >
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+
+                    <div className={styles['case-tbanks__carousel-indicators']}>
+                      {carouselImages.map((_, index) => (
+                        <div
+                          key={index}
+                          className={`${styles['case-tbanks__carousel-indicator']} ${index === currentImageIndex ? styles['active'] : ''}`}
+                          onClick={() => goToImage(index)}
+                          aria-label={`Go to image ${index + 1}`}
+                        />
+                      ))}
+                    </div>
+
+                    <div
+                    className={`${styles['case-tbanks__carousel-arrow']} ${styles['case-tbanks__carousel-arrow--right']}`}
+                    onClick={nextImage}
+                    aria-label="Next image"
+                  >
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
           </div>
         </section>
       </section>

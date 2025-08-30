@@ -416,6 +416,10 @@
     font-size: 2rem;
   }
 
+  .case-tbanks__key-results {
+    padding-top: 0;
+  }
+
   .case-tbanks__subtitle {
     font-size: 1.125rem;
   }
@@ -430,7 +434,8 @@
 
   .case-tbanks__content-row {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
+    margin-top: 20px;
   }
 
   .case-tbanks__section-title {
@@ -438,7 +443,7 @@
   }
 
   .case-tbanks__problem-section {
-    margin: 48px 0;
+    margin: 20px 0;
   }
 
   .case-tbanks__problem-header {
@@ -486,7 +491,7 @@
   .case-tbanks__concept-section,
   .case-tbanks__implementation-section,
   .case-tbanks__roadmap-section {
-    margin: 48px 0;
+    margin: 20px 0;
   }
 
   .case-tbanks__research-description p {
@@ -494,7 +499,7 @@
   }
 
   .case-tbanks__about-section {
-    margin: 48px 0;
+    margin: 20px 0;
   }
 
   .case-tbanks__about-header {

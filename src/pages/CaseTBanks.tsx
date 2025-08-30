@@ -255,7 +255,7 @@ export default function CaseTBanks() {
             <div
               className="case-lowfodmap__screenshot-container"
               onClick={() => openFullscreen("/src/assets/case-images/second-case/story1.svg")}
-              style={{ cursor: 'pointer', marginTop: '8px' }}
+              style={{ cursor: 'pointer', marginTop: '8px', marginBottom: '24px', width: '100%' }}
             >
               <img
                 src="/src/assets/case-images/second-case/story1.svg"
@@ -263,6 +263,9 @@ export default function CaseTBanks() {
                 className="case-lowfodmap__phase-screenshot2"
               />
             </div>
+            <p>
+              Эти проблемы приводили к фрустрации: пользователи, как Серёжа из сториборда, часто уходили ни с чем, не найдя подходящего досуга. Ниже я приведу три слайда из презентации, которые визуально иллюстрируют эти боли на примерах реального интерфейса.
+            </p>
           </div>
         </section>
       </section>

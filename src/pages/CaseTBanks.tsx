@@ -255,7 +255,7 @@ export default function CaseTBanks() {
             <div
               className="case-lowfodmap__screenshot-container"
               onClick={() => openFullscreen("/src/assets/case-images/second-case/story1.svg")}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: 'pointer', marginTop: '8px' }}
             >
               <img
                 src="/src/assets/case-images/second-case/story1.svg"

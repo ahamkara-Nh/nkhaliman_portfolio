@@ -382,6 +382,9 @@
 .case-tbanks__pain-content {
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .case-tbanks__pain-content p {

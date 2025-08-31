@@ -31,6 +31,12 @@ export default function CaseTBanks() {
   const [isOutcomesLoaded, setIsOutcomesLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Lazy loading states for iframes
+  const [isPrototypeInView, setIsPrototypeInView] = useState(false);
+  const [isOutcomesInView, setIsOutcomesInView] = useState(false);
+  const prototypeRef = useRef<HTMLDivElement>(null);
+  const outcomesRef = useRef<HTMLDivElement>(null);
+
   // Check if device is mobile
   useEffect(() => {
     const checkMobile = () => {
@@ -227,6 +233,41 @@ export default function CaseTBanks() {
       };
     }
   }, [isFullscreen, zoomLevel, isDragging, currentPosition]);
+
+  // Intersection Observer for lazy loading iframes
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '50px',
+      threshold: 0.1
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target === prototypeRef.current) {
+            setIsPrototypeInView(true);
+          } else if (entry.target === outcomesRef.current) {
+            setIsOutcomesInView(true);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    if (prototypeRef.current) {
+      observer.observe(prototypeRef.current);
+    }
+
+    if (outcomesRef.current) {
+      observer.observe(outcomesRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
   return (
     <>
       <style>
@@ -516,30 +557,26 @@ export default function CaseTBanks() {
               Как UI/UX дизайнер, я взялся за то, чтобы эти рекомендации вписались в существующий интерфейс, начиная от главной страницы, где они встречают пользователя сразу, и до умных всплывающих окон с кросс-рекомендациями, которые подкидывают дополнительные идеи в нужный момент.
             </p>
 
-            {isMobile && !isPrototypeLoaded ? (
-              <div className={styles['case-tbanks__prototype-banner']}>
-                <div className={styles['case-tbanks__prototype-banner-content']}>
-                  <div className={styles['case-tbanks__prototype-banner-text']}>
-                    <span>Интерактивный прототип интерфейса</span>
-                  </div>
-                  <button
-                    className="case-lowfodmap__telegram-button"
-                    onClick={() => setIsPrototypeLoaded(true)}
-                    aria-label="Загрузить Figma прототип"
-                  >
-                    Загрузить Figma прототип
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className={styles['case-tbanks__prototype-container']}>
+            <div ref={prototypeRef} className={styles['case-tbanks__prototype-container']}>
+              {isPrototypeInView ? (
                 <iframe
                   src="https://embed.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=0%3A1&node-id=734-32&viewport=1424%2C482%2C0.11&scaling=scale-down&content-scaling=fixed&starting-point-node-id=734%3A32&embed-host=share&footer=false&theme=dark"
                   allowFullScreen
                   title="T-Bank City Interface Prototype"
                 />
-              </div>
-            )}
+              ) : (
+                <div className={styles['case-tbanks__iframe-placeholder']}>
+                  <div className={styles['case-tbanks__iframe-placeholder-content']}>
+                    <div className={styles['case-tbanks__iframe-placeholder-text']}>
+                      Интерактивный прототип интерфейса
+                    </div>
+                    <div className={styles['case-tbanks__iframe-placeholder-subtext']}>
+                      Прокрутите вниз, чтобы загрузить
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
@@ -572,23 +609,8 @@ export default function CaseTBanks() {
                 перейти по ссылке
               </a>, чтобы открыть презентацию
             </p>
-            {isMobile && !isOutcomesLoaded ? (
-              <div className={styles['case-tbanks__prototype-banner']}>
-                <div className={styles['case-tbanks__prototype-banner-content']}>
-                  <div className={styles['case-tbanks__prototype-banner-text']}>
-                    <span>Figma презентация проекта</span>
-                  </div>
-                  <button
-                    className="case-lowfodmap__telegram-button"
-                    onClick={() => setIsOutcomesLoaded(true)}
-                    aria-label="Загрузить Figma презентацию"
-                  >
-                    Загрузить Figma презентацию
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className={styles['case-tbanks__outcomes-iframe-container']}>
+            <div ref={outcomesRef} className={styles['case-tbanks__outcomes-iframe-container']}>
+              {isOutcomesInView ? (
                 <iframe
                   style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
                   width="800"
@@ -597,8 +619,19 @@ export default function CaseTBanks() {
                   allowFullScreen
                   title="T-Bank City Interface Prototype - Outcomes"
                 />
-              </div>
-            )}
+              ) : (
+                <div className={styles['case-tbanks__iframe-placeholder']}>
+                  <div className={styles['case-tbanks__iframe-placeholder-content']}>
+                    <div className={styles['case-tbanks__iframe-placeholder-text']}>
+                      Figma презентация проекта
+                    </div>
+                    <div className={styles['case-tbanks__iframe-placeholder-subtext']}>
+                      Прокрутите вниз, чтобы загрузить
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </section>
       </section>

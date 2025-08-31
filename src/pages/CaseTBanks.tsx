@@ -460,16 +460,13 @@ export default function CaseTBanks() {
               </div>
             </div>
 
-            <h3 className={styles['case-tbanks__solution-subheader']}>Макет интерфейса</h3>
+            <h3 className={styles['case-tbanks__solution-subheader']} style={{ marginTop: '32px'}}>Макет интерфейса</h3>
             <p>
               Как UI/UX дизайнер, я взялся за то, чтобы эти рекомендации вписались в существующий интерфейс, начиная от главной страницы, где они встречают пользователя сразу, и до умных всплывающих окон с кросс-рекомендациями, которые подкидывают дополнительные идеи в нужный момент.
             </p>
 
             <div className={styles['case-tbanks__prototype-container']}>
               <iframe
-                style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
-                width="800"
-                height="450"
                 src="https://embed.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=0%3A1&node-id=734-32&viewport=1424%2C482%2C0.11&scaling=scale-down&content-scaling=fixed&starting-point-node-id=734%3A32&embed-host=share"
                 allowFullScreen
                 title="T-Bank City Interface Prototype"

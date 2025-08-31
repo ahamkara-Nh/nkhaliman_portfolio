@@ -37,6 +37,9 @@ export default function CaseTBanks() {
   const prototypeRef = useRef<HTMLDivElement>(null);
   const outcomesRef = useRef<HTMLDivElement>(null);
 
+  // Back to top state
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
   // Check if device is mobile
   useEffect(() => {
     const checkMobile = () => {
@@ -268,6 +271,23 @@ export default function CaseTBanks() {
       observer.disconnect();
     };
   }, []);
+
+  // Handle scroll to show/hide back to top button
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <style>
@@ -714,6 +734,17 @@ export default function CaseTBanks() {
           </div>
         </div>
       )}
+
+      {/* Back to Top Button */}
+      <button
+        className={`case-lowfodmap__back-to-top ${showBackToTop ? 'show' : ''}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Наверх"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
     </div>
     </>
   );

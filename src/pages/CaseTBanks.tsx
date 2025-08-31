@@ -295,9 +295,6 @@ export default function CaseTBanks() {
               <li className={styles['case-tbanks__toc-item']}>
                 <a href="#outcomes" className={styles['case-tbanks__toc-link']}>4. Итоги</a>
               </li>
-              <li className={styles['case-tbanks__toc-item']}>
-                <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
-              </li>
             </ul>
           </div>
 
@@ -555,7 +552,25 @@ export default function CaseTBanks() {
               <br /><br />
               Конечно, проект был командным, так что я тесно взаимодействовал с другими участниками: обсуждал, как дизайн стыкуется с технической частью, и оформлял их техническую документацию — диаграммы C4, sequence диаграммы, риски и метрики — чтобы всё вписалось в презентацию гладко и логично. Если хотите погрузиться глубже, полную презентацию можете посмотреть ниже — там все детали, от сторибордов до дорожной карты.
               <br /><br />
-              Или можете перейти по ссылке, чтобы открыть презентацию
+              Или можете <a
+                href="https://www.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=48%3A20&node-id=114-126&starting-point-node-id=114%3A126&scaling=scale-down&content-scaling=fixed&t=zfUzUJYFW0MMz7WD-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: 'var(--accent)',
+                  textDecoration: 'underline',
+                  fontWeight: '500',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = 'rgba(155, 156, 255, 0.8)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'var(--accent)';
+                }}
+              >
+                перейти по ссылке
+              </a>, чтобы открыть презентацию
             </p>
             {isMobile && !isOutcomesLoaded ? (
               <div className={styles['case-tbanks__prototype-banner']}>

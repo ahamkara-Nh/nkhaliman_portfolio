@@ -292,7 +292,7 @@ export default function CaseTBanks() {
                 <a href="#our-solution" className={styles['case-tbanks__toc-link']}>3. Наше решение</a>
               </li>
               <li className={styles['case-tbanks__toc-item']}>
-                <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
+                <a href="#outcomes" className={styles['case-tbanks__toc-link']}>4. Итоги</a>
               </li>
               <li className={styles['case-tbanks__toc-item']}>
                 <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
@@ -542,6 +542,28 @@ export default function CaseTBanks() {
                 />
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Outcomes Section */}
+        <section id="outcomes" className={styles['case-tbanks__outcomes-section']}>
+          <h2 className={styles['case-tbanks__outcomes-header']}>Итоги</h2>
+          <div className={styles['case-tbanks__outcomes-content']}>
+            <p>
+              В этом проекте я, как UI/UX дизайнер, взял на себя создание макетов возможного интерфейса для раздела "Город" в приложении Т-Банка, интегрируя туда рекомендательную систему на основе байесовских сетей. Кроме того, я полностью собрал proposal-презентацию: от построения сторителлинга (чтобы "заказчик" сразу вник в суть через истории и визуалы) до финального визуального оформления — выбрал цвета, шрифты, диаграммы, чтобы всё выглядело убедительно и стильно.
+              <br /><br />
+              Конечно, проект был командным, так что я тесно взаимодействовал с другими участниками: обсуждал, как дизайн стыкуется с технической частью, и оформлял их техническую документацию — диаграммы C4, sequence диаграммы, риски и метрики — чтобы всё вписалось в презентацию гладко и логично. Если хотите погрузиться глубже, полную презентацию можете посмотреть ниже — там все детали, от сторибордов до дорожной карты.
+            </p>
+            <div className={styles['case-tbanks__outcomes-iframe-container']}>
+              <iframe
+                style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
+                width="800"
+                height="450"
+                src="https://embed.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=48%3A20&node-id=114-126&starting-point-node-id=114%3A126&scaling=scale-down&content-scaling=fixed&embed-host=share&footer=false&theme=dark"
+                allowFullScreen
+                title="T-Bank City Interface Prototype - Outcomes"
+              />
+            </div>
           </div>
         </section>
       </section>

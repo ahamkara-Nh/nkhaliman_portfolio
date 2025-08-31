@@ -441,6 +441,58 @@
   text-align: left;
 }
 
+/* Outcomes Section */
+.case-tbanks__outcomes-section {
+  margin: 60px 0;
+  text-align: left;
+}
+
+.case-tbanks__outcomes-header {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 32px 0;
+  color: var(--text);
+  text-align: left;
+}
+
+.case-tbanks__outcomes-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.case-tbanks__outcomes-content p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 16px 0;
+}
+
+.case-tbanks__outcomes-content p:last-child {
+  margin-bottom: 0;
+}
+
+.case-tbanks__outcomes-iframe-container {
+  width: 100%;
+  margin-top: 8px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.case-tbanks__outcomes-iframe-container iframe {
+  width: 100%;
+  height: 650px;
+  border: none;
+  display: block;
+}
+
 .case-tbanks__pain-image {
   margin-top: 32px;
   text-align: center;
@@ -757,7 +809,8 @@
   .case-tbanks__research-section,
   .case-tbanks__concept-section,
   .case-tbanks__implementation-section,
-  .case-tbanks__roadmap-section {
+  .case-tbanks__roadmap-section,
+  .case-tbanks__outcomes-section {
     margin: 20px 0;
   }
 
@@ -818,6 +871,10 @@
 
   .case-tbanks__carousel-fullscreen-hint span {
     font-size: 0.75rem;
+  }
+
+  .case-tbanks__outcomes-iframe-container iframe {
+    height: 300px;
   }
 }
 

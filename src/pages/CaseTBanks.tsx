@@ -19,6 +19,13 @@ export default function CaseTBanks() {
     '/src/assets/case-images/second-case/painpoint3.svg'
   ];
 
+  // Solution carousel state
+  const [currentSolutionImageIndex, setCurrentSolutionImageIndex] = useState(0);
+  const solutionCarouselImages = [
+    '/src/assets/case-images/second-case/tobe1.png',
+    '/src/assets/case-images/second-case/tobe2.png'
+  ];
+
   const openFullscreen = (imageSrc: string) => {
     setFullscreenImage(imageSrc);
     setIsFullscreen(true);
@@ -30,7 +37,7 @@ export default function CaseTBanks() {
 
   // Determine header based on image source
   const getFullscreenHeader = () => {
-    if (fullscreenImage.includes('story1.svg')) {
+    if (fullscreenImage.includes('story1.png')) {
       return 'Storyboard AS IS';
     } else if (fullscreenImage.includes('painpoint')) {
       return 'Анализ болей пользователей';
@@ -169,6 +176,19 @@ export default function CaseTBanks() {
     setCurrentImageIndex(index);
   };
 
+  // Solution carousel navigation functions
+  const nextSolutionImage = () => {
+    setCurrentSolutionImageIndex((prev) => (prev + 1) % solutionCarouselImages.length);
+  };
+
+  const prevSolutionImage = () => {
+    setCurrentSolutionImageIndex((prev) => (prev - 1 + solutionCarouselImages.length) % solutionCarouselImages.length);
+  };
+
+  const goToSolutionImage = (index: number) => {
+    setCurrentSolutionImageIndex(index);
+  };
+
   // Add event listeners for zoom functionality
   useEffect(() => {
     if (isFullscreen && diagramRef.current) {
@@ -217,7 +237,7 @@ export default function CaseTBanks() {
                 <a href="#user-pain-points" className={styles['case-tbanks__toc-link']}>2. Боли пользователей</a>
               </li>
               <li className={styles['case-tbanks__toc-item']}>
-                <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
+                <a href="#our-solution" className={styles['case-tbanks__toc-link']}>3. Наше решение</a>
               </li>
               <li className={styles['case-tbanks__toc-item']}>
                 <a href="#placeholder" className={styles['case-tbanks__toc-link']}>Coming soon ...</a>
@@ -287,11 +307,11 @@ export default function CaseTBanks() {
             </p>
             <div
               className="case-lowfodmap__screenshot-container"
-              onClick={() => openFullscreen("/src/assets/case-images/second-case/story1.svg")}
+              onClick={() => openFullscreen("/src/assets/case-images/second-case/story1.png")}
               style={{ cursor: 'pointer', marginTop: '8px', marginBottom: '24px', width: '100%' }}
             >
               <img
-                src="/src/assets/case-images/second-case/story1.svg"
+                src="/src/assets/case-images/second-case/story1.png"
                 alt="User pain points illustration"
                 className="case-lowfodmap__phase-screenshot2"
               />
@@ -379,6 +399,66 @@ export default function CaseTBanks() {
             <p>
               Для иллюстрации, как это изменит пользовательский опыт, я сделал TO BE сториборды. В них Серёжа сразу видит персонализированные предложения на главной странице — например, фильм от любимого режиссёра с удобным временем и 15% кэшбеком, — и легко покупает билеты, уходя довольным. А Алиса, фанатка музыки, получает рекомендацию на концерт в другом городе с доступными билетами на самолёт, что делает поездку реальной.
             </p>
+
+            {/* Solution Image Carousel */}
+            <div className={styles['case-tbanks__carousel']}>
+              <div className={styles['case-tbanks__carousel-container']}>
+                <div className={styles['case-tbanks__carousel-content']}>
+                  <div
+                    className={styles['case-tbanks__carousel-image-container']}
+                    onClick={() => openFullscreen(solutionCarouselImages[currentSolutionImageIndex])}
+                  >
+                    <img
+                      src={solutionCarouselImages[currentSolutionImageIndex]}
+                      alt={`TO BE storyboard ${currentSolutionImageIndex + 1}`}
+                      className={styles['case-tbanks__carousel-image']}
+                    />
+                    <div className={styles['case-tbanks__carousel-fullscreen-hint']}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 3H21V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M9 21H3V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M21 3L14 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3 21L10 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <span>Полный экран</span>
+                    </div>
+                  </div>
+
+                  <div className={styles['case-tbanks__carousel-controls']}>
+                    <div
+                      className={`${styles['case-tbanks__carousel-arrow']} ${styles['case-tbanks__carousel-arrow--left']}`}
+                      onClick={prevSolutionImage}
+                      aria-label="Previous image"
+                    >
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+
+                    <div className={styles['case-tbanks__carousel-indicators']}>
+                      {solutionCarouselImages.map((_, index) => (
+                        <div
+                          key={index}
+                          className={`${styles['case-tbanks__carousel-indicator']} ${index === currentSolutionImageIndex ? styles['active'] : ''}`}
+                          onClick={() => goToSolutionImage(index)}
+                          aria-label={`Go to image ${index + 1}`}
+                        />
+                      ))}
+                    </div>
+
+                    <div
+                      className={`${styles['case-tbanks__carousel-arrow']} ${styles['case-tbanks__carousel-arrow--right']}`}
+                      onClick={nextSolutionImage}
+                      aria-label="Next image"
+                    >
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </section>

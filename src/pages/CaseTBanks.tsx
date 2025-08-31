@@ -227,7 +227,43 @@ export default function CaseTBanks() {
     }
   }, [isFullscreen, zoomLevel, isDragging, currentPosition]);
   return (
-    <div className={`${styles['case-page']} ${styles['case-tbanks']}`} role="main" aria-label="Case: T-Bank Recommendation System">
+    <>
+      <style>
+        {`
+          .case-lowfodmap__telegram-button {
+            background: linear-gradient(135deg, #9b9cff, #6cdfdb);
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-size: 1.125rem;
+            font-weight: 600;
+            padding: 16px 32px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(155, 156, 255, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+          }
+
+          .case-lowfodmap__telegram-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(155, 156, 255, 0.4);
+          }
+
+          .case-lowfodmap__telegram-button:active {
+            transform: translateY(0);
+          }
+
+          @media (max-width: 768px) {
+            .case-lowfodmap__telegram-button {
+              font-size: 1rem;
+              padding: 14px 24px;
+            }
+          }
+        `}
+      </style>
+      <div className={`${styles['case-page']} ${styles['case-tbanks']}`} role="main" aria-label="Case: T-Bank Recommendation System">
       <section className={styles['case-content']} aria-label="Storyline content">
         <header className={styles['case-tbanks__header']}>
           <h1 className={styles['case-tbanks__title']}>Концепт рекомендательной системы в Т-Банк "Город"</h1>
@@ -485,17 +521,10 @@ export default function CaseTBanks() {
               <div className={styles['case-tbanks__prototype-banner']}>
                 <div className={styles['case-tbanks__prototype-banner-content']}>
                   <div className={styles['case-tbanks__prototype-banner-text']}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles['case-tbanks__prototype-banner-icon']}>
-                      <path d="M14.5 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V7.5L14.5 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <polyline points="14,2 14,8 20,8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M16 13H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M16 17H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M10 9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
                     <span>Интерактивный прототип интерфейса</span>
                   </div>
                   <button
-                    className={styles['case-tbanks__prototype-load-button']}
+                    className="case-lowfodmap__telegram-button"
                     onClick={() => setIsPrototypeLoaded(true)}
                     aria-label="Загрузить Figma прототип"
                   >
@@ -595,5 +624,6 @@ export default function CaseTBanks() {
         </div>
       )}
     </div>
+    </>
   );
 }

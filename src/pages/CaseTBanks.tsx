@@ -364,7 +364,7 @@ export default function CaseTBanks() {
             <div className={styles['case-tbanks__results-grid']}>
               <div className={styles['case-tbanks__result-card']}>
                 <div className={styles['case-tbanks__result-number']}>Макет</div>
-                <div className={styles['case-tbanks__result-label']}>интерфейса рекомендаций</div>
+                <div className={styles['case-tbanks__result-label']}>интерфейса</div>
               </div>
               <div className={styles['case-tbanks__result-card']}>
                 <div className={styles['case-tbanks__result-number']} style ={{ minWidth: '100px' }}>3</div>

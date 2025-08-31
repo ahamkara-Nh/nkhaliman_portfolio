@@ -14,9 +14,9 @@ export default function CaseTBanks() {
   // Carousel state
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const carouselImages = [
-    '/src/assets/case-images/second-case/painpoint1.svg',
-    '/src/assets/case-images/second-case/painpoint2.svg',
-    '/src/assets/case-images/second-case/painpoint3.svg'
+    '/src/assets/case-images/second-case/painpoint1.png',
+    '/src/assets/case-images/second-case/painpoint2.png',
+    '/src/assets/case-images/second-case/painpoint3.png'
   ];
 
   // Solution carousel state
@@ -58,7 +58,7 @@ export default function CaseTBanks() {
     } else if (fullscreenImage.includes('painpoint')) {
       return 'Анализ болей пользователей';
     }
-    return 'Анализ болей пользователей'; // Default fallback
+    return 'Storyboard TO BE'; // Default fallback
   };
 
   const closeFullscreen = () => {
@@ -446,7 +446,8 @@ export default function CaseTBanks() {
           <div className={styles['case-tbanks__solution-content']} style={{ alignItems: 'flex-start' }}>
             <h3 className={styles['case-tbanks__solution-subheader']}>Рекомендательная система</h3>
             <p>
-              Чтобы преодолеть выявленные боли и превратить раздел "Город" в по-настоящему персонализированный гид по городской жизни, мы предложили внедрить рекомендательную систему на основе байесовских сетей. Это не просто добавление фич — это фундаментальное улучшение, где алгоритмы анализируют данные о пользователе (транзакции, история заказов, геолокация, демография и время на странице), чтобы предлагать релевантный контент в реальном времени. Байесовские сети выбраны не случайно: они превосходно справляются со сложными взаимосвязями данных, обеспечивая точные предсказания даже при неполной информации, и легко масштабируются под растущую аудиторию.
+              Чтобы преодолеть выявленные боли и превратить раздел "Город" в по-настоящему персонализированный гид по городской жизни, мы предложили внедрить рекомендательную систему на основе байесовских сетей. 
+              Данный алгоритм анализирует данные о пользователе (транзакции, история заказов, геолокация, демография и время на странице), чтобы предлагать релевантный контент в реальном времени. 
             </p>
             <p>
               Для иллюстрации, как это изменит пользовательский опыт, я сделал TO BE сториборды. В них Серёжа сразу видит персонализированные предложения на главной странице — например, фильм от любимого режиссёра с удобным временем и 15% кэшбеком, — и легко покупает билеты, уходя довольным. А Алиса, фанатка музыки, получает рекомендацию на концерт в другом городе с доступными билетами на самолёт, что делает поездку реальной.

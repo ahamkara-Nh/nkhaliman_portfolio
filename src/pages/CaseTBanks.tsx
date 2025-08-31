@@ -26,6 +26,22 @@ export default function CaseTBanks() {
     '/src/assets/case-images/second-case/tobe2.png'
   ];
 
+  // Prototype loading state
+  const [isPrototypeLoaded, setIsPrototypeLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const openFullscreen = (imageSrc: string) => {
     setFullscreenImage(imageSrc);
     setIsFullscreen(true);
@@ -465,13 +481,37 @@ export default function CaseTBanks() {
               Как UI/UX дизайнер, я взялся за то, чтобы эти рекомендации вписались в существующий интерфейс, начиная от главной страницы, где они встречают пользователя сразу, и до умных всплывающих окон с кросс-рекомендациями, которые подкидывают дополнительные идеи в нужный момент.
             </p>
 
-            <div className={styles['case-tbanks__prototype-container']}>
-              <iframe
-                src="https://embed.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=0%3A1&node-id=734-32&viewport=1424%2C482%2C0.11&scaling=scale-down&content-scaling=fixed&starting-point-node-id=734%3A32&embed-host=share"
-                allowFullScreen
-                title="T-Bank City Interface Prototype"
-              />
-            </div>
+            {isMobile && !isPrototypeLoaded ? (
+              <div className={styles['case-tbanks__prototype-banner']}>
+                <div className={styles['case-tbanks__prototype-banner-content']}>
+                  <div className={styles['case-tbanks__prototype-banner-text']}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles['case-tbanks__prototype-banner-icon']}>
+                      <path d="M14.5 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V7.5L14.5 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <polyline points="14,2 14,8 20,8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M16 13H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M16 17H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M10 9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span>Интерактивный прототип интерфейса</span>
+                  </div>
+                  <button
+                    className={styles['case-tbanks__prototype-load-button']}
+                    onClick={() => setIsPrototypeLoaded(true)}
+                    aria-label="Загрузить Figma прототип"
+                  >
+                    Загрузить Figma прототип
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className={styles['case-tbanks__prototype-container']}>
+                <iframe
+                  src="https://embed.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=0%3A1&node-id=734-32&viewport=1424%2C482%2C0.11&scaling=scale-down&content-scaling=fixed&starting-point-node-id=734%3A32&embed-host=share"
+                  allowFullScreen
+                  title="T-Bank City Interface Prototype"
+                />
+              </div>
+            )}
           </div>
         </section>
       </section>

@@ -535,7 +535,7 @@ export default function CaseTBanks() {
             ) : (
               <div className={styles['case-tbanks__prototype-container']}>
                 <iframe
-                  src="https://embed.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=0%3A1&node-id=734-32&viewport=1424%2C482%2C0.11&scaling=scale-down&content-scaling=fixed&starting-point-node-id=734%3A32&embed-host=share"
+                  src="https://embed.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=0%3A1&node-id=734-32&viewport=1424%2C482%2C0.11&scaling=scale-down&content-scaling=fixed&starting-point-node-id=734%3A32&embed-host=share&footer=false&theme=dark"
                   allowFullScreen
                   title="T-Bank City Interface Prototype"
                 />

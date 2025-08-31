@@ -28,6 +28,7 @@ export default function CaseTBanks() {
 
   // Prototype loading state
   const [isPrototypeLoaded, setIsPrototypeLoaded] = useState(false);
+  const [isOutcomesLoaded, setIsOutcomesLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   // Check if device is mobile
@@ -553,17 +554,36 @@ export default function CaseTBanks() {
               В этом проекте я, как UI/UX дизайнер, взял на себя создание макетов возможного интерфейса для раздела "Город" в приложении Т-Банка, интегрируя туда рекомендательную систему на основе байесовских сетей. Кроме того, я полностью собрал proposal-презентацию: от построения сторителлинга (чтобы "заказчик" сразу вник в суть через истории и визуалы) до финального визуального оформления — выбрал цвета, шрифты, диаграммы, чтобы всё выглядело убедительно и стильно.
               <br /><br />
               Конечно, проект был командным, так что я тесно взаимодействовал с другими участниками: обсуждал, как дизайн стыкуется с технической частью, и оформлял их техническую документацию — диаграммы C4, sequence диаграммы, риски и метрики — чтобы всё вписалось в презентацию гладко и логично. Если хотите погрузиться глубже, полную презентацию можете посмотреть ниже — там все детали, от сторибордов до дорожной карты.
+              <br /><br />
+              Или можете перейти по ссылке, чтобы открыть презентацию
             </p>
-            <div className={styles['case-tbanks__outcomes-iframe-container']}>
-              <iframe
-                style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
-                width="800"
-                height="450"
-                src="https://embed.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=48%3A20&node-id=114-126&starting-point-node-id=114%3A126&scaling=scale-down&content-scaling=fixed&embed-host=share&footer=false&theme=dark"
-                allowFullScreen
-                title="T-Bank City Interface Prototype - Outcomes"
-              />
-            </div>
+            {isMobile && !isOutcomesLoaded ? (
+              <div className={styles['case-tbanks__prototype-banner']}>
+                <div className={styles['case-tbanks__prototype-banner-content']}>
+                  <div className={styles['case-tbanks__prototype-banner-text']}>
+                    <span>Figma презентация проекта</span>
+                  </div>
+                  <button
+                    className="case-lowfodmap__telegram-button"
+                    onClick={() => setIsOutcomesLoaded(true)}
+                    aria-label="Загрузить Figma презентацию"
+                  >
+                    Загрузить Figma презентацию
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className={styles['case-tbanks__outcomes-iframe-container']}>
+                <iframe
+                  style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
+                  width="800"
+                  height="450"
+                  src="https://embed.figma.com/proto/abaStT5Mi9iiEgAs4sdcrK/%D0%A2%D0%B5%D0%94%D0%BE?page-id=48%3A20&node-id=114-126&starting-point-node-id=114%3A126&scaling=scale-down&content-scaling=fixed&embed-host=share&footer=false&theme=dark"
+                  allowFullScreen
+                  title="T-Bank City Interface Prototype - Outcomes"
+                />
+              </div>
+            )}
           </div>
         </section>
       </section>

@@ -551,6 +551,7 @@ body::after {
 /* Portfolio */
 .portfolio {
   margin-top: 28px;
+  margin-bottom: 52px;
 }
 
 .portfolio-grid {

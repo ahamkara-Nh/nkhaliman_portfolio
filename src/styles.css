@@ -371,9 +371,7 @@ body::after {
 .exp-details[open] {
   border-color: rgba(155, 156, 255, 0.24);
   box-shadow: 0 14px 32px -18px rgba(155, 156, 255, 0.32);
-  background:
-    linear-gradient(180deg, rgba(155,156,255,0.10), rgba(155,156,255,0.04)) border-box,
-    rgba(255,255,255,0.03);
+  background: transparent
 }
 
 .exp-summary {

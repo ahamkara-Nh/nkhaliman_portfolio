@@ -27,13 +27,14 @@ body {
   font-family: "Geologica", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   letter-spacing: -0.04em;
   /* -4% letter spacing */
-  /* Fancy aurora gradient with subtle grain overlay for depth */
+  /* Enhanced aurora gradient with darker tones and new color variations */
   background:
-    radial-gradient(1400px 900px at 70% -20%, rgba(155, 156, 255, 0.18), transparent 64%),
-    radial-gradient(1200px 800px at -10% 0%, rgba(92, 94, 207, 0.16), transparent 60%),
-    conic-gradient(from 220deg at 30% 20%, rgba(255, 163, 150, 0.18), rgba(155, 156, 255, 0.20), rgba(108, 223, 219, 0.20), rgba(255, 163, 150, 0.18)),
+    radial-gradient(1600px 1000px at 75% -15%, rgba(120, 122, 200, 0.22), transparent 68%),
+    radial-gradient(1300px 900px at -5% 5%, rgba(70, 72, 160, 0.20), transparent 65%),
+    radial-gradient(1100px 700px at 40% 80%, rgba(90, 140, 180, 0.15), transparent 55%),
+    conic-gradient(from 210deg at 25% 15%, rgba(200, 130, 120, 0.20), rgba(120, 122, 200, 0.24), rgba(85, 180, 170, 0.22), rgba(140, 110, 190, 0.18), rgba(200, 130, 120, 0.20)),
     /* extend the base gradient further down to avoid flat black at long pages */
-    linear-gradient(180deg, #0b0c0f 0%, #0e1016 35%, #10131b 70%, #0e1016 90%, #0b0c0f 100%);
+    linear-gradient(180deg, #0a0b0d 0%, #0c0e13 35%, #0e1118 70%, #0c0e13 90%, #0a0b0d 100%);
   background-attachment: fixed;
   color: var(--text);
   line-height: 1.35;
@@ -49,10 +50,11 @@ body::before {
   inset: -100px;
   pointer-events: none;
   background:
-    radial-gradient(1400px 900px at 80% -10%, rgba(155, 156, 255, 0.12), transparent 64%),
-    radial-gradient(1200px 800px at 0% 10%, rgba(108, 223, 219, 0.10), transparent 60%);
+    radial-gradient(1500px 950px at 85% -5%, rgba(120, 122, 200, 0.15), transparent 68%),
+    radial-gradient(1300px 850px at 5% 15%, rgba(85, 180, 170, 0.12), transparent 65%),
+    radial-gradient(1000px 600px at 60% 90%, rgba(90, 140, 180, 0.08), transparent 50%);
   mix-blend-mode: screen;
-  filter: blur(0.2px);
+  filter: blur(0.3px);
   z-index: -1;
 }
 

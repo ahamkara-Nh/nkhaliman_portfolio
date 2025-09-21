@@ -106,10 +106,10 @@
 
 .case-lowfodmap__toc-link:hover {
   color: var(--text);
-  border-color: rgba(155, 156, 255, 0.28);
-  background: rgba(155, 156, 255, 0.08);
+  border-color: rgba(212, 175, 55, 0.28);
+  background: rgba(212, 175, 55, 0.08);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
+  box-shadow: 0 4px 12px -4px rgba(212, 175, 55, 0.2);
 }
 
 .case-lowfodmap__results-grid {
@@ -133,10 +133,10 @@
 }
 
 .case-lowfodmap__result-card:hover {
-  border-color: rgba(155, 156, 255, 0.28);
-  background: rgba(155, 156, 255, 0.08);
+  border-color: rgba(212, 175, 55, 0.28);
+  background: rgba(212, 175, 55, 0.08);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
+  box-shadow: 0 4px 12px -4px rgba(212, 175, 55, 0.2);
 }
 
 .case-lowfodmap__result-number {
@@ -240,9 +240,9 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(155, 156, 255, 0.1) 0%,
-    rgba(108, 223, 219, 0.1) 50%,
-    rgba(255, 163, 150, 0.1) 100%
+    rgba(212, 175, 55, 0.1) 0%,
+    rgba(244, 228, 166, 0.1) 50%,
+    rgba(251, 191, 36, 0.1) 100%
   );
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -260,7 +260,7 @@
   height: 0;
   background: radial-gradient(
     circle,
-    rgba(155, 156, 255, 0.3) 0%,
+    rgba(212, 175, 55, 0.3) 0%,
     transparent 70%
   );
   transition: all 0.3s ease;
@@ -321,10 +321,10 @@
 }
 
 .case-lowfodmap__complexity-card:hover {
-  border-color: rgba(155, 156, 255, 0.28);
-  background: rgba(155, 156, 255, 0.08);
+  border-color: rgba(212, 175, 55, 0.28);
+  background: rgba(212, 175, 55, 0.08);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
+  box-shadow: 0 4px 12px -4px rgba(212, 175, 55, 0.2);
 }
 
 .case-lowfodmap__complexity-card-title {
@@ -436,8 +436,8 @@
   background: linear-gradient(
     135deg,
     var(--text) 0%,
-    rgba(155, 156, 255, 0.9) 30%,
-    rgba(108, 223, 219, 0.8) 60%,
+    rgba(212, 175, 55, 0.9) 30%,
+    rgba(244, 228, 166, 0.8) 60%,
     var(--text) 100%
   );
   background-clip: text;
@@ -468,8 +468,8 @@
   height: 120%;
   background: radial-gradient(
     ellipse at center,
-    rgba(155, 156, 255, 0.08) 0%,
-    rgba(108, 223, 219, 0.06) 30%,
+    rgba(212, 175, 55, 0.08) 0%,
+    rgba(244, 228, 166, 0.06) 30%,
     transparent 70%
   );
   border-radius: 50%;
@@ -489,9 +489,9 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(155, 156, 255, 0.4) 20%,
-    rgba(108, 223, 219, 0.6) 50%,
-    rgba(155, 156, 255, 0.4) 80%,
+    rgba(212, 175, 55, 0.4) 20%,
+    rgba(244, 228, 166, 0.6) 50%,
+    rgba(212, 175, 55, 0.4) 80%,
     transparent 100%
   );
   margin-top: -40px;

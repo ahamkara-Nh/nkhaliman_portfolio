@@ -32,7 +32,7 @@ body {
     radial-gradient(1600px 1000px at 75% -15%, rgba(120, 122, 200, 0.22), transparent 68%),
     radial-gradient(1300px 900px at -5% 5%, rgba(70, 72, 160, 0.20), transparent 65%),
     radial-gradient(1100px 700px at 40% 80%, rgba(90, 140, 180, 0.15), transparent 55%),
-    conic-gradient(from 210deg at 25% 15%, rgba(200, 130, 120, 0.20), rgba(120, 122, 200, 0.24), rgba(85, 180, 170, 0.22), rgba(140, 110, 190, 0.18), rgba(200, 130, 120, 0.20)),
+    conic-gradient(from 210deg at 25% 15%, rgba(200, 130, 120, 0.20), rgba(120, 122, 200, 0.24), rgba(100, 90, 140, 0.22), rgba(140, 110, 190, 0.18), rgba(200, 130, 120, 0.20)),
     /* extend the base gradient further down to avoid flat black at long pages */
     linear-gradient(180deg, #0a0b0d 0%, #0c0e13 35%, #0e1118 70%, #0c0e13 90%, #0a0b0d 100%);
   background-attachment: fixed;
@@ -51,7 +51,7 @@ body::before {
   pointer-events: none;
   background:
     radial-gradient(1500px 950px at 85% -5%, rgba(120, 122, 200, 0.15), transparent 68%),
-    radial-gradient(1300px 850px at 5% 15%, rgba(85, 180, 170, 0.12), transparent 65%),
+    radial-gradient(1300px 850px at 5% 15%, rgba(100, 90, 140, 0.12), transparent 65%),
     radial-gradient(1000px 600px at 60% 90%, rgba(90, 140, 180, 0.08), transparent 50%);
   mix-blend-mode: screen;
   filter: blur(0.3px);
@@ -780,5 +780,45 @@ body::after {
 
   .about-card {
     padding: 18px 16px;
+  }
+}
+
+/* Mobile aurora background adjustments */
+@media (max-width: 900px) {
+  body {
+    background:
+      radial-gradient(1200px 800px at 75% -15%, rgba(120, 122, 200, 0.15), transparent 70%),
+      radial-gradient(1000px 700px at -5% 5%, rgba(70, 72, 160, 0.13), transparent 68%),
+      radial-gradient(900px 600px at 40% 80%, rgba(90, 140, 180, 0.10), transparent 58%),
+      conic-gradient(from 210deg at 25% 15%, rgba(200, 130, 120, 0.13), rgba(120, 122, 200, 0.16), rgba(100, 90, 140, 0.15), rgba(140, 110, 190, 0.12), rgba(200, 130, 120, 0.13)),
+      linear-gradient(180deg, #0a0b0d 0%, #0c0e13 35%, #0e1118 70%, #0c0e13 90%, #0a0b0d 100%);
+  }
+
+  body::before {
+    background:
+      radial-gradient(1200px 800px at 85% -5%, rgba(120, 122, 200, 0.10), transparent 70%),
+      radial-gradient(1000px 700px at 5% 15%, rgba(100, 90, 140, 0.08), transparent 68%),
+      radial-gradient(800px 500px at 60% 90%, rgba(90, 140, 180, 0.06), transparent 55%);
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    background:
+      radial-gradient(1000px 700px at 75% -15%, rgba(120, 122, 200, 0.12), transparent 72%),
+      radial-gradient(800px 600px at -5% 5%, rgba(70, 72, 160, 0.10), transparent 70%),
+      radial-gradient(700px 500px at 40% 80%, rgba(90, 140, 180, 0.08), transparent 60%),
+      conic-gradient(from 210deg at 25% 15%, rgba(200, 130, 120, 0.10), rgba(120, 122, 200, 0.12), rgba(100, 90, 140, 0.11), rgba(140, 110, 190, 0.09), rgba(200, 130, 120, 0.10)),
+      linear-gradient(180deg, #0a0b0d 0%, #0c0e13 35%, #0e1118 70%, #0c0e13 90%, #0a0b0d 100%);
+    background-attachment: fixed; /* Fix repeating pattern on mobile */
+
+  }
+
+  body::before {
+    background:
+      radial-gradient(1000px 700px at 85% -5%, rgba(120, 122, 200, 0.08), transparent 72%),
+      radial-gradient(800px 600px at 5% 15%, rgba(100, 90, 140, 0.06), transparent 70%),
+      radial-gradient(600px 400px at 60% 90%, rgba(90, 140, 180, 0.04), transparent 58%);
+
   }
 }

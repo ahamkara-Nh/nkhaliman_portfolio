@@ -324,7 +324,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 .case-river-taxi__solution-content p {
@@ -345,6 +345,26 @@
   margin: 0 0 24px 0;
   color: var(--text);
   text-align: left;
+}
+
+.case-river-taxi__first-steps-header {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 24px 0;
+  color: var(--text);
+  text-align: left;
+}
+
+.case-river-taxi__solution-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+.case-river-taxi__solution-text strong {
+  color: var(--text);
 }
 
 /* Results Section */
@@ -474,6 +494,15 @@
     left: 16px;
     background: rgba(155, 156, 255, 0.12);
     border: 1px solid rgba(155, 156, 255, 0.25);
+  }
+
+  .case-river-taxi__first-steps-header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .case-river-taxi__solution-text {
+    font-size: 1rem;
   }
 
   .case-river-taxi__solution-section,

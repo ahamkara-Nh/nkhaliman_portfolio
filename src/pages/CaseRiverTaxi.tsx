@@ -89,6 +89,17 @@ export default function CaseRiverTaxi() {
           </ol>
         </section>
 
+        {/* Solution Section */}
+        <section id="solution" className={styles['case-river-taxi__solution-section']}>
+          <h2 className={styles['case-river-taxi__solution-header']}>Проектирование решения</h2>
+          <div className={styles['case-river-taxi__solution-content']}>
+            <h3 className={styles['case-river-taxi__first-steps-header']}>Первые шаги</h3>
+            <p className={styles['case-river-taxi__solution-text']}>
+              <strong>Обязательный функционал:</strong> создание веб-интерфейса для оформления заказа и отслеживания поездки, а также алгоритм шеринга для оптимизации затрат и времени. Для начала нужно определить алгоритм работы нашего сервиса. Вместе с остальными членами команды мы придумали алгоритм работы нашего решения. Он основан на уменьшении цены в зависимости от количества пассажиров (попутчиков)
+            </p>
+          </div>
+        </section>
+
       </section>
     </div>
   );

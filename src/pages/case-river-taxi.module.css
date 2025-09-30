@@ -195,6 +195,114 @@
 .case-river-taxi__about-text strong {
   color: var(--text);
 }
+.case-river-taxi__task-description strong {
+  color: var(--text);
+}
+
+.case-river-taxi__about-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  height: 300px;
+  transition: all 160ms ease;
+}
+
+.case-river-taxi__about-image:hover {
+  transform: translateY(-2px);
+}
+
+.case-river-taxi__hack-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  position: relative;
+  z-index: 3;
+  transition: transform 0.3s ease;
+}
+
+.case-river-taxi__about-image:hover .case-river-taxi__hack-image {
+  transform: scale(1.02);
+}
+
+.case-river-taxi__task-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 32px 0 0 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-river-taxi__problem-goals-header {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 48px 0 32px 0;
+  color: var(--text);
+  text-align: left;
+}
+
+.case-river-taxi__goals-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: goal-counter;
+}
+
+.case-river-taxi__goal-item {
+  counter-increment: goal-counter;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--muted);
+  transition: all 160ms ease;
+  position: relative;
+  padding-left: 60px;
+}
+
+.case-river-taxi__goal-item:last-child {
+  margin-bottom: 0;
+}
+
+.case-river-taxi__goal-item:hover {
+  border-color: rgba(155, 156, 255, 0.28);
+  background: rgba(155, 156, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
+}
+
+.case-river-taxi__goal-item::before {
+  content: counter(goal-counter);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: rgba(155, 156, 255, 0.15);
+  border: 1px solid rgba(155, 156, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.case-river-taxi__goal-item strong {
+  color: var(--text);
+}
+
+.case-river-taxi__goal-item b {
+  color: var(--text);
+}
 
 /* Solution Section */
 .case-river-taxi__solution-section {
@@ -338,6 +446,34 @@
 
   .case-river-taxi__about-text p {
     font-size: 1rem;
+  }
+
+  .case-river-taxi__about-image {
+    height: 250px;
+  }
+
+  .case-river-taxi__task-description {
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+
+  .case-river-taxi__problem-goals-header {
+    font-size: 1.5rem;
+    margin: 32px 0 20px 0;
+  }
+
+  .case-river-taxi__goal-item {
+    font-size: 1rem;
+    padding: 16px 20px 16px 50px;
+  }
+
+  .case-river-taxi__goal-item::before {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+    left: 16px;
+    background: rgba(155, 156, 255, 0.12);
+    border: 1px solid rgba(155, 156, 255, 0.25);
   }
 
   .case-river-taxi__solution-section,

@@ -1,5 +1,4 @@
 import styles from './case-river-taxi.module.css';
-import MermaidDiagram from '../components/MermaidDiagram';
 
 export default function CaseRiverTaxi() {
   return (
@@ -106,28 +105,14 @@ export default function CaseRiverTaxi() {
             </p>
             
             <div className={styles['case-river-taxi__diagram-container']}>
-              <MermaidDiagram 
-                chartCode={`flowchart TD
-  A[Пассажир A запрашивает водное такси] --> B[Система строит маршрут R_A и рассчитывает индивидуальный тариф]
-  B --> C[Поиск потенциальных попутчиков с похожими маршрутами]
-  C --> D{Соответствуют ли кандидаты ограничениям по времени и объезду?}
-  D -- Yes --> E[Рассчитать дополнительное время, расстояние и балл совпадения]
-  D -- No --> F[Пропустить кандидата]
-  E --> G[Отправить предложение поездки с ETA и предполагаемой платой]
-  G --> H{Принимает ли кандидат?}
-  H -- Yes --> I[Заблокировать место и оптимизировать объединенный маршрут]
-  H -- No --> J[Продолжить поиск или ехать в одиночку]
-  I --> K[Пересчитать общую стоимость и разделить тарифы]
-  K --> L[Уведомить всех пассажиров об окончательном ETA и цене]
-  L --> M{Появляется новый запрос пассажира?}
-  M -- Yes --> N[Проверить влияние объезда на всех пассажиров]
-  N --> O{Объезд в пределах разрешенных ограничений?}
-  O -- Yes --> P[Добавить пассажира, пересчитать маршрут и тариф]
-  O -- No --> Q[Отклонить или запросить согласие пассажира]
-  Q --> R[Если согласие дано → Добавить пассажира, иначе отклонить]
-  M -- No --> S[Продолжить поездку]`}
-              />
-            </div>
+               <iframe
+                 src="/src/components/SimpleMermaidDiagrams.html"
+                 className={styles['case-river-taxi__mermaid-iframe']}
+                 title="Mermaid Diagrams Comparison"
+                 width="100%"
+                 height="600"
+               />
+             </div>
           </div>
         </section>
 

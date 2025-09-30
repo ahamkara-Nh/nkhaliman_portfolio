@@ -367,6 +367,75 @@
   color: var(--text);
 }
 
+/* Diagram Container */
+.case-river-taxi__diagram-container {
+  margin-top: 48px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 160ms ease;
+}
+
+.case-river-taxi__diagram-container:hover {
+  border-color: rgba(155, 156, 255, 0.18);
+  background: rgba(155, 156, 255, 0.04);
+  box-shadow: 0 12px 40px -14px rgba(155, 156, 255, 0.15);
+}
+
+.case-river-taxi__diagram-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 24px 0;
+  color: var(--text);
+  text-align: center;
+}
+
+.case-river-taxi__mermaid-diagram {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.case-river-taxi__mermaid-diagram::before {
+  content: '🖱️ Перетащите для навигации';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 12px;
+  border-radius: 4px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Mermaid diagram specific overrides */
+.case-river-taxi__mermaid-diagram svg {
+  min-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-river-taxi__mermaid-diagram svg text {
+  font-size: 14px !important;
+}
+
+.case-river-taxi__mermaid-diagram svg .nodeLabel {
+  font-size: 13px !important;
+}
+
 /* Results Section */
 .case-river-taxi__results-section {
   margin: 60px 0;
@@ -508,6 +577,27 @@
   .case-river-taxi__solution-section,
   .case-river-taxi__results-section {
     margin: 20px 0;
+  }
+
+  .case-river-taxi__diagram-container {
+    margin-top: 32px;
+    padding: 20px 16px;
+  }
+
+  .case-river-taxi__diagram-title {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  }
+
+  .case-river-taxi__mermaid-diagram {
+    height: 400px;
+    padding: 12px;
+  }
+
+  .case-river-taxi__mermaid-diagram::before {
+    content: '👆 Перетащите';
+    font-size: 0.75rem;
+    padding: 3px 8px;
   }
 }
 

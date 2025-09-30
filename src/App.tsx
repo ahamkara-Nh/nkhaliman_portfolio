@@ -2,7 +2,7 @@ import './styles.css';
 import { NavLink, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import CaseLowFodmap from './pages/CaseLowFodmap';
 import CaseTBanks from './pages/CaseTBanks';
-/* import CaseRiverTaxi from './pages/CaseRiverTaxi'; */
+import CaseRiverTaxi from './pages/CaseRiverTaxi';
 
 const AboutSection = () => (
   <section id="about" className="about">
@@ -508,7 +508,7 @@ export default function App() {
             element={
               <>
                 {/* Keep only the two existing buttons at the top (from header). No hero section here. */}
-                {/*<CaseRiverTaxi/>*/}
+                <CaseRiverTaxi/>
               </>
             }
           />

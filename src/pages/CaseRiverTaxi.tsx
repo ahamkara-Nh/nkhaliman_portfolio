@@ -108,7 +108,8 @@ export default function CaseRiverTaxi() {
                <iframe
                  src="/src/components/SimpleMermaidDiagrams.html"
                  className={styles['case-river-taxi__mermaid-iframe']}
-                 title="Mermaid Diagrams Comparison"
+                 title="Mermaid Diagrams 
+                 Comparison"
                  width="100%"
                  height="600"
                />

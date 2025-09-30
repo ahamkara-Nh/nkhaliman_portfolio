@@ -463,7 +463,7 @@ export default function App() {
                         />
                         <div className="case-body">
                           <h3 className="case-title">Сервис заказов речного шеринг-такси</h3>
-                          <div className="case-origin">Описание проекта</div>
+                          <div className="case-origin">Хакатон HACK&CHANGE</div>
                         </div>
                       </a>
                     </li>

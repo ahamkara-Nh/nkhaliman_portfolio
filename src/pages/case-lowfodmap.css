@@ -547,6 +547,7 @@
 
 .case-lowfodmap__research-description {
   border-radius: var(--radius);
+  backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   margin-top: 24px;
 }
@@ -1300,6 +1301,7 @@
 
 .case-lowfodmap__phase-demo {
   border-radius: var(--radius);
+  backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   transition: all 160ms ease;
   position: relative;

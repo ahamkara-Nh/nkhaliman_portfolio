@@ -21,13 +21,13 @@ export default function CaseRiverTaxi() {
             <h2 className={styles['case-river-taxi__section-title']}>Содержание</h2>
             <ul className={styles['case-river-taxi__toc-list']}>
               <li className={styles['case-river-taxi__toc-item']}>
-                <a href="#about-project" className={styles['case-river-taxi__toc-link']}>1. О проекте</a>
+                <a href="#placeholder" className={styles['case-river-taxi__toc-link']}>1. placeholder</a>
               </li>
               <li className={styles['case-river-taxi__toc-item']}>
-                <a href="#solution" className={styles['case-river-taxi__toc-link']}>2. Наше решение</a>
+                <a href="#placeholder" className={styles['case-river-taxi__toc-link']}>2. placeholder</a>
               </li>
               <li className={styles['case-river-taxi__toc-item']}>
-                <a href="#results" className={styles['case-river-taxi__toc-link']}>3. Результаты</a>
+                <a href="#placeholder" className={styles['case-river-taxi__toc-link']}>3. placeholder</a>
               </li>
             </ul>
           </div>

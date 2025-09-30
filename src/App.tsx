@@ -2,6 +2,7 @@ import './styles.css';
 import { NavLink, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import CaseLowFodmap from './pages/CaseLowFodmap';
 import CaseTBanks from './pages/CaseTBanks';
+/* import CaseRiverTaxi from './pages/CaseRiverTaxi'; */
 
 const AboutSection = () => (
   <section id="about" className="about">
@@ -128,7 +129,7 @@ function HardSoftSkillsSection() {
 
 export default function App() {
   const location = useLocation();
-  const isCasePage = location.pathname === '/portfolio/fodmap' || location.pathname === '/portfolio/tbanks';
+  const isCasePage = location.pathname === '/portfolio/fodmap' || location.pathname === '/portfolio/tbanks' || location.pathname === '/portfolio/river-taxi';
 
   return (
     <div className="page">
@@ -169,6 +170,15 @@ export default function App() {
               aria-current="page"
             >
               Т-Банк "Город"
+            </NavLink>
+          )}
+          {location.pathname === '/portfolio/river-taxi' && (
+            <NavLink
+              to="/portfolio/river-taxi"
+              className={({ isActive }: { isActive: boolean }) => `nav-btn${isActive ? ' is-active' : ''}`}
+              aria-current="page"
+            >
+              Шеринг-такси
             </NavLink>
           )}
         </nav>
@@ -444,16 +454,18 @@ export default function App() {
                     </li>
 
                     <li className="case-card">
-                      <img
-                        className="case-image"
-                        src="https://placehold.co/600x400/png"
-                        alt="Превью проекта 3"
-                        aria-hidden="true"
-                      />
-                      <div className="case-body">
-                        <h3 className="case-title">Название проекта 3</h3>
-                        <div className="case-origin">Источник: Placeholder (например, фриланс / тестовое задание)</div>
-                      </div>
+                      <a className="case-link" href="/portfolio/river-taxi" aria-label="Открыть кейс: Сервис заказов речного шеринг-такси">
+                        <img
+                          className="case-image"
+                          src="/src/assets/case-images/third-case/Cover.png"
+                          alt="Превью проекта: Сервис заказов речного шеринг-такси"
+                          aria-hidden="true"
+                        />
+                        <div className="case-body">
+                          <h3 className="case-title">Сервис заказов речного шеринг-такси</h3>
+                          <div className="case-origin">Описание проекта</div>
+                        </div>
+                      </a>
                     </li>
 
                     <li className="case-card">
@@ -488,6 +500,15 @@ export default function App() {
               <>
                 {/* Keep only the two existing buttons at the top (from header). No hero section here. */}
                 <CaseTBanks />
+              </>
+            }
+          />
+          <Route
+            path="/portfolio/river-taxi"
+            element={
+              <>
+                {/* Keep only the two existing buttons at the top (from header). No hero section here. */}
+                {/*<CaseRiverTaxi/>*/}
               </>
             }
           />

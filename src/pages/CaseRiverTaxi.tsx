@@ -33,7 +33,7 @@ export default function CaseRiverTaxi() {
           </div>
 
           <div className={styles['case-river-taxi__key-results']}>
-            <h2 className={styles['case-river-taxi__section-title']}>Мой вклад</h2>
+            <h2 className={styles['case-river-taxi__section-title']}>Мой вклад в групповой проект</h2>
             <div className={styles['case-river-taxi__results-grid']}>
               <div className={styles['case-river-taxi__result-card']}>
                 <div className={styles['case-river-taxi__result-number']}>Макеты</div>
@@ -88,7 +88,7 @@ export default function CaseRiverTaxi() {
             </li>
           </ol>
         </section>
-        
+
       </section>
     </div>
   );

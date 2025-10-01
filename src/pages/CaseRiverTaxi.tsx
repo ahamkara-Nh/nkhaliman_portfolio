@@ -1,5 +1,25 @@
 import styles from './case-river-taxi.module.css';
 import { useState, useRef, useEffect } from 'react';
+import { useRive, Layout, Fit, Alignment } from '@rive-app/react-canvas';
+
+// Rive Animation Component
+function RiveAnimation({ src }: { src: string }) {
+  const { RiveComponent } = useRive({
+    src: src,
+    stateMachines: 'State Machine 1',
+    autoplay: true,
+    layout: new Layout({
+      fit: Fit.Contain,
+      alignment: Alignment.Center,
+    }),
+  });
+
+  return (
+    <div className={styles['case-river-taxi__rive-preview']}>
+      <RiveComponent />
+    </div>
+  );
+}
 
 export default function CaseRiverTaxi() {
    // Prototype loading state
@@ -269,16 +289,12 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <img
-                             src="/src/assets/case-images/third-case/rive/boats.riv"
-                             alt="Rive анимация первой фичи"
-                             className={styles['case-river-taxi__rive-preview']}
-                           />
+                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Интеллектуальное объединение поездок</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             [Текст о первой фиче - интеллектуальное объединение поездок с похожими маршрутами]
+                             Система автоматически объединяет пассажиров с похожими маршрутами, оптимизируя загрузку судов и снижая время ожидания на причалах.
                            </p>
                          </div>
                        </div>
@@ -288,16 +304,12 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <img
-                             src="/src/assets/case-images/third-case/rive/boats2.riv"
-                             alt="Rive анимация второй фичи"
-                             className={styles['case-river-taxi__rive-preview']}
-                           />
+                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats2.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Динамическое ценообразование</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             [Текст о второй фиче - динамическое ценообразование в зависимости от количества пассажиров]
+                             Стоимость поездки автоматически уменьшается при добавлении попутчиков, делая водный транспорт более доступным для всех пассажиров.
                            </p>
                          </div>
                        </div>
@@ -307,16 +319,12 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <img
-                             src="/src/assets/case-images/third-case/rive/boats3.riv"
-                             alt="Rive анимация третьей фичи"
-                             className={styles['case-river-taxi__rive-preview']}
-                           />
+                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats3.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Оптимизация маршрутов</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             [Текст о третьей фиче - оптимизация маршрутов для минимизации времени в пути]
+                             Умный алгоритм строит оптимальные маршруты с учётом местоположения всех пассажиров, минимизируя общее время в пути.
                            </p>
                          </div>
                        </div>
@@ -326,16 +334,12 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <img
-                             src="/src/assets/case-images/third-case/rive/boats4.riv"
-                             alt="Rive анимация четвертой фичи"
-                             className={styles['case-river-taxi__rive-preview']}
-                           />
+                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats4.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Отслеживание в реальном времени</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             [Текст о четвертой фиче - отслеживание местоположения такси в реальном времени]
+                             Пассажиры могут отслеживать местоположение своего судна на карте в режиме реального времени и получать точные прогнозы прибытия.
                            </p>
                          </div>
                        </div>
@@ -345,16 +349,12 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <img
-                             src="/src/assets/case-images/third-case/rive/boats5.riv"
-                             alt="Rive анимация пятой фичи"
-                             className={styles['case-river-taxi__rive-preview']}
-                           />
+                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats5.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Уведомления и коммуникация</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             [Текст о пятой фиче - система уведомлений и коммуникации с пассажирами]
+                             Система push-уведомлений информирует пассажиров о статусе заказа, прибытии судна и важных изменениях маршрута.
                            </p>
                          </div>
                        </div>

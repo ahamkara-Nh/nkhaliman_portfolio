@@ -31,8 +31,11 @@ export default function CaseRiverTaxi() {
    const prototypeRef = useRef<HTMLDivElement>(null);
 
    // Features carousel state
-   const [currentFeatureScreen, setCurrentFeatureScreen] = useState(0);
-   const featuresTrackRef = useRef<HTMLDivElement>(null);
+    const [currentFeatureScreen, setCurrentFeatureScreen] = useState(0);
+    const featuresTrackRef = useRef<HTMLDivElement>(null);
+
+    // Back to top state
+    const [showBackToTop, setShowBackToTop] = useState(false);
 
   // Check if device is mobile
   useEffect(() => {
@@ -95,6 +98,22 @@ export default function CaseRiverTaxi() {
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  // Handle scroll to show/hide back to top button
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   return (
@@ -417,6 +436,17 @@ export default function CaseRiverTaxi() {
         </section>
 
       </section>
+
+      {/* Back to Top Button */}
+      <button
+        className={`${styles['case-river-taxi__back-to-top']} ${showBackToTop ? styles['show'] : ''}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Наверх"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
     </div>
   );
 }

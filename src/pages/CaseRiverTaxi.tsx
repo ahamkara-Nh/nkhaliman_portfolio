@@ -108,12 +108,17 @@ export default function CaseRiverTaxi() {
                <iframe
                  src="/src/components/SimpleMermaidDiagrams.html"
                  className={styles['case-river-taxi__mermaid-iframe']}
-                 title="Mermaid Diagrams 
+                 title="Mermaid Diagrams
                  Comparison"
                  width="100%"
                  height="600"
                />
              </div>
+
+             <h3 className={styles['case-river-taxi__solution-subheader']}>Выбор дизайн-системы</h3>
+             <p className={styles['case-river-taxi__solution-text']}>
+               В условиях ограниченного времени хакатона, я принял решение использовать готовую дизайн-систему Material Design. Так значительно сократиться время на создание макетов и написание кода фронтенд разработчиком. Для некоторых элементов интерфейса я сделал уникальные компоненты. но в основном использовались готовые компоненты дизайн-системы
+             </p>
           </div>
         </section>
 

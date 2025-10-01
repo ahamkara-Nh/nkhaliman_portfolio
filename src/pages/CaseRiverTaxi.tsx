@@ -184,7 +184,7 @@ export default function CaseRiverTaxi() {
              <h3 className={styles['case-river-taxi__solution-subheader']}>Макеты приложения</h3>
              <div className={styles['case-river-taxi__prototype-content']}>
                <p className={styles['case-river-taxi__prototype-description']}>
-                 Здесь можно увидеть прототип приложения с реализованным user flow заказа шеринг тарифа. Figma файл этого прототипа можно открыть по ссылке - <a href="https://embed.figma.com/proto/5TIYxY4gkkU6U5r8bAhB3M/moscow-river?node-id=54-5588&p=f&scaling=min-zoom&content-scaling=fixed&page-id=52%3A4&starting-point-node-id=54%3A5588&embed-host=share&footer=false&theme=dark" target="_blank" rel="noopener noreferrer" className={styles['case-river-taxi__figma-link']}>тут</a>. Далее я опишу основные детали, которые были реализованы для успешного выполнения задачи.
+                 Здесь можно увидеть прототип приложения с реализованным user flow заказа шеринг тарифа. Figma файл этого прототипа можно открыть по ссылке - <a href="https://www.figma.com/design/5TIYxY4gkkU6U5r8bAhB3M/moscow-river?node-id=52-4&t=1zYUUQN4S2gx80sj-1" target="_blank" rel="noopener noreferrer" className={styles['case-river-taxi__figma-link']}>тут</a>. Далее я опишу основные детали, которые были реализованы для успешного выполнения задачи.
                </p>
                <div ref={prototypeRef} className={styles['case-river-taxi__prototype-container']}>
                  {isMobile && !isPrototypeLoaded ? (

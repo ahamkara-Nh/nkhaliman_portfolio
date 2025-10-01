@@ -117,13 +117,16 @@ export default function CaseRiverTaxi() {
             <h2 className={styles['case-river-taxi__section-title']}>Содержание</h2>
             <ul className={styles['case-river-taxi__toc-list']}>
               <li className={styles['case-river-taxi__toc-item']}>
-                <a href="#placeholder" className={styles['case-river-taxi__toc-link']}>1. placeholder</a>
+                <a href="#about-project" className={styles['case-river-taxi__toc-link']}>1. Контекст задачи</a>
               </li>
               <li className={styles['case-river-taxi__toc-item']}>
-                <a href="#placeholder" className={styles['case-river-taxi__toc-link']}>2. placeholder</a>
+                <a href="#solution" className={styles['case-river-taxi__toc-link']}>2. Проектирование решения</a>
               </li>
               <li className={styles['case-river-taxi__toc-item']}>
-                <a href="#placeholder" className={styles['case-river-taxi__toc-link']}>3. placeholder</a>
+                <a href="#layouts" className={styles['case-river-taxi__toc-link']}>3. Макеты приложения</a>
+              </li>
+              <li className={styles['case-river-taxi__toc-item']}>
+                <a href="#results" className={styles['case-river-taxi__toc-link']}>4. Итоги</a>
               </li>
             </ul>
           </div>
@@ -228,7 +231,7 @@ export default function CaseRiverTaxi() {
                />
              </div>
 
-             <h2 className={styles['case-river-taxi__solution-header']} style={{ marginTop: '16px' }}>Макеты приложения</h2>
+             <h2 id="layouts" className={styles['case-river-taxi__solution-header']} style={{ marginTop: '16px' }}>Макеты приложения</h2>
              <div className={styles['case-river-taxi__prototype-content']}>
                <p className={styles['case-river-taxi__prototype-description']}>
                  Здесь можно увидеть прототип приложения с реализованным user flow заказа шеринг тарифа. Figma файл этого прототипа можно открыть по ссылке - <a href="https://www.figma.com/design/5TIYxY4gkkU6U5r8bAhB3M/moscow-river?node-id=52-4&t=1zYUUQN4S2gx80sj-1" target="_blank" rel="noopener noreferrer" className={styles['case-river-taxi__figma-link']}>тут</a>. Далее я опишу основные детали, которые были реализованы для успешного выполнения задачи.
@@ -395,7 +398,7 @@ export default function CaseRiverTaxi() {
         </section>
 
         {/* Results Section */}
-        <section className={styles['case-river-taxi__results-section']}>
+        <section id="results" className={styles['case-river-taxi__results-section']}>
           <h2 className={styles['case-river-taxi__results-header']}>Итоги</h2>
           <div className={styles['case-river-taxi__results-content']}>
             <p className={styles['case-river-taxi__results-text']}>

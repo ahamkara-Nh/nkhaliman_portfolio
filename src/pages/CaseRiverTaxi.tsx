@@ -274,7 +274,7 @@ export default function CaseRiverTaxi() {
                </div>
              </div>
 
-             <h3 className={styles['case-river-taxi__solution-subheader']}>Основные фичи</h3>
+             <h3 className={styles['case-river-taxi__solution-subheader']} style={{ marginTop: '48px' }}>Основные фичи</h3>
              <div className={styles['case-river-taxi__features-section']}>
                <p className={styles['case-river-taxi__solution-text']}>
                  В приложении реализованы ключевые функции для удобного шеринг-такси на воде. Ниже представлены основные возможности с интерактивными демонстрациями.
@@ -292,9 +292,9 @@ export default function CaseRiverTaxi() {
                            <RiveAnimation src="/src/assets/case-images/third-case/rive/boats.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
-                           <h4 className={styles['case-river-taxi__features-title']}>Интеллектуальное объединение поездок</h4>
+                           <h4 className={styles['case-river-taxi__features-title']}>Выбор тарифа</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             Система автоматически объединяет пассажиров с похожими маршрутами, оптимизируя загрузку судов и снижая время ожидания на причалах.
+                             Четкое разделение на тарифы: «Шеринг» (с попутчиками, цена может быть снижена) и «Стандарт» (лодка полностью ваша)
                            </p>
                          </div>
                        </div>
@@ -307,9 +307,9 @@ export default function CaseRiverTaxi() {
                            <RiveAnimation src="/src/assets/case-images/third-case/rive/boats2.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
-                           <h4 className={styles['case-river-taxi__features-title']}>Динамическое ценообразование</h4>
+                           <h4 className={styles['case-river-taxi__features-title']}>Информирование до заказа</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             Стоимость поездки автоматически уменьшается при добавлении попутчиков, делая водный транспорт более доступным для всех пассажиров.
+                             Пользователю сразу сообщается, что во время поездки могут появиться попутчики, и в этом случае цена будет снижена
                            </p>
                          </div>
                        </div>
@@ -322,9 +322,9 @@ export default function CaseRiverTaxi() {
                            <RiveAnimation src="/src/assets/case-images/third-case/rive/boats3.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
-                           <h4 className={styles['case-river-taxi__features-title']}>Оптимизация маршрутов</h4>
+                           <h4 className={styles['case-river-taxi__features-title']}>Отображение ожидаемой цены</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             Умный алгоритм строит оптимальные маршруты с учётом местоположения всех пассажиров, минимизируя общее время в пути.
+                             Указывается максимальная цена (например, 452 ₽) и визулаьно отображается возможное изменение цены во время поездки
                            </p>
                          </div>
                        </div>
@@ -337,9 +337,9 @@ export default function CaseRiverTaxi() {
                            <RiveAnimation src="/src/assets/case-images/third-case/rive/boats4.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
-                           <h4 className={styles['case-river-taxi__features-title']}>Отслеживание в реальном времени</h4>
+                           <h4 className={styles['case-river-taxi__features-title']}>Вспомогательные UX-решения</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             Пассажиры могут отслеживать местоположение своего судна на карте в режиме реального времени и получать точные прогнозы прибытия.
+                             Предупреждение о времени ожидания: информация о том, что катер ожидает на причале только в течении 2 минут. Такое ограничение обусловлено движением судов по фиксированному расписанию
                            </p>
                          </div>
                        </div>
@@ -352,9 +352,9 @@ export default function CaseRiverTaxi() {
                            <RiveAnimation src="/src/assets/case-images/third-case/rive/boats5.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
-                           <h4 className={styles['case-river-taxi__features-title']}>Уведомления и коммуникация</h4>
+                           <h4 className={styles['case-river-taxi__features-title']}>Демонстрация снижения цены</h4>
                            <p className={styles['case-river-taxi__features-description']}>
-                             Система push-уведомлений информирует пассажиров о статусе заказа, прибытии судна и важных изменениях маршрута.
+                            В интерфейсе активной/завершенной поездки наглядно показано, как работает наш концепт: Финальная цена 398 ₽ (зачеркнуто 452 ₽) и указание причины — 2 попутчика. Это обеспечивает прозрачность ценообразования
                            </p>
                          </div>
                        </div>

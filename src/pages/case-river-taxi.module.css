@@ -769,7 +769,6 @@
 
 /* Features Carousel Section */
 .case-river-taxi__features-section {
-  margin: 48px 0;
   text-align: left;
   width: 100%;
   max-width: 100%;
@@ -819,12 +818,6 @@
   box-sizing: border-box;
 }
 
-.case-river-taxi__features-content:hover {
-  border-color: rgba(155, 156, 255, 0.28);
-  background: rgba(155, 156, 255, 0.08);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
-}
 
 .case-river-taxi__features-animation {
   flex: 1.5;
@@ -841,6 +834,7 @@
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px 0 30px 0;
 }
 
 .case-river-taxi__features-text {
@@ -914,18 +908,16 @@
 
 /* Features Carousel Responsive Design */
 @media (max-width: 768px) {
-  .case-river-taxi__features-section {
-    margin: 32px 0;
-  }
 
   .case-river-taxi__features-carousel-container {
     margin: 24px 0;
   }
 
   .case-river-taxi__features-content {
-    flex-direction: column;
-    gap: 24px;
-    padding: 20px 16px;
+    flex-direction: column; 
+    padding: 30px 16px;
+    height: 100%;
+    gap: 20px !important;
   }
 
   .case-river-taxi__features-animation {
@@ -936,11 +928,13 @@
   .case-river-taxi__rive-preview {
     height: 400px;
     width: 100%;
+    padding: 0;
   }
 
   .case-river-taxi__features-text {
-    text-align: center;
-    width: 100%;
+    text-align: left;
+    width: 100%;  
+    flex: none;
   }
 
   .case-river-taxi__features-title {
@@ -948,7 +942,7 @@
   }
 
   .case-river-taxi__features-description {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   .case-river-taxi__features-dots {

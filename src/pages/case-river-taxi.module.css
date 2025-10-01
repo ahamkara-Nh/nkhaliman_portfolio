@@ -1,6 +1,5 @@
 .case-page.case-river-taxi {
   display: block;
-  padding: 0 16px 64px;
   max-width: 100vw;
   padding-bottom: 0;
 }
@@ -397,10 +396,134 @@
  }
 
 .case-river-taxi__solution-image:hover {
-   transform: translateY(-2px);
-   border-color: rgba(155, 156, 255, 0.28);
-   box-shadow: 0 12px 40px -8px rgba(155, 156, 255, 0.15);
- }
+    transform: translateY(-2px);
+    border-color: rgba(155, 156, 255, 0.28);
+    box-shadow: 0 12px 40px -8px rgba(155, 156, 255, 0.15);
+  }
+
+.case-river-taxi__figma-container {
+  width: 100%;
+  margin-top: 8px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.case-river-taxi__figma-iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  display: block;
+}
+
+.case-river-taxi__prototype-container {
+  width: auto;
+  max-width: 500px;
+  margin: 32px auto 0;
+  margin-top: 8px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.case-river-taxi__prototype-container iframe {
+  width: 100%;
+  height: 853px;
+  width: 396px;
+  border: none;
+  display: block;
+}
+
+.case-river-taxi__mobile-banner {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 160ms ease;
+}
+
+.case-river-taxi__mobile-banner:hover {
+  border-color: rgba(155, 156, 255, 0.28);
+  background: rgba(155, 156, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
+}
+
+.case-river-taxi__mobile-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  text-align: center;
+}
+
+.case-river-taxi__mobile-banner-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.case-river-taxi__mobile-banner-text svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.case-river-taxi__iframe-placeholder {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 160ms ease;
+}
+
+.case-river-taxi__iframe-placeholder:hover {
+  border-color: rgba(155, 156, 255, 0.28);
+  background: rgba(155, 156, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -4px rgba(155, 156, 255, 0.2);
+}
+
+.case-river-taxi__iframe-placeholder-content {
+  text-align: center;
+  padding: 24px;
+}
+
+.case-river-taxi__iframe-placeholder-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 8px 0;
+  color: var(--text);
+}
+
+.case-river-taxi__iframe-placeholder-subtext {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--muted);
+  margin: 0;
+}
 
 
 /* Results Section */
@@ -557,8 +680,45 @@
 }
 
 @media (max-width: 1100px) {
-  .case-page.case-river-taxi {
-    padding-left: 24px;
-    padding-right: 24px;
+
+  .case-river-taxi__prototype-container iframe {
+    height: 647px;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .case-river-taxi__prototype-container iframe {
+    height: 647px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .case-river-taxi__prototype-container iframe {
+    height: 647px;
+    width: 100%;
+  }
+
+  .case-river-taxi__iframe-placeholder {
+    height: 500px;
+  }
+
+  .case-river-taxi__mobile-banner {
+    height: 500px;
+  }
+
+  .case-river-taxi__mobile-banner-content {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .case-river-taxi__mobile-banner-text {
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
   }
 }

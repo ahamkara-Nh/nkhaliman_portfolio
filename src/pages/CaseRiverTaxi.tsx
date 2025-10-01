@@ -1,6 +1,55 @@
 import styles from './case-river-taxi.module.css';
+import { useState, useRef, useEffect } from 'react';
 
 export default function CaseRiverTaxi() {
+  // Prototype loading state
+  const [isPrototypeLoaded, setIsPrototypeLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Lazy loading state for iframe
+  const [isPrototypeInView, setIsPrototypeInView] = useState(false);
+  const prototypeRef = useRef<HTMLDivElement>(null);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Intersection Observer for lazy loading iframe
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '50px',
+      threshold: 0.1
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target === prototypeRef.current) {
+            setIsPrototypeInView(true);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    if (prototypeRef.current) {
+      observer.observe(prototypeRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
   return (
     <div className={`${styles['case-page']} ${styles['case-river-taxi']}`} role="main" aria-label="Case: River Taxi">
       <section className={styles['case-content']} aria-label="Storyline content">
@@ -130,6 +179,47 @@ export default function CaseRiverTaxi() {
                  alt="Примеры существующих решений такси"
                  className={styles['case-river-taxi__solution-image']}
                />
+             </div>
+
+             <h3 className={styles['case-river-taxi__solution-subheader']}>Макеты приложения</h3>
+             <div ref={prototypeRef} className={styles['case-river-taxi__prototype-container']}>
+               {isMobile && !isPrototypeLoaded ? (
+                 <div className={styles['case-river-taxi__mobile-banner']}>
+                   <div className={styles['case-river-taxi__mobile-banner-content']}>
+                     <div className={styles['case-river-taxi__mobile-banner-text']}>
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                         <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+                       </svg>
+                       <span>Интерактивный прототип интерфейса</span>
+                     </div>
+                     <button
+                       className="case-lowfodmap__telegram-button"
+                       onClick={() => setIsPrototypeLoaded(true)}
+                     >
+                       Загрузить прототип
+                     </button>
+                   </div>
+                 </div>
+               ) : isPrototypeInView || isPrototypeLoaded ? (
+                 <iframe
+                   className={styles['case-river-taxi__figma-iframe']}
+                   src="https://embed.figma.com/proto/5TIYxY4gkkU6U5r8bAhB3M/moscow-river?node-id=54-5588&p=f&scaling=min-zoom&content-scaling=fixed&page-id=52%3A4&starting-point-node-id=54%3A5588&embed-host=share&footer=false&theme=dark"
+                   allowFullScreen
+                   title="River Taxi Interface Prototype"
+                 />
+               ) : (
+                 <div className={styles['case-river-taxi__iframe-placeholder']}>
+                   <div className={styles['case-river-taxi__iframe-placeholder-content']}>
+                     <div className={styles['case-river-taxi__iframe-placeholder-text']}>
+                       Интерактивный прототип интерфейса
+                     </div>
+                     <div className={styles['case-river-taxi__iframe-placeholder-subtext']}>
+                       Прокрутите вниз, чтобы загрузить
+                     </div>
+                   </div>
+                 </div>
+               )}
              </div>
           </div>
         </section>

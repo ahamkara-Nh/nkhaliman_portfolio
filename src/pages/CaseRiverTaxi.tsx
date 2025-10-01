@@ -394,6 +394,16 @@ export default function CaseRiverTaxi() {
           </div>
         </section>
 
+        {/* Results Section */}
+        <section className={styles['case-river-taxi__results-section']}>
+          <h2 className={styles['case-river-taxi__results-header']}>Итоги</h2>
+          <div className={styles['case-river-taxi__results-content']}>
+            <p className={styles['case-river-taxi__results-text']}>
+              Хотя макеты и прототип были готовы, финальный дизайн не был использован в рамках хакатона, так как один из участников команды не смог принять участие в завершающих этапах. Не смотря на это я получил довольно много полезных навыков, таких как: умение работать в команде и принимать быстрые и обоснованные дизайнерские решения в условиях хакатона. Плюс к этому полученные результаты были достигнуты в довольно узкие временные рамки.
+            </p>
+          </div>
+        </section>
+
       </section>
     </div>
   );

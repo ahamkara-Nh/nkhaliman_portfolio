@@ -228,7 +228,7 @@ export default function CaseRiverTaxi() {
                />
              </div>
 
-             <h3 className={styles['case-river-taxi__solution-subheader']}>Макеты приложения</h3>
+             <h2 className={styles['case-river-taxi__solution-header']} style={{ marginTop: '16px' }}>Макеты приложения</h2>
              <div className={styles['case-river-taxi__prototype-content']}>
                <p className={styles['case-river-taxi__prototype-description']}>
                  Здесь можно увидеть прототип приложения с реализованным user flow заказа шеринг тарифа. Figma файл этого прототипа можно открыть по ссылке - <a href="https://www.figma.com/design/5TIYxY4gkkU6U5r8bAhB3M/moscow-river?node-id=52-4&t=1zYUUQN4S2gx80sj-1" target="_blank" rel="noopener noreferrer" className={styles['case-river-taxi__figma-link']}>тут</a>. Далее я опишу основные детали, которые были реализованы для успешного выполнения задачи.

@@ -2,13 +2,17 @@ import styles from './case-river-taxi.module.css';
 import { useState, useRef, useEffect } from 'react';
 
 export default function CaseRiverTaxi() {
-  // Prototype loading state
-  const [isPrototypeLoaded, setIsPrototypeLoaded] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+   // Prototype loading state
+   const [isPrototypeLoaded, setIsPrototypeLoaded] = useState(false);
+   const [isMobile, setIsMobile] = useState(false);
 
-  // Lazy loading state for iframe
-  const [isPrototypeInView, setIsPrototypeInView] = useState(false);
-  const prototypeRef = useRef<HTMLDivElement>(null);
+   // Lazy loading state for iframe
+   const [isPrototypeInView, setIsPrototypeInView] = useState(false);
+   const prototypeRef = useRef<HTMLDivElement>(null);
+
+   // Features carousel state
+   const [currentFeatureScreen, setCurrentFeatureScreen] = useState(0);
+   const featuresTrackRef = useRef<HTMLDivElement>(null);
 
   // Check if device is mobile
   useEffect(() => {
@@ -48,6 +52,29 @@ export default function CaseRiverTaxi() {
 
     return () => {
       observer.disconnect();
+    };
+  }, []);
+
+  // Handle features carousel navigation
+  useEffect(() => {
+    if (featuresTrackRef.current) {
+      featuresTrackRef.current.style.transform = `translateX(-${currentFeatureScreen * 100}%)`;
+    }
+  }, [currentFeatureScreen]);
+
+  // Handle keyboard navigation for features carousel
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        setCurrentFeatureScreen(prev => prev === 0 ? 4 : prev - 1);
+      } else if (e.key === 'ArrowRight') {
+        setCurrentFeatureScreen(prev => prev === 4 ? 0 : prev + 1);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
   return (
@@ -224,6 +251,144 @@ export default function CaseRiverTaxi() {
                      </div>
                    </div>
                  )}
+               </div>
+             </div>
+
+             <h3 className={styles['case-river-taxi__solution-subheader']}>Основные фичи</h3>
+             <div className={styles['case-river-taxi__features-section']}>
+               <p className={styles['case-river-taxi__solution-text']}>
+                 В приложении реализованы ключевые функции для удобного шеринг-такси на воде. Ниже представлены основные возможности с интерактивными демонстрациями.
+               </p>
+
+               {/* Rive Features Carousel */}
+               <div className={styles['case-river-taxi__features-carousel-container']}>
+                 <div className={styles['case-river-taxi__features-carousel']}>
+                   <div className={styles['case-river-taxi__features-track']} ref={featuresTrackRef}>
+
+                     {/* Feature 1 - boats.riv */}
+                     <div className={styles['case-river-taxi__features-slide']}>
+                       <div className={styles['case-river-taxi__features-content']}>
+                         <div className={styles['case-river-taxi__features-animation']}>
+                           <img
+                             src="/src/assets/case-images/third-case/rive/boats.riv"
+                             alt="Rive анимация первой фичи"
+                             className={styles['case-river-taxi__rive-preview']}
+                           />
+                         </div>
+                         <div className={styles['case-river-taxi__features-text']}>
+                           <h4 className={styles['case-river-taxi__features-title']}>Интеллектуальное объединение поездок</h4>
+                           <p className={styles['case-river-taxi__features-description']}>
+                             [Текст о первой фиче - интеллектуальное объединение поездок с похожими маршрутами]
+                           </p>
+                         </div>
+                       </div>
+                     </div>
+
+                     {/* Feature 2 - boats2.riv */}
+                     <div className={styles['case-river-taxi__features-slide']}>
+                       <div className={styles['case-river-taxi__features-content']}>
+                         <div className={styles['case-river-taxi__features-animation']}>
+                           <img
+                             src="/src/assets/case-images/third-case/rive/boats2.riv"
+                             alt="Rive анимация второй фичи"
+                             className={styles['case-river-taxi__rive-preview']}
+                           />
+                         </div>
+                         <div className={styles['case-river-taxi__features-text']}>
+                           <h4 className={styles['case-river-taxi__features-title']}>Динамическое ценообразование</h4>
+                           <p className={styles['case-river-taxi__features-description']}>
+                             [Текст о второй фиче - динамическое ценообразование в зависимости от количества пассажиров]
+                           </p>
+                         </div>
+                       </div>
+                     </div>
+
+                     {/* Feature 3 - boats3.riv */}
+                     <div className={styles['case-river-taxi__features-slide']}>
+                       <div className={styles['case-river-taxi__features-content']}>
+                         <div className={styles['case-river-taxi__features-animation']}>
+                           <img
+                             src="/src/assets/case-images/third-case/rive/boats3.riv"
+                             alt="Rive анимация третьей фичи"
+                             className={styles['case-river-taxi__rive-preview']}
+                           />
+                         </div>
+                         <div className={styles['case-river-taxi__features-text']}>
+                           <h4 className={styles['case-river-taxi__features-title']}>Оптимизация маршрутов</h4>
+                           <p className={styles['case-river-taxi__features-description']}>
+                             [Текст о третьей фиче - оптимизация маршрутов для минимизации времени в пути]
+                           </p>
+                         </div>
+                       </div>
+                     </div>
+
+                     {/* Feature 4 - boats4.riv */}
+                     <div className={styles['case-river-taxi__features-slide']}>
+                       <div className={styles['case-river-taxi__features-content']}>
+                         <div className={styles['case-river-taxi__features-animation']}>
+                           <img
+                             src="/src/assets/case-images/third-case/rive/boats4.riv"
+                             alt="Rive анимация четвертой фичи"
+                             className={styles['case-river-taxi__rive-preview']}
+                           />
+                         </div>
+                         <div className={styles['case-river-taxi__features-text']}>
+                           <h4 className={styles['case-river-taxi__features-title']}>Отслеживание в реальном времени</h4>
+                           <p className={styles['case-river-taxi__features-description']}>
+                             [Текст о четвертой фиче - отслеживание местоположения такси в реальном времени]
+                           </p>
+                         </div>
+                       </div>
+                     </div>
+
+                     {/* Feature 5 - boats5.riv */}
+                     <div className={styles['case-river-taxi__features-slide']}>
+                       <div className={styles['case-river-taxi__features-content']}>
+                         <div className={styles['case-river-taxi__features-animation']}>
+                           <img
+                             src="/src/assets/case-images/third-case/rive/boats5.riv"
+                             alt="Rive анимация пятой фичи"
+                             className={styles['case-river-taxi__rive-preview']}
+                           />
+                         </div>
+                         <div className={styles['case-river-taxi__features-text']}>
+                           <h4 className={styles['case-river-taxi__features-title']}>Уведомления и коммуникация</h4>
+                           <p className={styles['case-river-taxi__features-description']}>
+                             [Текст о пятой фиче - система уведомлений и коммуникации с пассажирами]
+                           </p>
+                         </div>
+                       </div>
+                     </div>
+
+                   </div>
+                 </div>
+
+                 {/* Navigation dots with arrows */}
+                 <div className={styles['case-river-taxi__features-dots']}>
+                   <div
+                     className={styles['case-river-taxi__features-arrow case-river-taxi__features-arrow--left']}
+                     onClick={() => setCurrentFeatureScreen(prev => prev === 0 ? 4 : prev - 1)}
+                   >
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                     </svg>
+                   </div>
+                   {[0, 1, 2, 3, 4].map((index) => (
+                     <div
+                       key={index}
+                       className={`${styles['case-river-taxi__features-dot']} ${currentFeatureScreen === index ? styles['case-river-taxi__features-dot--active'] : ''}`}
+                       onClick={() => setCurrentFeatureScreen(index)}
+                     ></div>
+                   ))}
+                   <div
+                     className={styles['case-river-taxi__features-arrow case-river-taxi__features-arrow--right']}
+                     onClick={() => setCurrentFeatureScreen(prev => prev === 4 ? 0 : prev + 1)}
+                   >
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                     </svg>
+                   </div>
+                 </div>
                </div>
              </div>
           </div>

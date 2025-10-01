@@ -119,6 +119,18 @@ export default function CaseRiverTaxi() {
              <p className={styles['case-river-taxi__solution-text']}>
                В условиях ограниченного времени хакатона, я принял решение использовать готовую дизайн-систему Material Design. Так значительно сократиться время на создание макетов и написание кода фронтенд разработчиком. Для некоторых элементов интерфейса я сделал уникальные компоненты. но в основном использовались готовые компоненты дизайн-системы
              </p>
+
+             <h3 className={styles['case-river-taxi__solution-subheader']}>Изучение существующих решений</h3>
+             <p className={styles['case-river-taxi__solution-text']}>
+               Я посмотрел существующие приложения такси и как там реализован функционал совместных поездок. Приложения с водным такси было трудно найти, поэтому я рассматривал классическое такси и их способы реализации совместных поездок.
+             </p>
+             <div className={styles['case-river-taxi__image-container']}>
+               <img
+                 src="/src/assets/case-images/third-case/taxi_examples.png"
+                 alt="Примеры существующих решений такси"
+                 className={styles['case-river-taxi__solution-image']}
+               />
+             </div>
           </div>
         </section>
 

@@ -591,6 +591,51 @@
   margin-bottom: 0;
 }
 
+/* Conclusion Image Styles */
+.case-river-taxi__conclusion-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.case-river-taxi__conclusion-image-container {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 8px 26px -16px rgba(155, 156, 255, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.case-river-taxi__conclusion-image-container:hover {
+  border-color: rgba(155, 156, 255, 0.28);
+  background: rgba(155, 156, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px -18px rgba(155, 156, 255, 0.32);
+}
+
+.case-river-taxi__conclusion-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-height: 400px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.case-river-taxi__conclusion-image-container:hover .case-river-taxi__conclusion-image {
+  transform: scale(1.02);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .case-river-taxi__title {
@@ -721,6 +766,15 @@
   .case-river-taxi__prototype-container {
     max-width: 100%;
   }
+
+  .case-river-taxi__conclusion-image-container {
+    padding: 16px;
+    margin-top: 24px;
+  }
+
+  .case-river-taxi__conclusion-image {
+    max-height: 300px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -764,6 +818,10 @@
     flex-direction: column;
     gap: 8px;
     text-align: center;
+  }
+
+  .case-river-taxi__conclusion-image {
+    max-height: 250px;
   }
 }
 

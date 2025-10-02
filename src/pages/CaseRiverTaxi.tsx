@@ -387,13 +387,13 @@ export default function CaseRiverTaxi() {
 
                  {/* Navigation dots with arrows */}
                  <div className={styles['case-river-taxi__features-dots']}>
-                   <div
-                     className={styles['case-river-taxi__features-arrow case-river-taxi__features-arrow--left']}
-                     onClick={() => setCurrentFeatureScreen(prev => prev === 0 ? 4 : prev - 1)}
-                   >
+                   <div className={`${styles['case-river-taxi__features-arrow']} ${styles['case-river-taxi__features-arrow--left']}`}
+                     onClick={() => setCurrentFeatureScreen(prev => prev === 0 ? 4 : prev - 1)}>
+
                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                        <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                      </svg>
+                     
                    </div>
                    {[0, 1, 2, 3, 4].map((index) => (
                      <div
@@ -403,7 +403,7 @@ export default function CaseRiverTaxi() {
                      ></div>
                    ))}
                    <div
-                     className={styles['case-river-taxi__features-arrow case-river-taxi__features-arrow--right']}
+                     className={`${styles['case-river-taxi__features-arrow']} ${styles['case-river-taxi__features-arrow--right']}`}
                      onClick={() => setCurrentFeatureScreen(prev => prev === 4 ? 0 : prev + 1)}
                    >
                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

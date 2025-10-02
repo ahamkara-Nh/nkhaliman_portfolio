@@ -261,15 +261,16 @@ export default function App() {
                     </li>
                     <li className="skill-card">
                       <img className="skill-icon" src="/src/assets/icons/skills/html.svg" alt="" aria-hidden="true" />
-                      <span className="skill-name">HTML</span>
+                      <span className="skill-name">HTML/CSS</span>
+                    </li>
+                    
+                    <li className="skill-card">
+                      <img className="skill-icon" src="/src/assets/icons/skills/ux-research.svg" alt="" aria-hidden="true" />
+                      <span className="skill-name">UX Research</span>
                     </li>
                     <li className="skill-card">
-                      <img className="skill-icon" src="/src/assets/icons/skills/css.svg" alt="" aria-hidden="true" />
-                      <span className="skill-name">CSS</span>
-                    </li>
-                    <li className="skill-card">
-                      <img className="skill-icon" src="/src/assets/icons/skills/js.svg" alt="" aria-hidden="true" />
-                      <span className="skill-name">JavaScript</span>
+                      <img className="skill-icon" src="/src/assets/icons/skills/ai-tools.svg" alt="" aria-hidden="true" />
+                      <span className="skill-name">AI-инструменты</span>
                     </li>
                     <li className="skill-card">
                       <img className="skill-icon" src="/src/assets/icons/skills/english.svg" alt="" aria-hidden="true" />

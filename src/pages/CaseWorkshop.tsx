@@ -196,6 +196,39 @@ export default function CaseWorkshop() {
           </div>
         </section>
 
+        {/* Workshop Flow Section */}
+        <section
+          id="workshop-flow"
+          className="case-workshop__workshop-flow-section"
+        >
+          <h2 className="case-workshop__workshop-flow-header">
+            Ход воркшопа: Погружение в проблему
+          </h2>
+          <div className="case-workshop__workshop-flow-content">
+            <p>
+              Воркшоп проходил в Яндекс.Телемосте, а все активности мы
+              организовали на интерактивной доске Miro.
+            </p>
+            <p>
+              <strong>1. Знакомство и Ice-breaking.</strong> Мы начали с
+              неформального знакомства, чтобы создать доверительную атмосферу и
+              понять контекст каждого участника.
+            </p>
+          </div>
+
+          <div className="case-workshop__miro-embed">
+            <iframe
+              width="768"
+              height="496"
+              src="https://miro.com/app/live-embed/uXjVJ_Z6fsY=/?focusWidget=3458764582175593084&embedMode=view_only_without_ui&embedId=695162889405"
+              frameBorder="0"
+              scrolling="no"
+              allow="fullscreen; clipboard-read; clipboard-write"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </section>
+
         {/* Add your sections here: research, design, testing, conclusion */}
 
         {/* Fullscreen Modal */}

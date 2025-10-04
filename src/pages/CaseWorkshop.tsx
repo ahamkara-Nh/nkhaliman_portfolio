@@ -56,8 +56,31 @@ export default function CaseWorkshop() {
           
           <div className="case-workshop__key-results">
             <h2 className="case-workshop__section-title">Мой вклад в групповой проект</h2>
-            <div className="case-workshop__results-grid">
-              {/* Add your key results here */}
+            <div className="case-workshop__contributions-list">
+              <div className="case-workshop__contribution-item">
+                <div className="case-workshop__contribution-header">
+                  <strong>Разработка активностей:</strong>
+                </div>
+                <div className="case-workshop__contribution-text">
+                  Участвовал в создании структуры заданий для участников воркшопа на доске в Miro.
+                </div>
+              </div>
+              <div className="case-workshop__contribution-item">
+                <div className="case-workshop__contribution-header">
+                  <strong>Подготовка презентации:</strong>
+                </div>
+                <div className="case-workshop__contribution-text">
+                  Разработал структуру и дизайн итоговой презентации для защиты проекта.
+                </div>
+              </div>
+              <div className="case-workshop__contribution-item">
+                <div className="case-workshop__contribution-header">
+                  <strong>Написание отчета:</strong>
+                </div>
+                <div className="case-workshop__contribution-text">
+                  Составил детальный отчет по результатам воркшопа, обобщив полученные данные и сформулировав ключевые выводы.
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -61,27 +61,37 @@ export default function CaseWorkshop() {
             <ul className="case-workshop__toc-list">
               <li className="case-workshop__toc-item">
                 <a href="#problem" className="case-workshop__toc-link">
-                  1. Проблема
+                  1. Проблема: Почему мы теряем фокус?
                 </a>
               </li>
               <li className="case-workshop__toc-item">
-                <a href="#research" className="case-workshop__toc-link">
-                  2. Исследование
+                <a href="#preparation" className="case-workshop__toc-link">
+                  2. Подготовка и планирование
                 </a>
               </li>
               <li className="case-workshop__toc-item">
-                <a href="#design" className="case-workshop__toc-link">
-                  3. Дизайн и функционал
+                <a href="#workshop-flow" className="case-workshop__toc-link">
+                  3. Ход воркшопа: Погружение в проблему
                 </a>
               </li>
               <li className="case-workshop__toc-item">
-                <a href="#testing" className="case-workshop__toc-link">
-                  4. Тестирование и результаты
+                <a href="#main-insight" className="case-workshop__toc-link">
+                  4. Главный инсайт: Враг внутри
                 </a>
               </li>
               <li className="case-workshop__toc-item">
-                <a href="#conclusion" className="case-workshop__toc-link">
-                  5. Выводы и ограничения
+                <a href="#user-solutions" className="case-workshop__toc-link">
+                  5. Решения пользователей и их ожидания
+                </a>
+              </li>
+              <li className="case-workshop__toc-item">
+                <a href="#conclusions" className="case-workshop__toc-link">
+                  6. Выводы и рефлексия
+                </a>
+              </li>
+              <li className="case-workshop__toc-item">
+                <a href="#final" className="case-workshop__toc-link">
+                  7. Итог
                 </a>
               </li>
             </ul>

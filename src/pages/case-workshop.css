@@ -895,31 +895,68 @@
 
 .case-workshop__back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    bottom: 32px;
+    right: 32px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    background: linear-gradient(135deg, #9b9cff, #6cdfdb);
+    border: none;
+    color: #000;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(155, 156, 255, 0.3);
     transition: all 0.3s ease;
+    z-index: 100;
     opacity: 0;
+    visibility: hidden;
     transform: translateY(20px);
-    z-index: 1000;
-    color: var(--text);
+}
+
+.case-workshop__back-to-top:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(155, 156, 255, 0.4);
 }
 
 .case-workshop__back-to-top.show {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
 }
 
-.case-workshop__back-to-top:hover {
-    background: rgba(155, 156, 255, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(155, 156, 255, 0.3);
+.case-workshop__back-to-top svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* Responsive adjustments for back to top button */
+@media (max-width: 768px) {
+    .case-workshop__back-to-top {
+        bottom: 24px;
+        right: 24px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .case-workshop__back-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-workshop__back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .case-workshop__back-to-top svg {
+        width: 18px;
+        height: 18px;
+    }
 }

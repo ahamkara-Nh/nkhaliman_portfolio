@@ -404,6 +404,98 @@
     border-radius: var(--radius);
 }
 
+.case-workshop__miro-embed:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.45);
+    border-color: rgba(155, 156, 255, 0.5);
+}
+
+/* Main Insight Section */
+.case-workshop__main-insight-section {
+    margin: 60px 0;
+}
+
+.case-workshop__main-insight-header {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 32px 0;
+    color: var(--text);
+    text-align: left;
+}
+
+.case-workshop__main-insight-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.case-workshop__main-insight-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0 0 20px 0;
+}
+
+.case-workshop__main-insight-content p:last-child {
+    margin-bottom: 0;
+}
+
+.case-workshop__main-insight-content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* User Solutions Section */
+.case-workshop__user-solutions-section {
+    margin: 60px 0;
+}
+
+.case-workshop__user-solutions-header {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 32px 0;
+    color: var(--text);
+    text-align: left;
+}
+
+.case-workshop__user-solutions-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.case-workshop__user-solutions-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0 0 20px 0;
+}
+
+.case-workshop__user-solutions-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.case-workshop__user-solutions-content ul {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 20px 0;
+    padding-left: 24px;
+}
+
+.case-workshop__user-solutions-content li {
+    margin-bottom: 12px;
+}
+
+.case-workshop__user-solutions-content li:last-child {
+    margin-bottom: 0;
+}
+
+.case-workshop__user-solutions-content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
 /* Add more styles as needed for sections like research, design, testing, conclusion */
 
 @media (max-width: 768px) {

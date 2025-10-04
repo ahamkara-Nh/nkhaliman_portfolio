@@ -271,6 +271,88 @@ export default function CaseWorkshop() {
           </div>
         </section>
 
+        {/* Main Insight Section */}
+        <section
+          id="main-insight"
+          className="case-workshop__main-insight-section"
+        >
+          <h2 className="case-workshop__main-insight-header">
+            Главный инсайт: Враг внутри
+          </h2>
+          <div className="case-workshop__main-insight-content">
+            <p>
+              Мы ожидали, что лидером окажется «Виртуальный мир» (соцсети,
+              уведомления). Но результат удивил:
+            </p>
+            <p>
+              <strong>
+                Большинство отвлекающих факторов оказались в сфере «Внутреннее
+                состояние»
+              </strong>{" "}
+              — тревожность, усталость, стресс, отсутствие мотивации.
+            </p>
+            <p>Это стало поворотным пунктом нашего исследования.</p>
+          </div>
+        </section>
+
+        {/* User Solutions Section */}
+        <section
+          id="user-solutions"
+          className="case-workshop__user-solutions-section"
+        >
+          <h2 className="case-workshop__user-solutions-header">
+            Решения пользователей и их ожидания
+          </h2>
+          <div className="case-workshop__user-solutions-content">
+            <p>Далее мы исследовали, как участники борются с проблемой:</p>
+            <ul>
+              <li>
+                <strong>Методы:</strong> Использование таймеров (Pomodoro),
+                планирование, приложения-трекеры.
+              </li>
+              <li>
+                <strong>Эффективность:</strong> Ни один метод не был признан
+                100% рабочим. Большинство техник боролись с внешними факторами
+                (виртуальным и физическим миром), в то время как главная
+                проблема — внутреннее состояние — оставалась без внимания.
+              </li>
+            </ul>
+            <p>
+              На финальной активности <strong>Crazy 8</strong> мы собрали
+              ожидания от гипотетического сервиса для продуктивности:
+            </p>
+            <ul>
+              <li>
+                <strong>Единый календарь</strong> и система планирования.
+              </li>
+              <li>
+                <strong>"Экологичные" уведомления</strong> (мнения разделились:
+                кому-то нужен навязчивый стиль Duolingo, а кому-то — мягкие
+                напоминания).
+              </li>
+              <li>
+                <strong>Советы и лайфхаки</strong> по борьбе с прокрастинацией.
+              </li>
+              <li>
+                <strong>Мотивация через геймификацию,</strong> бонусы и
+                статистику.
+              </li>
+            </ul>
+          </div>
+
+          <div className="case-workshop__miro-embed">
+            <iframe
+              width="768"
+              height="496"
+              src="https://miro.com/app/live-embed/uXjVJ_Z6fsY=/?focusWidget=3458764582175593088&embedMode=view_only_without_ui&embedId=218164128317"
+              frameBorder="0"
+              scrolling="no"
+              allow="fullscreen; clipboard-read; clipboard-write"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </section>
+
         {/* Add your sections here: research, design, testing, conclusion */}
 
         {/* Fullscreen Modal */}

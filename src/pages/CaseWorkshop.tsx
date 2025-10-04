@@ -28,7 +28,7 @@ export default function CaseWorkshop() {
         </header>
         <div className="case-workshop__description">
           <p>
-            {/* Add your project description here */}
+            Учебный проект, выполненный в рамках магистерской программы. Целью исследования было глубже понять, как люди справляются с проблемами концентрации внимания при выполнении рабочих и учебных задач, чтобы определить возможные решения для повышения их продуктивности.
           </p>
         </div>
         
@@ -55,7 +55,7 @@ export default function CaseWorkshop() {
           </div>
           
           <div className="case-workshop__key-results">
-            <h2 className="case-workshop__section-title">Ключевые результаты</h2>
+            <h2 className="case-workshop__section-title">Мой вклад в групповой проект</h2>
             <div className="case-workshop__results-grid">
               {/* Add your key results here */}
             </div>

@@ -188,7 +188,7 @@ export default function App() {
                className={({ isActive }: { isActive: boolean }) => `nav-btn${isActive ? ' is-active' : ''}`}
                aria-current="page"
              >
-               Workshop: проблема концентрации внимания
+               Workshop
              </NavLink>
            )}
         </nav>
@@ -483,7 +483,7 @@ export default function App() {
                        <a className="case-link" href="/portfolio/workshop" aria-label="Открыть кейс: Workshop: проблема концентрации внимания">
                          <img
                            className="case-image"
-                           src="https://placehold.co/600x400/png"
+                           src="/src/assets/case-images/fourth-case/Workshop_cover.png"
                            alt="Превью проекта: Workshop: проблема концентрации внимания"
                            aria-hidden="true"
                          />

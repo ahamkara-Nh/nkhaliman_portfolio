@@ -1,10 +1,10 @@
-import './case-workshop.css';
-import { useState, useRef, useEffect } from 'react';
+import "./case-workshop.css";
+import { useState, useRef, useEffect } from "react";
 
 export default function CaseWorkshop() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isPhase2Fullscreen, setIsPhase2Fullscreen] = useState(false);
-  const [fullscreenImage, setFullscreenImage] = useState('');
+  const [fullscreenImage, setFullscreenImage] = useState("");
   const [zoomLevel, setZoomLevel] = useState(0.25);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
@@ -17,52 +17,88 @@ export default function CaseWorkshop() {
   const trackRef = useRef<HTMLDivElement>(null);
   const mainScreensTrackRef = useRef<HTMLDivElement>(null);
 
-  // Add your state and functions here based on the template
+  // Handle scroll to show/hide back to top button
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="case-page case-workshop" role="main" aria-label="Case: Workshop">
+    <div
+      className="case-page case-workshop"
+      role="main"
+      aria-label="Case: Workshop"
+    >
       <section className="case-content" aria-label="Storyline content">
         <header className="case-workshop__header">
-          <h1 className="case-workshop__title">Workshop: проблема концентрации внимания</h1>
+          <h1 className="case-workshop__title">
+            Workshop: проблема концентрации внимания
+          </h1>
           <p className="case-workshop__subtitle">Учебный проект ВШЭ</p>
         </header>
         <div className="case-workshop__description">
           <p>
-            Учебный проект, выполненный в рамках магистерской программы. Целью исследования было глубже понять, как люди справляются с проблемами концентрации внимания при выполнении рабочих и учебных задач, чтобы определить возможные решения для повышения их продуктивности.
+            Учебный проект, выполненный в рамках магистерской программы. Целью
+            исследования было глубже понять, как люди справляются с проблемами
+            концентрации внимания при выполнении рабочих и учебных задач, чтобы
+            определить возможные решения для повышения их продуктивности.
           </p>
         </div>
-        
+
         <div className="case-workshop__content-row">
           <div className="case-workshop__table-of-contents">
             <h2 className="case-workshop__section-title">Содержание</h2>
             <ul className="case-workshop__toc-list">
               <li className="case-workshop__toc-item">
-                <a href="#problem" className="case-workshop__toc-link">1. Проблема</a>
+                <a href="#problem" className="case-workshop__toc-link">
+                  1. Проблема
+                </a>
               </li>
               <li className="case-workshop__toc-item">
-                <a href="#research" className="case-workshop__toc-link">2. Исследование</a>
+                <a href="#research" className="case-workshop__toc-link">
+                  2. Исследование
+                </a>
               </li>
               <li className="case-workshop__toc-item">
-                <a href="#design" className="case-workshop__toc-link">3. Дизайн и функционал</a>
+                <a href="#design" className="case-workshop__toc-link">
+                  3. Дизайн и функционал
+                </a>
               </li>
               <li className="case-workshop__toc-item">
-                <a href="#testing" className="case-workshop__toc-link">4. Тестирование и результаты</a>
+                <a href="#testing" className="case-workshop__toc-link">
+                  4. Тестирование и результаты
+                </a>
               </li>
               <li className="case-workshop__toc-item">
-                <a href="#conclusion" className="case-workshop__toc-link">5. Выводы и ограничения</a>
+                <a href="#conclusion" className="case-workshop__toc-link">
+                  5. Выводы и ограничения
+                </a>
               </li>
             </ul>
           </div>
-          
+
           <div className="case-workshop__key-results">
-            <h2 className="case-workshop__section-title">Мой вклад в групповой проект</h2>
+            <h2 className="case-workshop__section-title">
+              Мой вклад в групповой проект
+            </h2>
             <div className="case-workshop__contributions-list">
               <div className="case-workshop__contribution-item">
                 <div className="case-workshop__contribution-header">
                   <strong>Разработка активностей:</strong>
                 </div>
                 <div className="case-workshop__contribution-text">
-                  Участвовал в создании структуры заданий для участников воркшопа на доске в Miro.
+                  Участвовал в создании структуры заданий для участников
+                  воркшопа на доске в Miro.
                 </div>
               </div>
               <div className="case-workshop__contribution-item">
@@ -70,7 +106,8 @@ export default function CaseWorkshop() {
                   <strong>Подготовка презентации:</strong>
                 </div>
                 <div className="case-workshop__contribution-text">
-                  Разработал структуру и дизайн итоговой презентации для защиты проекта.
+                  Разработал структуру и дизайн итоговой презентации для защиты
+                  проекта.
                 </div>
               </div>
               <div className="case-workshop__contribution-item">
@@ -78,19 +115,46 @@ export default function CaseWorkshop() {
                   <strong>Написание отчета:</strong>
                 </div>
                 <div className="case-workshop__contribution-text">
-                  Составил детальный отчет по результатам воркшопа, обобщив полученные данные и сформулировав ключевые выводы.
+                  Составил детальный отчет по результатам воркшопа, обобщив
+                  полученные данные и сформулировав ключевые выводы.
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Add your sections here: problem, research, design, testing, conclusion */}
+        {/* Problem Section */}
+        <section id="problem" className="case-workshop__problem-section">
+          <h2 className="case-workshop__problem-header">
+            Проблема: Почему мы теряем фокус?
+          </h2>
+          <div className="case-workshop__problem-content">
+            <p>
+              В современном мире, переполненном информацией и отвлечениями,
+              способность концентрироваться стала ценным ресурсом. Наша учебная
+              группа столкнулась с тем, что многим сложно эффективно управлять
+              своим вниманием при решении рабочих и учебных задач.
+            </p>
+            <p>
+              Мы решили не гадать, а спросить напрямую у потенциальных
+              пользователей. Целью воркшопа было определить возможные решения
+              для повышения эффективности управления вниманием.
+            </p>
+          </div>
+        </section>
+
+        {/* Add your sections here: research, design, testing, conclusion */}
 
         {/* Fullscreen Modal */}
         {isFullscreen && (
-          <div className="case-workshop__fullscreen-overlay" onClick={() => setIsFullscreen(false)}>
-            <div className="case-workshop__fullscreen-modal" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="case-workshop__fullscreen-overlay"
+            onClick={() => setIsFullscreen(false)}
+          >
+            <div
+              className="case-workshop__fullscreen-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
               {/* Add fullscreen content here */}
             </div>
           </div>
@@ -98,21 +162,39 @@ export default function CaseWorkshop() {
 
         {/* Fullscreen Modal for Phase 2 Screenshots */}
         {isPhase2Fullscreen && (
-          <div className="case-workshop__fullscreen-overlay case-workshop__fullscreen-overlay--phase2" onClick={() => setIsPhase2Fullscreen(false)}>
-            <div className="case-workshop__fullscreen-modal" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="case-workshop__fullscreen-overlay case-workshop__fullscreen-overlay--phase2"
+            onClick={() => setIsPhase2Fullscreen(false)}
+          >
+            <div
+              className="case-workshop__fullscreen-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
               {/* Add fullscreen content here */}
             </div>
           </div>
         )}
-        
+
         {/* Back to Top Button */}
-        <button 
-          className={`case-workshop__back-to-top ${showBackToTop ? 'show' : ''}`}
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        <button
+          className={`case-workshop__back-to-top ${showBackToTop ? "show" : ""}`}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Наверх"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 19V5M12 5L5 12M12 5L19 12"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
       </section>

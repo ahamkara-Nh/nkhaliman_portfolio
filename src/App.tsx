@@ -3,6 +3,7 @@ import { NavLink, Route, Routes, Navigate, useLocation } from 'react-router-dom'
 import CaseLowFodmap from './pages/CaseLowFodmap';
 import CaseTBanks from './pages/CaseTBanks';
 import CaseRiverTaxi from './pages/CaseRiverTaxi';
+import CaseWorkshop from './pages/CaseWorkshop';
 
 const AboutSection = () => (
   <section id="about" className="about">
@@ -129,7 +130,7 @@ function HardSoftSkillsSection() {
 
 export default function App() {
   const location = useLocation();
-  const isCasePage = location.pathname === '/portfolio/fodmap' || location.pathname === '/portfolio/tbanks' || location.pathname === '/portfolio/river-taxi';
+  const isCasePage = location.pathname === '/portfolio/fodmap' || location.pathname === '/portfolio/tbanks' || location.pathname === '/portfolio/river-taxi' || location.pathname === '/portfolio/workshop';
 
   return (
     <div className="page">
@@ -172,15 +173,24 @@ export default function App() {
               Т-Банк "Город"
             </NavLink>
           )}
-          {location.pathname === '/portfolio/river-taxi' && (
-            <NavLink
-              to="/portfolio/river-taxi"
-              className={({ isActive }: { isActive: boolean }) => `nav-btn${isActive ? ' is-active' : ''}`}
-              aria-current="page"
-            >
-              Шеринг-такси
-            </NavLink>
-          )}
+           {location.pathname === '/portfolio/river-taxi' && (
+             <NavLink
+               to="/portfolio/river-taxi"
+               className={({ isActive }: { isActive: boolean }) => `nav-btn${isActive ? ' is-active' : ''}`}
+               aria-current="page"
+             >
+               Шеринг-такси
+             </NavLink>
+           )}
+           {location.pathname === '/portfolio/workshop' && (
+             <NavLink
+               to="/portfolio/workshop"
+               className={({ isActive }: { isActive: boolean }) => `nav-btn${isActive ? ' is-active' : ''}`}
+               aria-current="page"
+             >
+               Workshop: проблема концентрации внимания
+             </NavLink>
+           )}
         </nav>
       </header>
 
@@ -469,18 +479,20 @@ export default function App() {
                       </a>
                     </li>
 
-                    <li className="case-card">
-                      <img
-                        className="case-image"
-                        src="https://placehold.co/600x400/png"
-                        alt="Превью проекта 4"
-                        aria-hidden="true"
-                      />
-                      <div className="case-body">
-                        <h3 className="case-title">Название проекта 4</h3>
-                        <div className="case-origin">Источник: Placeholder (например, собственная инициатива)</div>
-                      </div>
-                    </li>
+                     <li className="case-card">
+                       <a className="case-link" href="/portfolio/workshop" aria-label="Открыть кейс: Workshop: проблема концентрации внимания">
+                         <img
+                           className="case-image"
+                           src="https://placehold.co/600x400/png"
+                           alt="Превью проекта: Workshop: проблема концентрации внимания"
+                           aria-hidden="true"
+                         />
+                         <div className="case-body">
+                           <h3 className="case-title">Workshop: проблема концентрации внимания</h3>
+                           <div className="case-origin">Учебный проект ВШЭ</div>
+                         </div>
+                       </a>
+                     </li>
                   </ul>
                 </section>
               </>
@@ -504,15 +516,24 @@ export default function App() {
               </>
             }
           />
-          <Route
-            path="/portfolio/river-taxi"
-            element={
-              <>
-                {/* Keep only the two existing buttons at the top (from header). No hero section here. */}
-                <CaseRiverTaxi/>
-              </>
-            }
-          />
+           <Route
+             path="/portfolio/river-taxi"
+             element={
+               <>
+                 {/* Keep only the two existing buttons at the top (from header). No hero section here. */}
+                 <CaseRiverTaxi/>
+               </>
+             }
+           />
+           <Route
+             path="/portfolio/workshop"
+             element={
+               <>
+                 {/* Keep only the two existing buttons at the top (from header). No hero section here. */}
+                 <CaseWorkshop />
+               </>
+             }
+           />
         </Routes>
 
       </main>

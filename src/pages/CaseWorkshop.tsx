@@ -141,6 +141,14 @@ export default function CaseWorkshop() {
               для повышения эффективности управления вниманием.
             </p>
           </div>
+
+          <div className="case-workshop__problem-image">
+            <img
+              src="/src/assets/case-images/fourth-case/attention.png"
+              alt="Проблема концентрации внимания"
+              className="case-workshop__problem-image-img"
+            />
+          </div>
         </section>
 
         {/* Add your sections here: research, design, testing, conclusion */}

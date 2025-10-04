@@ -960,3 +960,11 @@
         height: 18px;
     }
 }
+
+@media (max-width: 1000px){
+    .case-page.case-workshop {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}

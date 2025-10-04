@@ -239,41 +239,21 @@
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.35);
-    max-width: 800px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    border: 2px solid transparent;
     transition:
         transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.case-workshop__problem-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(155, 156, 255, 0.1) 0%,
-        rgba(108, 223, 219, 0.1) 50%,
-        rgba(255, 163, 150, 0.1) 100%
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
-    border-radius: var(--radius);
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .case-workshop__problem-image:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.45);
-}
-
-.case-workshop__problem-image:hover::before {
-    opacity: 1;
+    border-color: rgba(155, 156, 255, 0.5);
 }
 
 .case-workshop__problem-image-img {
@@ -283,7 +263,87 @@
     border-radius: var(--radius);
 }
 
-/* Add more styles as needed for sections like problem, research, etc. */
+/* Preparation Section */
+.case-workshop__preparation-section {
+    margin: 60px 0;
+}
+
+.case-workshop__preparation-header {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 32px 0;
+    color: var(--text);
+    text-align: left;
+}
+
+.case-workshop__preparation-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.case-workshop__preparation-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0 0 20px 0;
+}
+
+.case-workshop__preparation-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.case-workshop__preparation-content ul {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 20px 0;
+    padding-left: 24px;
+}
+
+.case-workshop__preparation-content li {
+    margin-bottom: 12px;
+}
+
+.case-workshop__preparation-content li:last-child {
+    margin-bottom: 0;
+}
+
+.case-workshop__preparation-content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.case-workshop__preparation-image {
+    margin-top: 32px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.35);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 2px solid transparent;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.case-workshop__preparation-image:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.45);
+    border-color: rgba(155, 156, 255, 0.5);
+}
+
+.case-workshop__preparation-image-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+}
+
+/* Add more styles as needed for sections like research, design, testing, conclusion */
 
 @media (max-width: 768px) {
     .case-workshop__title {
@@ -346,6 +406,34 @@
     }
 
     .case-workshop__problem-image {
+        margin-top: 24px;
+    }
+
+    .case-workshop__preparation-section {
+        margin: 40px 0;
+    }
+
+    .case-workshop__preparation-header {
+        font-size: 1.875rem;
+        margin-bottom: 24px;
+    }
+
+    .case-workshop__preparation-content p {
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+    .case-workshop__preparation-content ul {
+        font-size: 1rem;
+        margin: 16px 0;
+        padding-left: 20px;
+    }
+
+    .case-workshop__preparation-content li {
+        margin-bottom: 10px;
+    }
+
+    .case-workshop__preparation-image {
         margin-top: 24px;
     }
 }

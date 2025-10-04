@@ -151,6 +151,51 @@ export default function CaseWorkshop() {
           </div>
         </section>
 
+        {/* Preparation Section */}
+        <section
+          id="preparation"
+          className="case-workshop__preparation-section"
+        >
+          <h2 className="case-workshop__preparation-header">
+            Подготовка и планирование
+          </h2>
+          <div className="case-workshop__preparation-content">
+            <p>
+              Прежде чем начать, мы четко определили для себя фокус исследования
+              в соответствии с методологией <strong>101 Design Methods</strong>:
+            </p>
+            <ul>
+              <li>
+                <strong>Know Context:</strong> Понять, в каких ситуациях и
+                контекстах люди теряют концентрацию.
+              </li>
+              <li>
+                <strong>Frame Insights:</strong> Упорядочить и систематизировать
+                полученные данные.
+              </li>
+              <li>
+                <strong>Explore Concepts:</strong> Проводим мозговой штурм
+                возможных решений.
+              </li>
+            </ul>
+            <p>
+              Мы разработали детальный план на 2 часа, который включал
+              знакомство, четыре ключевые активности и перерыв. Критерием для
+              участников было наличие реальных проблем с концентрацией, а также
+              разнообразие по роду деятельности и полу. В итоге мы собрали
+              группу из 6 человек.
+            </p>
+          </div>
+
+          <div className="case-workshop__preparation-image">
+            <img
+              src="/src/assets/case-images/fourth-case/101design.png"
+              alt="101 Design Methods"
+              className="case-workshop__preparation-image-img"
+            />
+          </div>
+        </section>
+
         {/* Add your sections here: research, design, testing, conclusion */}
 
         {/* Fullscreen Modal */}

@@ -410,6 +410,33 @@ export default function CaseWorkshop() {
           </div>
         </section>
 
+        {/* Final Section */}
+        <section id="final" className="case-workshop__final-section">
+          <h2 className="case-workshop__final-header">Итог</h2>
+          <div className="case-workshop__final-content">
+            <p>
+              Этот воркшоп стал для меня ценным опытом в организации
+              пользовательских исследований. Я не только прокачал навыки
+              фасилитации и работы с группой, но и научился выявлять глубинные,
+              неочевидные инсайты. Главный вывод: создавая цифровой продукт,
+              важно смотреть не только на внешние раздражители, но и на
+              внутренний мир пользователя. Собранные данные стали прочной
+              основой для следующего этапа — проектирования сервиса, который
+              действительно поможет людям справляться с вызовами цифровой эпохи.
+            </p>
+          </div>
+
+          <div className="case-workshop__figma-embed">
+            <iframe
+              style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+              width="100%"
+              height="600"
+              src="https://embed.figma.com/proto/QnyyiYxhdZdGjSxWqPj6Id/workshop_presentation?node-id=2-2&p=f&scaling=contain&content-scaling=fixed&page-id=0%3A1&embed-host=share&footer=false&theme=dark"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </section>
+
         {/* Add your sections here: research, design, testing, conclusion */}
 
         {/* Fullscreen Modal */}

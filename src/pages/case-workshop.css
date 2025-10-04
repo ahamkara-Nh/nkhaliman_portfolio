@@ -404,12 +404,6 @@
     border-radius: var(--radius);
 }
 
-.case-workshop__miro-embed:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.45);
-    border-color: rgba(155, 156, 255, 0.5);
-}
-
 /* Main Insight Section */
 .case-workshop__main-insight-section {
     margin: 60px 0;
@@ -574,6 +568,60 @@
     width: 100%;
     height: auto;
     display: block;
+    border-radius: var(--radius);
+}
+
+/* Final Section */
+.case-workshop__final-section {
+    margin: 60px 0;
+}
+
+.case-workshop__final-header {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 32px 0;
+    color: var(--text);
+    text-align: left;
+}
+
+.case-workshop__final-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.case-workshop__final-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0 0 20px 0;
+}
+
+.case-workshop__final-content p:last-child {
+    margin-bottom: 0;
+}
+
+.case-workshop__figma-embed {
+    margin-top: 32px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.35);
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.case-workshop__figma-embed iframe {
+    display: block;
+    width: 100%;
+    border: none;
     border-radius: var(--radius);
 }
 

@@ -61,6 +61,7 @@
   flex: 1;
   border-radius: var(--radius);
   padding: 20px 0;
+  max-width: 360px;
 }
 
 .case-workshop__key-results {
@@ -84,6 +85,7 @@
   margin: 0;
   display: grid;
   gap: 12px;
+  
 }
 
 .case-workshop__toc-item {

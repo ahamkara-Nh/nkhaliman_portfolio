@@ -496,6 +496,87 @@
     font-weight: 600;
 }
 
+/* Conclusions Section */
+.case-workshop__conclusions-section {
+    margin: 60px 0;
+}
+
+.case-workshop__conclusions-header {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 32px 0;
+    color: var(--text);
+    text-align: left;
+}
+
+.case-workshop__conclusions-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.case-workshop__conclusions-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0 0 20px 0;
+}
+
+.case-workshop__conclusions-content p:first-of-type {
+    margin-top: 0;
+}
+
+.case-workshop__conclusions-content ul {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 20px 0;
+    padding-left: 24px;
+}
+
+.case-workshop__conclusions-content li {
+    margin-bottom: 12px;
+}
+
+.case-workshop__conclusions-content li:last-child {
+    margin-bottom: 0;
+}
+
+.case-workshop__conclusions-content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.case-workshop__conclusions-image {
+    margin-top: 32px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.35);
+    max-width: 800px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 2px solid transparent;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.case-workshop__conclusions-image:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.45);
+    border-color: rgba(155, 156, 255, 0.5);
+}
+
+.case-workshop__conclusions-image-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+}
+
 /* Add more styles as needed for sections like research, design, testing, conclusion */
 
 @media (max-width: 768px) {

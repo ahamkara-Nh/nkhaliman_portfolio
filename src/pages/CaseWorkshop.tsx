@@ -353,6 +353,63 @@ export default function CaseWorkshop() {
           </div>
         </section>
 
+        {/* Conclusions Section */}
+        <section
+          id="conclusions"
+          className="case-workshop__conclusions-section"
+        >
+          <h2 className="case-workshop__conclusions-header">
+            Выводы и рефлексия
+          </h2>
+          <div className="case-workshop__conclusions-content">
+            <p>
+              <strong>Что мы достигли:</strong>
+            </p>
+            <ul>
+              <li>
+                ✔ Выявили неочевидную главную причину потери фокуса —
+                внутреннее состояние.
+              </li>
+              <li>
+                ✔ Собрали портрет задач и контекстов, где концентрация падает.
+              </li>
+              <li>
+                ✔ Определили пробел на рынке: недостаток инструментов для
+                работы с внутренними триггерами.
+              </li>
+              <li>
+                ✔ Сформировали список ожиданий от сервиса для продуктивности.
+              </li>
+            </ul>
+            <p>
+              <strong>Что можно улучшить в следующий раз:</strong>
+            </p>
+            <ul>
+              <li>
+                Сделать формат более интерактивным, с большим количеством
+                обсуждений.
+              </li>
+              <li>
+                Всегда предоставлять <strong>наглядные примеры</strong>{" "}
+                выполнения заданий, так как участники не всегда читают текстовые
+                инструкции.
+              </li>
+              <li>
+                Тщательнее тестировать техническую часть (Miro, видеосвязь)
+                перед началом.
+              </li>
+            </ul>
+          </div>
+
+          <div className="case-workshop__conclusions-image">
+            <img
+              src="/src/assets/case-images/fourth-case/screenshot.png"
+              alt="Скриншот результатов воркшопа"
+              className="case-workshop__conclusions-image-img"
+            />
+          </div>
+        </section>
+
         {/* Add your sections here: research, design, testing, conclusion */}
 
         {/* Fullscreen Modal */}

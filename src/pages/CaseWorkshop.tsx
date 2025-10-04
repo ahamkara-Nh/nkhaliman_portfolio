@@ -227,6 +227,48 @@ export default function CaseWorkshop() {
               allowFullScreen
             ></iframe>
           </div>
+
+          <div className="case-workshop__workshop-flow-content">
+            <p>
+              <strong>2. Задачи-провокаторы.</strong> Участники записывали
+              задачи, на которых им сложнее всего сосредоточиться, и отмечали
+              свои эмоции. Это помогло выявить контексты: проблемы возникали не
+              только со скучными, но и с приятными задачами (чтение, обучение,
+              творчество).
+            </p>
+          </div>
+
+          <div className="case-workshop__miro-embed">
+            <iframe
+              width="768"
+              height="496"
+              src="https://miro.com/app/live-embed/uXjVJ_Z6fsY=/?focusWidget=3458764582175593085&embedMode=view_only_without_ui&embedId=695162889405"
+              frameBorder="0"
+              scrolling="no"
+              allow="fullscreen; clipboard-read; clipboard-write"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          <div className="case-workshop__workshop-flow-content">
+            <p>
+              <strong>3. Карта отвлекающих факторов.</strong> Ключевая
+              активность! Мы попросили участников распределить триггеры по трем
+              сферам: Физический мир, Виртуальный мир и Внутреннее состояние.
+            </p>
+          </div>
+
+          <div className="case-workshop__miro-embed">
+            <iframe
+              width="768"
+              height="496"
+              src="https://miro.com/app/live-embed/uXjVJ_Z6fsY=/?focusWidget=3458764582175593089&embedMode=view_only_without_ui&embedId=218164128317"
+              frameBorder="0"
+              scrolling="no"
+              allow="fullscreen; clipboard-read; clipboard-write"
+              allowFullScreen
+            ></iframe>
+          </div>
         </section>
 
         {/* Add your sections here: research, design, testing, conclusion */}

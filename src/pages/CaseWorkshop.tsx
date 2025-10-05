@@ -143,7 +143,7 @@ export default function CaseWorkshop() {
 
           <div className="case-workshop__problem-image">
             <img
-              src="/src/assets/case-images/fourth-case/attention.png"
+              src="/assets/case-images/fourth-case/attention.png"
               alt="Проблема концентрации внимания"
               className="case-workshop__problem-image-img"
             />
@@ -188,7 +188,7 @@ export default function CaseWorkshop() {
 
           <div className="case-workshop__preparation-image">
             <img
-              src="/src/assets/case-images/fourth-case/101design.png"
+              src="/assets/case-images/fourth-case/101design.png"
               alt="101 Design Methods"
               className="case-workshop__preparation-image-img"
             />
@@ -402,7 +402,7 @@ export default function CaseWorkshop() {
 
           <div className="case-workshop__conclusions-image">
             <img
-              src="/src/assets/case-images/fourth-case/screenshot.png"
+              src="/assets/case-images/fourth-case/screenshot.png"
               alt="Скриншот результатов воркшопа"
               className="case-workshop__conclusions-image-img"
             />

@@ -212,13 +212,13 @@
 }
 
 .case-lowfodmap__problem-image-slide--default {
-  background-image: url("/src/assets/case-images/first-case/problem.png");
+  background-image: url("/assets/case-images/first-case/problem.png");
   opacity: 1;
   z-index: 1;
 }
 
 .case-lowfodmap__problem-image-slide--hover {
-  background-image: url("/src/assets/case-images/first-case/problem2.jpeg");
+  background-image: url("/assets/case-images/first-case/problem2.jpeg");
   opacity: 0;
   z-index: 2;
 }
@@ -572,11 +572,11 @@
     font-size: 1rem;
   }
   .hero {
-    padding-top: 0px;
+    padding-top: 38px;
   }
   
-  .name {
-    padding-top: 38px;
+  .portfolio {
+    margin-top: 0;
   }
 }
 

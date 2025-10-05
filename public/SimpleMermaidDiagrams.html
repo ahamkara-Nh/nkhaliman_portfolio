@@ -156,15 +156,14 @@ flowchart TD
   
   <div class="zoom-indicator" id="zoom-level">100%</div>
 
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>
     // Initialize mermaid
-    mermaid.initialize({ 
+    mermaid.initialize({
       startOnLoad: true,
       theme: 'dark'
     });
-    
+
     // Wait for mermaid to render
     setTimeout(() => {
       initInfiniteCanvas();

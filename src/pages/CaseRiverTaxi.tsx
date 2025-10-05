@@ -224,7 +224,7 @@ export default function CaseRiverTaxi() {
             
             <div className={styles['case-river-taxi__diagram-container']}>
                <iframe
-                 src="/src/components/SimpleMermaidDiagrams.html"
+                 src="/SimpleMermaidDiagrams.html"
                  className={styles['case-river-taxi__mermaid-iframe']}
                  title="Mermaid Diagrams
                  Comparison"

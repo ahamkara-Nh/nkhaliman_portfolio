@@ -929,7 +929,6 @@ body {
 @media (max-width: 900px) {
     .page {
         padding: 24px 24px;
-        gap: 20px;
     }
 }
 
@@ -1077,4 +1076,10 @@ body {
             )
             padding-box,
         var(--btn-hover);
+}
+
+@media (max-width: 410px) {
+    .skill-name {
+        font-size: 11px;
+    }
 }

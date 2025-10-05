@@ -12,6 +12,7 @@ import CaseTBanks from "./pages/CaseTBanks";
 import CaseRiverTaxi from "./pages/CaseRiverTaxi";
 import CaseWorkshop from "./pages/CaseWorkshop";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const AboutSection = () => (
   <section id="about" className="about">
@@ -230,6 +231,7 @@ export default function App() {
       </header>
 
       <main className="hero">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Navigate to="/about" replace />} />
           <Route

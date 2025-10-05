@@ -1,21 +1,10 @@
 import "./case-workshop.css";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function CaseWorkshop() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isPhase2Fullscreen, setIsPhase2Fullscreen] = useState(false);
-  const [fullscreenImage, setFullscreenImage] = useState("");
-  const [zoomLevel, setZoomLevel] = useState(0.25);
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [currentPosition, setCurrentPosition] = useState({ x: 0, y: 0 });
-  const [currentScreen, setCurrentScreen] = useState(0);
-  const [mainScreensCurrentScreen, setMainScreensCurrentScreen] = useState(0);
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const diagramRef = useRef<HTMLDivElement>(null);
-  const touchStartDistance = useRef<number>(0);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const mainScreensTrackRef = useRef<HTMLDivElement>(null);
 
   // Handle scroll to show/hide back to top button
   useEffect(() => {

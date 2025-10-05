@@ -11,6 +11,7 @@ import CaseLowFodmap from "./pages/CaseLowFodmap";
 import CaseTBanks from "./pages/CaseTBanks";
 import CaseRiverTaxi from "./pages/CaseRiverTaxi";
 import CaseWorkshop from "./pages/CaseWorkshop";
+import NotFound from "./pages/NotFound";
 
 const AboutSection = () => (
   <section id="about" className="about">
@@ -746,6 +747,10 @@ export default function App() {
                 <CaseWorkshop />
               </>
             }
+          />
+          <Route
+            path="*"
+            element={<NotFound />}
           />
         </Routes>
       </main>

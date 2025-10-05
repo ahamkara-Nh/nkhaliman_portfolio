@@ -14,16 +14,16 @@ export default function CaseTBanks() {
   // Carousel state
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const carouselImages = [
-    '/src/assets/case-images/second-case/painpoint1.png',
-    '/src/assets/case-images/second-case/painpoint2.png',
-    '/src/assets/case-images/second-case/painpoint3.png'
+    '/assets/case-images/second-case/painpoint1.png',
+    '/assets/case-images/second-case/painpoint2.png',
+    '/assets/case-images/second-case/painpoint3.png'
   ];
 
   // Solution carousel state
   const [currentSolutionImageIndex, setCurrentSolutionImageIndex] = useState(0);
   const solutionCarouselImages = [
-    '/src/assets/case-images/second-case/tobe1.png',
-    '/src/assets/case-images/second-case/tobe2.png'
+    '/assets/case-images/second-case/tobe1.png',
+    '/assets/case-images/second-case/tobe2.png'
   ];
 
   // Prototype loading state
@@ -398,7 +398,7 @@ export default function CaseTBanks() {
             </div>
             <div className={styles['case-tbanks__about-image']}>
               <img
-                src="/src/assets/case-images/second-case/phone_mockup.png"
+                src="/assets/case-images/second-case/phone_mockup.png"
                 alt="Phone mockup showing T-Bank City interface"
                 className={styles['case-tbanks__mockup-image']}
               />
@@ -418,11 +418,11 @@ export default function CaseTBanks() {
             </p>
             <div
               className="case-lowfodmap__screenshot-container"
-              onClick={() => openFullscreen("/src/assets/case-images/second-case/story1.png")}
+              onClick={() => openFullscreen("/assets/case-images/second-case/story1.png")}
               style={{ cursor: 'pointer', marginTop: '8px', marginBottom: '24px', width: '100%' }}
             >
               <img
-                src="/src/assets/case-images/second-case/story1.png"
+                src="/assets/case-images/second-case/story1.png"
                 alt="User pain points illustration"
                 className="case-lowfodmap__phase-screenshot2"
               />

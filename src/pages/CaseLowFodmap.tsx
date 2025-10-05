@@ -23,7 +23,7 @@ function RivePhaseTracker() {
   }, []);
   
   const { RiveComponent } = useRive({
-    src: isMobile ? '/src/assets/fodmap-mobile.riv' : '/src/assets/fodmap.riv',
+    src: isMobile ? '/assets/fodmap-mobile.riv' : '/assets/fodmap.riv',
     autoplay: true,
     stateMachines: isMobile ? 'State Machine 2' : 'State Machine 1', // Use State Machine 2 for mobile
   });
@@ -319,7 +319,7 @@ export default function CaseLowFodmap() {
                 <div className="case-lowfodmap__result-label">уникальные функции*</div>
               </div>
               <a className="case-lowfodmap__result-card" href="https://t.me/fodmap_tracker_bot" target='_blank'>
-                <img src="/src/assets/icons/telegram_white.svg" alt="Telegram" className="case-lowfodmap__result-icon" />
+                <img src="/assets/icons/telegram_white.svg" alt="Telegram" className="case-lowfodmap__result-icon" />
                 <div className="case-lowfodmap__result-label">Telegram Mini App</div>
               </a>
             </div>
@@ -488,7 +488,7 @@ export default function CaseLowFodmap() {
           
           <div className="case-lowfodmap__diagram-container" onClick={openFullscreen}>
             <img 
-              src="/src/assets/case-images/first-case/diagram.svg" 
+              src="/assets/case-images/first-case/diagram.svg" 
               alt="Схема процесса соблюдения low-FODMAP диеты" 
               className="case-lowfodmap__diagram"
             />
@@ -522,14 +522,14 @@ export default function CaseLowFodmap() {
           <div className="case-lowfodmap__interview-images">
             <div className="case-lowfodmap__interview-image-container">
               <img 
-                src="/src/assets/case-images/first-case/interview1.png" 
+                src="/assets/case-images/first-case/interview1.png" 
                 alt="Экспертное интервью 1" 
                 className="case-lowfodmap__interview-image"
               />
             </div>
             <div className="case-lowfodmap__interview-image-container">
               <img 
-                src="/src/assets/case-images/first-case/interview2.png" 
+                src="/assets/case-images/first-case/interview2.png" 
                 alt="Экспертное интервью 2" 
                 className="case-lowfodmap__interview-image"
               />
@@ -622,41 +622,41 @@ export default function CaseLowFodmap() {
               <div className="case-lowfodmap__onboarding-carousel">
                 <div className="case-lowfodmap__onboarding-track">
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_1.svg" alt="Онбоардинг экран 1" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_1.svg" alt="Онбоардинг экран 1" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_2.svg" alt="Онбоардинг экран 2" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_2.svg" alt="Онбоардинг экран 2" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_3.svg" alt="Онбоардинг экран 3" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_3.svg" alt="Онбоардинг экран 3" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_1.svg" alt="Обучающий экран 1" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_learn_1.svg" alt="Обучающий экран 1" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_2.svg" alt="Обучающий экран 2" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_learn_2.svg" alt="Обучающий экран 2" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_3.svg" alt="Обучающий экран 3" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_learn_3.svg" alt="Обучающий экран 3" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_4.svg" alt="Обучающий экран 4" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_learn_4.svg" alt="Обучающий экран 4" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_5.svg" alt="Обучающий экран 5" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_learn_5.svg" alt="Обучающий экран 5" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_learn_6.svg" alt="Обучающий экран 6" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_learn_6.svg" alt="Обучающий экран 6" />
                   </div>
                   {/* Duplicate slides for seamless loop */}
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_1.svg" alt="Онбоардинг экран 1" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_1.svg" alt="Онбоардинг экран 1" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_2.svg" alt="Онбоардинг экран 2" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_2.svg" alt="Онбоардинг экран 2" />
                   </div>
                   <div className="case-lowfodmap__onboarding-slide">
-                    <img src="/src/assets/case-images/onboarding-svg/Onboarding_3.svg" alt="Онбоардинг экран 3" />
+                    <img src="/assets/case-images/onboarding-svg/Onboarding_3.svg" alt="Онбоардинг экран 3" />
                   </div>
                 </div>
               </div>
@@ -683,11 +683,11 @@ export default function CaseLowFodmap() {
                       <div className="case-lowfodmap__main-screens-layout">
                         <div 
                           className="case-lowfodmap__main-screens-image"
-                          onClick={() => openPhase2Fullscreen("/src/assets/case-images/first-case/diary-screens/first.png")}
+                          onClick={() => openPhase2Fullscreen("/assets/case-images/first-case/diary-screens/first.png")}
                           style={{ cursor: 'pointer' }}
                         >
                           <img 
-                            src="/src/assets/case-images/first-case/diary-screens/first.png" 
+                            src="/assets/case-images/first-case/diary-screens/first.png" 
                             alt="Экран дневника приложения" 
                             className="case-lowfodmap__main-screens-screenshot"
                           />
@@ -709,11 +709,11 @@ export default function CaseLowFodmap() {
                       <div className="case-lowfodmap__main-screens-layout">
                         <div 
                           className="case-lowfodmap__main-screens-image"
-                          onClick={() => openPhase2Fullscreen("/src/assets/case-images/first-case/diary-screens/second.png")}
+                          onClick={() => openPhase2Fullscreen("/assets/case-images/first-case/diary-screens/second.png")}
                           style={{ cursor: 'pointer' }}
                         >
                           <img 
-                            src="/src/assets/case-images/first-case/diary-screens/second.png" 
+                            src="/assets/case-images/first-case/diary-screens/second.png" 
                             alt="Экран добавления продуктов" 
                             className="case-lowfodmap__main-screens-screenshot"
                           />
@@ -735,11 +735,11 @@ export default function CaseLowFodmap() {
                       <div className="case-lowfodmap__main-screens-layout">
                         <div 
                           className="case-lowfodmap__main-screens-image"
-                          onClick={() => openPhase2Fullscreen("/src/assets/case-images/first-case/diary-screens/third.png")}
+                          onClick={() => openPhase2Fullscreen("/assets/case-images/first-case/diary-screens/third.png")}
                           style={{ cursor: 'pointer' }}
                         >
                           <img 
-                            src="/src/assets/case-images/first-case/diary-screens/third.png" 
+                            src="/assets/case-images/first-case/diary-screens/third.png" 
                             alt="Экран аналитики и информации" 
                             className="case-lowfodmap__main-screens-screenshot"
                           />
@@ -762,11 +762,11 @@ export default function CaseLowFodmap() {
                       <div className="case-lowfodmap__main-screens-layout">
                         <div 
                           className="case-lowfodmap__main-screens-image"
-                          onClick={() => openPhase2Fullscreen("/src/assets/case-images/first-case/diary-screens/fourth.png")}
+                          onClick={() => openPhase2Fullscreen("/assets/case-images/first-case/diary-screens/fourth.png")}
                           style={{ cursor: 'pointer' }}
                         >
                           <img 
-                            src="/src/assets/case-images/first-case/diary-screens/fourth.png" 
+                            src="/assets/case-images/first-case/diary-screens/fourth.png" 
                             alt="Экран настроек приложения" 
                             className="case-lowfodmap__main-screens-screenshot"
                           />
@@ -830,7 +830,7 @@ export default function CaseLowFodmap() {
                   
                   <div className="case-lowfodmap__real-screenshot">
                     <img 
-                      src="/src/assets/case-images/first-case/phone-phase1.png" 
+                      src="/assets/case-images/first-case/phone-phase1.png" 
                       alt="Скриншот интерфейса первой фазы" 
                       className="case-lowfodmap__phase-screenshot"
                     />
@@ -852,9 +852,9 @@ export default function CaseLowFodmap() {
                 </p>
                 {/* Phase 2 Screenshots */}
                 <div className="case-lowfodmap__phase-screenshots">
-                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/first.svg")} style={{ cursor: 'pointer'}}>
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/assets/case-images/second-phase-svg/first.svg")} style={{ cursor: 'pointer'}}>
                     <img
-                      src="/src/assets/case-images/second-phase-svg/first.svg"
+                      src="/assets/case-images/second-phase-svg/first.svg"
                       alt="Скриншот интерфейса второй фазы - первый этап"
                       className="case-lowfodmap__phase-screenshot2"
                     />
@@ -864,9 +864,9 @@ export default function CaseLowFodmap() {
                       <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/second.svg")} style={{ cursor: 'pointer'}}>
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/assets/case-images/second-phase-svg/second.svg")} style={{ cursor: 'pointer'}}>
                     <img
-                      src="/src/assets/case-images/second-phase-svg/second.svg"
+                      src="/assets/case-images/second-phase-svg/second.svg"
                       alt="Скриншот интерфейса второй фазы - второй этап"
                       className="case-lowfodmap__phase-screenshot2"
                     />
@@ -876,9 +876,9 @@ export default function CaseLowFodmap() {
                       <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/second-phase-svg/third.svg")} style={{ cursor: 'pointer'}}>
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/assets/case-images/second-phase-svg/third.svg")} style={{ cursor: 'pointer'}}>
                     <img
-                      src="/src/assets/case-images/second-phase-svg/third.svg"
+                      src="/assets/case-images/second-phase-svg/third.svg"
                       alt="Скриншот интерфейса второй фазы - третий этап"
                       className="case-lowfodmap__phase-screenshot2"
                     />
@@ -895,9 +895,9 @@ export default function CaseLowFodmap() {
                   В третьей фазе компонент показывает группы FODMAP, которые вызывают симптомы у конкретного пользователя. Это помогает пользователю понять, какие группы FODMAP он должен избегать, чтобы быть более здоровым. В базе продуктов автоматически применяется фильтр.
 {/* Phase 3 Screenshots */}
                 <div className="case-lowfodmap__phase-screenshots">
-                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/third-phase-svg/first.svg")} style={{ cursor: 'pointer'}}>
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/assets/case-images/third-phase-svg/first.svg")} style={{ cursor: 'pointer'}}>
                     <img
-                      src="/src/assets/case-images/third-phase-svg/first.svg"
+                      src="/assets/case-images/third-phase-svg/first.svg"
                       alt="Скриншот интерфейса третьей фазы - первый этап"
                       className="case-lowfodmap__phase-screenshot2"
                     />
@@ -907,9 +907,9 @@ export default function CaseLowFodmap() {
                       <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/src/assets/case-images/third-phase-svg/second.svg")} style={{ cursor: 'pointer'}}>
+                  <div className="case-lowfodmap__screenshot-container" onClick={() => openPhase2Fullscreen("/assets/case-images/third-phase-svg/second.svg")} style={{ cursor: 'pointer'}}>
                     <img
-                      src="/src/assets/case-images/third-phase-svg/second.svg"
+                      src="/assets/case-images/third-phase-svg/second.svg"
                       alt="Скриншот интерфейса третьей фазы - второй этап"
                       className="case-lowfodmap__phase-screenshot2"
                     />
@@ -1014,7 +1014,7 @@ export default function CaseLowFodmap() {
                       <div className="case-lowfodmap__testing-image-container">
                         <div className="case-lowfodmap__testing-interface-image">
                           <img
-                            src="/src/assets/case-images/first-case/features/second.svg"
+                            src="/assets/case-images/first-case/features/second.svg"
                             alt="Возможность добавить собственный продукт"
                             className="case-lowfodmap__testing-interface-screenshot"
                           />
@@ -1046,7 +1046,7 @@ export default function CaseLowFodmap() {
                       <div className="case-lowfodmap__testing-image-container">
                         <div className="case-lowfodmap__testing-interface-image">
                           <img
-                            src="/src/assets/case-images/first-case/features/first.svg"
+                            src="/assets/case-images/first-case/features/first.svg"
                             alt="Автоматическое отслеживание этапов"
                             className="case-lowfodmap__testing-interface-screenshot"
                           />
@@ -1079,7 +1079,7 @@ export default function CaseLowFodmap() {
                       <div className="case-lowfodmap__testing-image-container">
                         <div className="case-lowfodmap__testing-interface-image">
                           <img
-                            src="/src/assets/case-images/first-case/features/third.svg"
+                            src="/assets/case-images/first-case/features/third.svg"
                             alt="Автоматический фильтр продуктов"
                             className="case-lowfodmap__testing-interface-screenshot"
                           />
@@ -1111,7 +1111,7 @@ export default function CaseLowFodmap() {
                       <div className="case-lowfodmap__testing-image-container">
                         <div className="case-lowfodmap__testing-interface-image">
                           <img
-                            src="/src/assets/case-images/first-case/features/fourth.png"
+                            src="/assets/case-images/first-case/features/fourth.png"
                             alt="Раздельные списки продуктов"
                             className="case-lowfodmap__testing-interface-screenshot"
                           />
@@ -1193,7 +1193,7 @@ export default function CaseLowFodmap() {
               }}
             >
               <img 
-                src="/src/assets/case-images/first-case/meme.png" 
+                src="/assets/case-images/first-case/meme.png" 
                 alt="Мем о low-FODMAP диете" 
                 className="case-lowfodmap__conclusion-image"
               />
@@ -1268,7 +1268,7 @@ export default function CaseLowFodmap() {
                 </span>
               </div>
               <img 
-                src="/src/assets/case-images/first-case/diagram.svg" 
+                src="/assets/case-images/first-case/diagram.svg" 
                 alt="Схема процесса соблюдения low-FODMAP диеты" 
                 className="case-lowfodmap__fullscreen-diagram"
                 style={{ 

@@ -183,7 +183,7 @@ export default function CaseRiverTaxi() {
             </div>
             <div className={styles['case-river-taxi__about-image']}>
               <img
-                src="/src/assets/case-images/third-case/hack_pic.png"
+                src="/assets/case-images/third-case/hack_pic.png"
                 alt="Hackathon team photo"
                 className={styles['case-river-taxi__hack-image']}
               />
@@ -244,7 +244,7 @@ export default function CaseRiverTaxi() {
              </p>
              <div className={styles['case-river-taxi__image-container']}>
                <img
-                 src="/src/assets/case-images/third-case/taxi_examples.png"
+                 src="/assets/case-images/third-case/taxi_examples.png"
                  alt="Примеры существующих решений такси"
                  className={styles['case-river-taxi__solution-image']}
                />
@@ -311,7 +311,7 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats.riv" />
+                           <RiveAnimation src="/assets/case-images/third-case/rive/boats.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Выбор тарифа</h4>
@@ -326,7 +326,7 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats2.riv" />
+                           <RiveAnimation src="/assets/case-images/third-case/rive/boats2.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Информирование до заказа</h4>
@@ -341,7 +341,7 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats3.riv" />
+                           <RiveAnimation src="/assets/case-images/third-case/rive/boats3.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Отображение ожидаемой цены</h4>
@@ -356,7 +356,7 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats4.riv" />
+                           <RiveAnimation src="/assets/case-images/third-case/rive/boats4.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Вспомогательные UX-решения</h4>
@@ -371,7 +371,7 @@ export default function CaseRiverTaxi() {
                      <div className={styles['case-river-taxi__features-slide']}>
                        <div className={styles['case-river-taxi__features-content']}>
                          <div className={styles['case-river-taxi__features-animation']}>
-                           <RiveAnimation src="/src/assets/case-images/third-case/rive/boats5.riv" />
+                           <RiveAnimation src="/assets/case-images/third-case/rive/boats5.riv" />
                          </div>
                          <div className={styles['case-river-taxi__features-text']}>
                            <h4 className={styles['case-river-taxi__features-title']}>Демонстрация снижения цены</h4>
@@ -427,7 +427,7 @@ export default function CaseRiverTaxi() {
           <div className={styles['case-river-taxi__conclusion-image-wrapper']}>
             <div className={styles['case-river-taxi__conclusion-image-container']}>
               <img
-                src="/src/assets/case-images/third-case/meme.jpg"
+                src="/assets/case-images/third-case/meme.jpg"
                 alt="Мем о хакатоне"
                 className={styles['case-river-taxi__conclusion-image']}
               />

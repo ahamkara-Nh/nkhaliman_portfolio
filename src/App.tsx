@@ -5,6 +5,7 @@ import {
   Routes,
   Navigate,
   useLocation,
+  Link,
 } from "react-router-dom";
 import CaseLowFodmap from "./pages/CaseLowFodmap";
 import CaseTBanks from "./pages/CaseTBanks";
@@ -258,7 +259,7 @@ export default function App() {
                   >
                     <img
                       className="icon"
-                      src="/src/assets/icons/email.svg"
+                      src="/assets/icons/email.svg"
                       alt=""
                       aria-hidden="true"
                     />
@@ -274,7 +275,7 @@ export default function App() {
                   >
                     <img
                       className="icon"
-                      src="/src/assets/icons/telegram.svg"
+                      src="/assets/icons/telegram.svg"
                       alt=""
                       aria-hidden="true"
                     />
@@ -288,19 +289,19 @@ export default function App() {
                   <ul className="skills-grid">
                     {/* NOTE: Replace each src with your icon file and keep the same path.
                 Suggested icon paths (add your SVG/PNG files later):
-                - /src/assets/icons/skills/figma.svg
-                - /src/assets/icons/skills/photoshop.svg
-                - /src/assets/icons/skills/miro.svg
-                - /src/assets/icons/skills/rive.svg
-                - /src/assets/icons/skills/html.svg
-                - /src/assets/icons/skills/css.svg
-                - /src/assets/icons/skills/js.svg
-                - /src/assets/icons/skills/english.svg
+                - /assets/icons/skills/figma.svg
+                - /assets/icons/skills/photoshop.svg
+                - /assets/icons/skills/miro.svg
+                - /assets/icons/skills/rive.svg
+                - /assets/icons/skills/html.svg
+                - /assets/icons/skills/css.svg
+                - /assets/icons/skills/js.svg
+                - /assets/icons/skills/english.svg
             */}
                     <li className="skill-card">
                       <img
                         className="skill-icon"
-                        src="/src/assets/icons/skills/figma.svg"
+                        src="/assets/icons/skills/figma.svg"
                         alt=""
                         aria-hidden="true"
                       />
@@ -309,7 +310,7 @@ export default function App() {
                     <li className="skill-card">
                       <img
                         className="skill-icon"
-                        src="/src/assets/icons/skills/photoshop.svg"
+                        src="/assets/icons/skills/photoshop.svg"
                         alt=""
                         aria-hidden="true"
                       />
@@ -318,7 +319,7 @@ export default function App() {
                     <li className="skill-card">
                       <img
                         className="skill-icon"
-                        src="/src/assets/icons/skills/miro.svg"
+                        src="/assets/icons/skills/miro.svg"
                         alt=""
                         aria-hidden="true"
                       />
@@ -327,7 +328,7 @@ export default function App() {
                     <li className="skill-card">
                       <img
                         className="skill-icon"
-                        src="/src/assets/icons/skills/rive.svg"
+                        src="/assets/icons/skills/rive.svg"
                         alt=""
                         aria-hidden="true"
                       />
@@ -336,7 +337,7 @@ export default function App() {
                     <li className="skill-card">
                       <img
                         className="skill-icon"
-                        src="/src/assets/icons/skills/html.svg"
+                        src="/assets/icons/skills/html.svg"
                         alt=""
                         aria-hidden="true"
                       />
@@ -346,7 +347,7 @@ export default function App() {
                     <li className="skill-card">
                       <img
                         className="skill-icon"
-                        src="/src/assets/icons/skills/ux-research.svg"
+                        src="/assets/icons/skills/ux-research.svg"
                         alt=""
                         aria-hidden="true"
                       />
@@ -355,7 +356,7 @@ export default function App() {
                     <li className="skill-card">
                       <img
                         className="skill-icon"
-                        src="/src/assets/icons/skills/ai-tools.svg"
+                        src="/assets/icons/skills/ai-tools.svg"
                         alt=""
                         aria-hidden="true"
                       />
@@ -364,7 +365,7 @@ export default function App() {
                     <li className="skill-card">
                       <img
                         className="skill-icon"
-                        src="/src/assets/icons/skills/english.svg"
+                        src="/assets/icons/skills/english.svg"
                         alt=""
                         aria-hidden="true"
                       />
@@ -579,7 +580,7 @@ export default function App() {
                   >
                     <img
                       className="icon"
-                      src="/src/assets/icons/email.svg"
+                      src="/assets/icons/email.svg"
                       alt=""
                       aria-hidden="true"
                     />
@@ -595,7 +596,7 @@ export default function App() {
                   >
                     <img
                       className="icon"
-                      src="/src/assets/icons/telegram.svg"
+                      src="/assets/icons/telegram.svg"
                       alt=""
                       aria-hidden="true"
                     />
@@ -606,14 +607,14 @@ export default function App() {
                 <section id="portfolio" className="portfolio">
                   <ul className="portfolio-grid">
                     <li className="case-card">
-                      <a
+                      <Link
                         className="case-link"
-                        href="/portfolio/fodmap"
+                        to="/portfolio/fodmap"
                         aria-label="Открыть кейс: Трекер low-FODMAP"
                       >
                         <img
                           className="case-image"
-                          src="/src/assets/case-images/first.png"
+                          src="/assets/case-images/first.png"
                           alt="Превью проекта: Трекер low-FODMAP"
                           aria-hidden="true"
                         />
@@ -625,18 +626,18 @@ export default function App() {
                             Дипломный проект ВШЭ
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
 
                     <li className="case-card">
-                      <a
+                      <Link
                         className="case-link"
-                        href="/portfolio/tbanks"
+                        to="/portfolio/tbanks"
                         aria-label="Открыть кейс: Концепт рекомендательной системы в Т-Банк Город"
                       >
                         <img
                           className="case-image"
-                          src="src\assets\case-images\second-case\bank.png"
+                          src="/assets/case-images/second-case/bank.png"
                           alt="Превью проекта: Концепт рекомендательной системы в Т-Банк Город"
                           aria-hidden="true"
                         />
@@ -649,18 +650,18 @@ export default function App() {
                             Доверия)
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
 
                     <li className="case-card">
-                      <a
+                      <Link
                         className="case-link"
-                        href="/portfolio/river-taxi"
+                        to="/portfolio/river-taxi"
                         aria-label="Открыть кейс: Сервис заказов речного шеринг-такси"
                       >
                         <img
                           className="case-image"
-                          src="/src/assets/case-images/third-case/Cover.png"
+                          src="/assets/case-images/third-case/Cover.png"
                           alt="Превью проекта: Сервис заказов речного шеринг-такси"
                           aria-hidden="true"
                         />
@@ -670,18 +671,18 @@ export default function App() {
                           </h3>
                           <div className="case-origin">Хакатон HACK&CHANGE</div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
 
                     <li className="case-card">
-                      <a
+                      <Link
                         className="case-link"
-                        href="/portfolio/workshop"
+                        to="/portfolio/workshop"
                         aria-label="Открыть кейс: Workshop: проблема концентрации внимания"
                       >
                         <img
                           className="case-image"
-                          src="/src/assets/case-images/fourth-case/Workshop_cover.png"
+                          src="/assets/case-images/fourth-case/Workshop_cover.png"
                           alt="Превью проекта: Workshop: проблема концентрации внимания"
                           aria-hidden="true"
                         />
@@ -691,7 +692,7 @@ export default function App() {
                           </h3>
                           <div className="case-origin">Учебный проект ВШЭ</div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
 
